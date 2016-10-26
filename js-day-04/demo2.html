@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="t1" id="t1" value="" />
+		<input type="button" name="b1" id="b1" value="存款" />
+		<input type="button" name="b2" id="b2" value="取款" />
+		<input type="button" name="b3" id="b3" value="查询余额" />
+		<script type="text/javascript">
+			var sum=60000;
+			var t1=document.getElementById("t1");
+			var b1=document.getElementById("b1");
+			var b2=document.getElementById("b2");
+			var b3=document.getElementById("b3");
+			b1.onclick=function(){
+				var a=parseInt(t1.value);
+				if(a<0){
+					alert("输入错误");
+				}
+				else if(a<100000){
+					alert("穷比，每次最少存10W");
+				}else if(isNaN(a)){
+					alert("输入不合法");
+				}else{
+					sum+=a;
+					alert("存款成功");
+					alert("余额为:"+sum);
+				}
+			}
+			b2.onclick=function(){
+				var a=parseInt(t1.value);
+				if(a<0){
+					alert("输入错误");
+				}else if(isNaN(a)){
+					alert("输入不合法");
+				}else if(a>1){
+					alert("每次最多取一块");
+				}else{
+					sum-=a;
+					alert("取款成功");
+					alert("余额为:"+sum);
+				}
+			}
+			b3.onclick=function(){
+				alert("余额为:"+sum);
+			}
+			
+			
+		</script>
+	</body>
+</html>

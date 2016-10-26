@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link id="l1" rel="stylesheet" type="text/css" href="css/1.css"/>
+		<!--<link id="l2" rel="stylesheet" type="text/css" href="css/index.css"/>-->
+		
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+		<input type="button" name="" id="b1" value="红色" />
+		<input type="button" name="" id="b2" value="蓝色" />
+		<input type="button" name="" id="b3" value="黄色" />
+		<input type="button" name="" id="b4" value="绿色" />
+		<input type="button" name="" id="b5" value="随机切换—注意戴上护目镜" />
+		<script type="text/javascript">
+			var oL1=document.getElementById("l1");
+			var oDiv=document.getElementById("div1")
+			var oB1=document.getElementById("b1");
+			var oB2=document.getElementById("b2");
+			var oB3=document.getElementById("b3");
+			var oB4=document.getElementById("b4");
+			var oB5=document.getElementById("b5");
+			
+			var time1;
+			
+			
+			oB1.onclick=function(){
+				oDiv.innerHTML="切换皮肤";
+				oL1.href="css/1.css";	
+			}
+			oB2.onclick=function(){
+				oDiv.innerHTML="切换皮肤";
+				oL1.href="css/2.css";	
+			}
+			oB3.onclick=function(){
+				oDiv.innerHTML="切换皮肤";
+				oL1.href="css/3.css";	
+			}
+			oB4.onclick=function(){
+				oDiv.innerHTML="切换皮肤";
+				oL1.href="css/4.css";	
+			}
+			
+			var sum=0;
+			function bs(){
+				
+				switch(sum){
+					case 0:oL1.href="css/1.css";sum=1;
+					break;
+					case 1:oL1.href="css/2.css";sum=2;
+					break;
+					case 2:oL1.href="css/3.css";sum=3;
+					break;
+					case 3:oL1.href="css/4.css";sum=0;
+					break;	
+				}	
+			}
+			
+			var a=true;
+			oB5.onclick=function(){
+				
+				if(a){
+					a=false;
+					time1=setInterval(bs,10);
+					oDiv.innerHTML="爸爸闪瞎你！！！"
+				}
+				else{
+					a=true;
+					clearInterval(time1);
+					oDiv.innerHTML="切换皮肤";
+				}
+				
+			}
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滚动</title>
+    <style>
+        div{
+            width: 100px;
+            height:2000px;
+            background: blue;
+        }
+        #bt1{
+            position: fixed;
+            right: 20px;
+            bottom:20px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <input type="button" id="bt1" value="获取滚动高度-回到顶部"/>
+    <input type="text" id="txt1"/>
+    <script>
+        //滚动的高度
+        var sTop=document.documentElement.scrollTop||document.body.scrollTop;
+        var oTxt=document.getElementById("txt1");
+        oTxt.value=sTop;
+        var oBt=document.getElementById("bt1");
+        var timer;
+        oBt.onclick=function(){
+            clearInterval(timer);
+            timer=setInterval(function(){
+                //每次修改scrolltop的时候，把isTimer设置为true；
+                //然后修改top，会触发scroll事件，在事件中判断isTimer；这个时候不清理定时器；
+                //会把isTimer设置为false；
+                isTimer=true;
+                var sTop=document.documentElement.scrollTop||document.body.scrollTop;//1190
+                if(sTop<=0){
+                    clearInterval(timer);//停止执行 下一次；
+                }else{
+                    document.documentElement.scrollTop=sTop-10;
+                    document.body.scrollTop=sTop-10;
+                }
+            },30);
+        }
+
+        var isTimer=false;
+        window.onscroll=function(){
+            var sTop=document.documentElement.scrollTop||document.body.scrollTop;//1190
+            document.title=sTop;
+            if(sTop>1000){
+                oBt.style.display="block";
+            }else{
+                oBt.style.display="none";
+            }
+            //定时器导致的scroll，不清理timer
+            //如果不是定时器 导致的scroll事件，就清理timer；
+            if(isTimer){
+                isTimer=false;
+            }else{
+                clearInterval(timer);
+            }
+           /*
+            if(isClear){
+            clearInterval(timer);
+            }else{
+            isClear=true;
+            }
+           if(sTop>800){
+                oBt.style.display="block";
+
+            }else{
+                oBt.style.display="none";
+            }*/
+        }
+        //回到顶部  动画效果。
+        //setInterval("",1000);
+        //1. 点击回到顶部。。在滚动的过程中。如果我用鼠标滚动页面。这个时候，需要定制定时器。
+        //2.回到顶部的按钮：
+    </script>
+</body>
+</html>

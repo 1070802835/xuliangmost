@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+	<body>
+		<input type="button" onclick="fn1()" name="b1" id="b1" value="弹" />
+		<div id="div1"></div>
+		<div class="c1"></div>
+		<div class="c2"></div>
+		<div class="c1"></div>
+		<div class="c2"></div>
+		
+		<div class="c1"></div>
+		<div class="c4"></div>
+		
+		<div class="c2"></div>
+		<div class="c3"></div>
+		<div class="c3"></div>
+		
+		
+		<script type="text/javascript">
+			function fn1(){
+				alert(1)
+			}
+			
+			$(".c1").html("c1");
+			$(".c2").html("c2");
+			$(".c3").html("c3");
+			$(".c4").html("c4");
+//			$("div").html("31231");
+//			$("#div1,.c1").html("000");
+			$("div").css("background","red").css("color","white").css("width","100");
+			$("#b1").css("width","40").css("height","40").css("background","brown");
+			$(".c1").next().css("color","black");//c1后面的所有紧跟的元素
+			$(".c2+.c4").css("color","blue");//只有是c2后面紧跟的c4
+		</script>
+	</body>
+</html>

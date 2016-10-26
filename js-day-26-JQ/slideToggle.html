@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  div { background:yellow; border:1px solid #AAA; width:80px; height:600px; margin:0 5px; float:left; }
+  div.colored{ background:green; }
+  </style>
+  <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+  <button id="run">Run</button>
+ 
+  <div></div>
+  <div id="mover"></div>
+  <div></div>
+<script>
+
+    $("#run").click(function(){
+      $("div:animated").toggleClass("colored");
+    });
+    function animateIt() {
+      $("#mover").slideToggle("middle",animateIt);
+    }
+    animateIt();
+</script>
+ 
+</body>
+</html>

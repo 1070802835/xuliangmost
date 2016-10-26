@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			var s1=String("ABCDefghiJKLmnoPQrst");
+			var sum=0;
+			var sim=0;
+			for(var i=0;i<s1.length;i++){
+				if(s1.charCodeAt(i)<91){
+					sum++;
+				}else{
+					sim++;
+				}
+			}
+			document.write("大写字母个数为："+sum+"<br />");
+			document.write("小写字母个数为："+sim+"<br />");
+		</script>
+	</body>
+</html>

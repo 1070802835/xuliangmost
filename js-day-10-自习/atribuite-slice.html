@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>toogol</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+			font-weight: 600
+		}
+		input{
+			width: 110px;
+			height: 30px;
+			box-shadow: 0 0 10px #5EE1D0;
+			margin:20px;
+			margin-right: 0;
+			border:0;
+			text-align: center;
+			line-height: 30px;
+			font-size: 12px;
+			float: left;
+			border-radius: 2px
+		}
+		input:focus{
+			outline:0;
+		}
+		#btn{
+			width: 50px;
+			height: 30px;
+			box-shadow: 0 0 10px #5EE1D0;
+			border:0;
+			margin-left:0;
+			background: #ffffff;
+			font-size: 12px;
+			color: #5EE1D0
+		}
+		#btn2{
+			width: 50px;
+			height: 30px;
+			box-shadow: 0 0 10px #5EE1D0;
+			border:0;
+			margin-left:60px;
+			background: #ffffff;
+			font-size: 12px;
+			color: #5EE1D0
+		}
+		/*#btn:focus{
+			outline:1px solid #5EE1D0;
+		}*/
+		div{
+			width: 280px;
+			height: 30px;
+			/*box-shadow: 0 0 10px #5EE1D0;*/
+			margin:20px;
+			clear: both;
+			text-align: center;
+			line-height: 30px;
+			color: #5EE1D0;
+		}
+		#inside{
+			width: 160px;
+			height: 30px;
+			margin:0;
+			float:left;
+			box-shadow: 0 0 10px #5EE1D0;
+		}
+		#pause{
+			width: 50px;
+			height: 30px;
+			box-shadow: 0 0 10px #5EE1D0;
+			border:0;
+			
+			margin:0;
+			margin-right:10px;
+			background: #ffffff;
+			font-size: 12px;
+			color: #5EE1D0;
+			float:right;
+		}
+	</style>
+</head>
+<body>
+	<!-- 在beta1.0的基础上，每行生成的div可以暂停 删除 修改 -->
+	<input type="text" id="in" placeholder="content">
+	<input type="button" id="btn" value="toogol" onclick="toogol()">
+	<input type="button" id="btn2" value="clear" onclick="clearAll()">
+
+	<script>
+		var oTxt=document.getElementById("in");
+		var oBtn=document.getElementById("btn");
+		function toogol(){
+			var inContent=oTxt.value;
+			var oDivIn=document.createElement("div");
+			oDivIn.setAttribute("id","inside"); 
+			oDivIn.setAttribute("class","inside");//class给不上样式？？？
+			var oDiv=document.createElement("div");
+
+			var oPause=document.createElement("input");
+			oPause.setAttribute("id","pause");
+			oPause.type="button";
+			oPause.value="pause";
+			document.body.appendChild(oDiv);
+			oDiv.appendChild(oDivIn);
+			oDiv.appendChild(oPause);		
+
+			var sec=0;
+			var min=0;
+			var hour=0;
+			var timer=setInterval(function(){
+				sec++;
+				if(sec==60){
+					sec=0;
+					min++;
+					if(min==60){
+						hour++;
+					}
+				}
+				hour=checkTime(hour);
+				min=checkTime(min);
+				sec=checkTime(sec);
+				min=min.slice(-2);		//貌似放checktime里有bug
+				hour=hour.slice(-2);
+				oDivIn.innerHTML=inContent+"&nbsp;"+hour+":"+min+":"+sec;
+			},1000);
+			
+			
+			var flag=true;
+			
+			oPause.onclick=function(){
+				if(flag){
+					flag=false;
+					clearInterval(timer);
+				}else{
+					flag=true;
+					timer=setInterval(function(){
+						sec++;
+						if(sec==60){
+							sec=0;
+							min++;
+							if(min==60){
+								hour++;
+							}
+						}
+						hour=checkTime(hour);
+						min=checkTime(min);
+						sec=checkTime(sec);
+						min=min.slice(-2);		//貌似放checktime里有bug
+						hour=hour.slice(-2);
+						oDivIn.innerHTML=inContent+"&nbsp;"+hour+":"+min+":"+sec;
+					},1000);
+					
+				}
+				
+			}
+			oTxt.value="";
+		}
+
+
+		function clearAll(){
+			var oDivs=document.getElementsByTagName("div");
+			for(var i=oDivs.length-1;i>=0;i--){
+				oDivs[0].parentNode.removeChild(oDivs[i]);
+			}
+		} 
+
+		// 修正加零
+		function checkTime(i){
+				if(i<10){
+					i="0"+i;
+				}
+				return i;
+			}
+	</script>
+</body>
+</html>

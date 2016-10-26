@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/ajax.js"></script>
+	</head>
+	<body>
+		<input type="text" name="t1" id="t1" value="13" />
+		<div id="div1">
+			<p>name</p>
+			<p>Number</p>
+			<p>sex</p>
+		</div>
+		<input type="button" name="b1" id="b1" value="哈哈哈" />
+		<script type="text/javascript">
+			var oDiv1=document.getElementById("div1");
+			var oB1=document.getElementById("b1");
+
+			oB1.addEventListener("click",function(){
+				oDiv1.innerHTML="";
+				ajax.getajaxJSON("JSON/data2.json",q1,q2)
+			},false)
+			
+			function q1(a){
+				for(var i=0;i<a.length;i++){
+								oDiv1.innerHTML+="<p>"+a[i].name+"</p><p>"+a[i].Number+"</p><p>"+a[i].sex+"</p>";
+							}
+			}
+			function q2(b){
+				
+			}
+			
+		</script>
+	</body>
+</html>

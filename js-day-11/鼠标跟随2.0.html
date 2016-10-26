@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		img{width: 100px;height: 100px;position: absolute;}
+	</style>
+	</head>
+	<body>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				<img src="img/1.gif"/>
+				
+		<script type="text/javascript">
+				
+		
+//			for(var i=0;i<10;i++){
+//				var oDiv=document.createElement("div");
+//			}
+			var oImglist=document.getElementsByTagName("img");
+			
+			document.onmousemove=function(e){
+					var time;
+					var a=0;
+					e=e||window.event;
+					var x=e.clientX;
+					var y=e.clientY;
+					time=setInterval(gs,70);
+					function gs(){
+							oImglist[a].style.left=x-50+"px";
+							oImglist[a].style.top=y-50+"px";
+							a++;
+							if(a>oImglist.length){
+								clearInterval(time)
+							}
+					}
+			}
+			
+						
+					
+				
+				
+			
+		</script>
+		
+	</body>
+</html>

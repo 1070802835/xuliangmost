@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+			#div1{width: 300px;height: 50px;border-radius: 50px;border: 1px solid black;overflow: hidden;margin: 0 auto;text-align: center;line-height: 50px;position: relative;}
+			#div2{width:0px;height: 50px;background:deepskyblue;}
+			#p1{width: 100px;height: 50px;margin: 0 auto;text-align: center;line-height: 50px;position:absolute;left: 100px;top:5px;}
+			#div3{width: 300px;height: 50px;margin: 0 auto;line-height: 50px;text-align: center;}
+			a{text-decoration: none;color: red;}
+			img{width: 335px;height: 220px;float: left;display: none;}
+			#div4{width: 700px;height: 230px;margin: 0 auto;}
+		</style>
+	</head>
+	<body>
+		<div id="div3">葫芦娃大战奥特曼（高清无码）<a id="a1" href="#">下载</a></div>
+		<div id="div1">
+			<div id="div2"></div>
+			<p id="p1"></p>
+		</div>
+		<div id="div4">
+			<img src="img/1.gif"/>
+			<img src="img/2.gif"/>
+			<img src="img/3.gif"/>
+			<img src="img/4.gif"/>
+		</div>
+		
+		<script type="text/javascript">
+		var time1;
+		var oDiv2=document.getElementById("div2");
+		var oDiv1=document.getElementById("div1");
+		var oP1=document.getElementById("p1");
+		var oA1=document.getElementById("a1");
+		var oDiv4=document.getElementById("div4");
+		var a=0;
+		var oImg=oDiv4.getElementsByTagName("img")
+		oP1.innerHTML="已下载"+0+"%";
+		oA1.onclick=function(){
+			oDiv4.style.display="block";
+			a=0;
+			console.log(oImg)
+			clearInterval(time1);
+			time1=setInterval(function(){
+				
+				oDiv2.style.width=a+"px";
+				a++
+				
+				if(a==50){
+					oImg[0].style.display="block";
+				}
+				if(a==150){
+					oImg[1].style.display="block";
+				}
+				if(a==200){
+					oImg[2].style.display="block";
+				}
+				var text=Math.floor(a/3);
+				oP1.innerHTML="已下载"+text+"%";
+				if(a==300){
+					clearInterval(time1);
+					oP1.innerHTML="下载完成！";
+					oImg[3].style.display="block";
+				}
+			},10)
+			
+		}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Robot</title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+			#div1{width: 800px;height:100px ;background: aqua;margin: 0 auto;border: 1px solid black;}
+			#div2{width: 800px;height:600px ;margin: 0 auto;margin-top: 50px;border: 1px solid black;box-shadow: 0 0 30px 1px #00FFFF;overflow-x: hidden;}
+			#t1{width: 700px;height: 100px;border-top: 1px solid black;left: 0;bottom: 0;border: 0;font-size: 20px;float: left;}
+			#t1:focus{outline: none;}
+			#b1{width: 100px;height: 100px;border-top: 1px solid black;right: 0;bottom: 0;right: 0;bottom: 0;float: right;}
+			#p1{width: 778px;text-align: right;font-size: 30px;margin-right: 20px;}
+			#p2{width: 800px;font-size: 30px;}
+		</style>
+	</head>
+	<body>
+		<div id="div2"></div>
+		<div id="div1">
+			<input type="text" name="t1" id="t1" value="" />
+
+			<input type="button" name="b1" id="b1" value="发送" />
+		</div>
+		<script type="text/javascript">
+			var xhr=new XMLHttpRequest();
+			var oT1=document.getElementById("t1");
+
+			var oB1=document.getElementById("b1");
+			var oDiv1=document.getElementById("div1");
+			var oDiv2=document.getElementById("div2");
+			oB1.onclick=function(){
+				var text1=oT1.value;
+				oT1.value="";
+			var url="http://apis.baidu.com/turing/turing/turing?key=879a6cb3afb84dbf4fc84a1df2ab7319&info="+text1+"&userid=eb2edb736";
+			xhr.open("GET",url,true);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						var kangkai=JSON.parse(xhr.responseText);
+						var kk=kangkai.text;
+						oDiv2.innerHTML+= "<p id=\"p1\">"+"我:"+text1+"</p>";
+						oDiv2.innerHTML+= "<p id=\"p2\">"+"康恺:"+kk+"</p>";
+					}
+				}
+			}
+			xhr.setRequestHeader("apikey","45d8173dfc35ce17924e1141a441258e");
+			xhr.send();
+			}
+		</script>
+	</body>
+</html>
+

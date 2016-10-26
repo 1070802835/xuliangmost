@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			div{
+				width: 400px;
+				height: 400px;
+				display: none;
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="显示" />
+		<div style="background: red;"></div>
+		<div style="background: yellow;"></div>
+		<div style="background: green;"></div>
+		
+		
+		<script type="text/javascript">
+			$("input[name='b1']").click(function(){
+				$("div:hidden:first").fadeIn("slow");	
+			})
+		
+		
+			
+		</script>
+	</body>
+</html>

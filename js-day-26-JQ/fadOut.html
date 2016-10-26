@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			input{
+				float: left;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="变化" />
+		<div style="background: red;"></div>
+		<div style="background: yellow;"></div>
+		<div style="background: gray;"></div>
+		<div style="background: lightseagreen;"></div>
+		
+		<script type="text/javascript">
+			$("input[id]").click(function(){
+				$("div:visible:first").fadeOut("slow")// 可见的div：first       变淡  display：none
+				
+			})
+		</script>
+	</body>
+</html>

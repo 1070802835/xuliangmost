@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style type="text/css">
+		#div1{width: 30px;height: 30px;background:red;position: absolute;}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		
+	</div>
+	<script type="text/javascript">
+		var oDiv=document.getElementById("div1");
+		var speed=5;
+		document.onkeydown=function(e){
+			switch(e.keyCode){
+				case 39:
+				Right();
+				break;
+				
+				case 37:
+				Left();
+				break;
+				
+				case 38:
+				Bottom();
+				break;
+				
+				case 40:
+				Top();
+				break;
+				
+			}
+			
+			
+		}
+			
+		
+		function creatDiv(){
+			var oDiv1=document.createElement("div");
+			oDiv1.style.width="30px";
+			oDiv1.style.height="30px";
+			oDiv1.style.left=oDiv.offsetLeft+"px";
+			oDiv1.style.top=oDiv.offsetTop+"px";
+			}
+			
+			
+			
+			
+		
+		
+		
+		
+		function Right(){
+			oDiv.style.left=oDiv.offsetLeft+speed+"px";
+		}
+		function Left(){
+			oDiv.style.left=oDiv.offsetLeft-speed+"px";
+		}
+		function Top(){
+			oDiv.style.top=oDiv.offsetTop+speed+"px";
+		}
+		function Bottom(){
+			oDiv.style.top=oDiv.offsetTop-speed+"px";
+		}
+		
+	</script>
+</body>
+</html>

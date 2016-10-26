@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>slidetoggle</title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			input{
+				position: absolute;
+				top: 0;
+				left: 650px;
+			}
+			img{
+				/*width: 800px;
+				height: 600px;*/
+				display: none;
+			}
+			p{
+				width: 800px;
+				height: 30px;
+				word-break: break-all;
+				word-wrap: break-word;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="来回" />
+		<!--<img src="img/bg1.jpg"/>-->
+		<p>所得到的多多多多多多多多多多多多多所得到的多多多多多多多多多多多多多所得到的多多多多多多多多多多多多多所得到的多多多多多多多多多多多多多所得到的多多多多多多多多多多多多多</p>
+		
+		
+		<script type="text/javascript">
+			$("#b1").click(function(){
+//				$("img").slideToggle("slow");
+				$("p").slideToggle("slow");
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/Most.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/Jet.css" />
+	</head>
+
+	<body>
+		<div id="bg1">
+			<img id="bg1-1" src="img/LOGO.png" />
+			<a id="bt1" href="javascript:"><img id="bg1-2" src="img/Begin.png" /></a>
+			<img id="mineair" src="img/mine.gif" />
+			<div id="ganmeOver">
+				<p>很遗憾！你挂了！！</p>
+				<a id="bt2" href="javascript:"><img src="img/continue.png" /></a>
+			</div>
+			<div id="div2">
+
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var oBg1 = document.getElementById("bg1"); // 大背景
+			var oImg1 = document.getElementById("bg1-1"); //刚开始的logo
+			var oImg2 = document.getElementById("bg1-2"); //开始游戏图标
+			var mineAir = document.getElementById("mineair"); //我方飞机 
+			mineAir.HP = 1; //我方飞机血量
+			var oB1 = document.getElementById("bt1"); //开始游戏按钮
+			var oB2 = document.getElementById("bt2"); //继续游戏按钮
+			var oDiv2 = document.getElementById("div2"); //分数
+			var oGameOver = document.getElementById("ganmeOver");
+			var bulletespeed = 30;
+			var enemySpeed = 3;
+			var time1;
+			var bgspeed = 0;
+			var arr = [];
+			var arrEnemy = [];
+			var enemyNum = 1;
+			var sum = 0;
+			//			var enemy;
+
+			oDiv2.innerHTML = "得分："
+
+			var bEgin = { //让开始的大loGo上升
+				"top": 0
+			}
+			yd.move(oImg1, bEgin, ks);
+
+			function ks() {
+				oImg2.style.display = "block";
+				var bEgin1 = {
+					"opacity": 100
+				}
+				yd.move(oImg2, bEgin1);
+			}
+
+			oB1.addEventListener("click", fight, false); // 点击开始游戏后的一系列事情
+
+			function fight() {
+				oImg1.style.display = "none";
+				oImg2.style.display = "none";
+				mineAir.style.display = "block";
+				mineAir.style.left = "200px";
+				var target = {
+					"top": 686
+				}
+				yd.move(mineAir, target, mineairmove);
+
+			}
+
+			function mineairmove() {
+				document.onmousemove = function(e) {
+					e = e || window.event;
+					e.preventDefault();
+					var x = e.clientX - oBg1.offsetLeft;
+					var y = e.clientY;
+					mineAir.style.left = x - 59 + "px";
+					mineAir.style.top = y - 41 + "px";
+					mineAir.style.cursor = "none";
+					if(mineAir.offsetLeft < -0) {
+						mineAir.style.left = 0 + "px";
+					}
+					if(mineAir.offsetLeft > 394) {
+						mineAir.style.left = 394 + "px";
+					}
+					if(mineAir.offsetTop > 686) {
+						mineAir.style.top = 686 + "px"
+					}
+				}
+				clearInterval(time1);
+				startMove();
+				oDiv2.innerHTML = "得分："
+			}
+
+			function creatbullete() {
+				var mineBullete = document.createElement("img");
+				var x1 = mineAir.offsetLeft;
+				var y1 = mineAir.offsetTop;
+				mineBullete.src = "img/" + enemyNum + ".png";
+				mineBullete.style.position = "absolute";
+				mineBullete.style.width = 50 + "px";
+				mineBullete.style.height = 80 + "px";
+				mineBullete.style.left = x1 + 34 + "px";
+				mineBullete.style.top = y1 - 40 + "px";
+				mineBullete.style.zIndex = 200;
+				oBg1.appendChild(mineBullete);
+				arr.push(mineBullete);
+				enemyNum++;
+				if(enemyNum == 3) {
+					enemyNum = 1;
+				}
+			}
+
+			function bulleteMove() {
+				for(var i = 0; i < arr.length; i++) {
+					arr[i].style.top = arr[i].offsetTop - bulletespeed + "px";
+				}
+			}
+
+			function removebullete() {
+				for(var j = 0; j < arr.length; j++) {
+					if(arr[j].offsetTop <= 0) {
+						oBg1.removeChild(arr[j]);
+						arr.splice(j, 1);
+						j--;
+					}
+				}
+			}
+
+			function creatEnemyLittle() {
+				var enemy = document.createElement("img");
+				var enemyRandom = Math.floor(Math.random() * 400);
+				enemy.src = "img/enemy" + enemyNum + ".gif";
+				enemy.style.position = "absolute";
+				enemy.style.width = 100 + "px";
+				enemy.style.height = 80 + "px";
+				enemy.style.left = enemyRandom + 24 + "px";
+				enemy.style.top = 0 + "px";
+				enemy.style.zIndex = 200;
+				enemy.HP = 26;
+				oBg1.appendChild(enemy);
+				arrEnemy.push(enemy);
+				enemyNum++;
+				if(enemyNum == 3) {
+					enemyNum = 1;
+				}
+			}
+
+			function creatEnemyBig() {
+				var enemyBig = document.createElement("img");
+				var enemyRandom = Math.floor(Math.random() * 350);
+				enemyBig.src = "img/enemy-big.png";
+				enemyBig.style.position = "absolute";
+				enemyBig.style.width = 150 + "px";
+				enemyBig.style.height = 100 + "px";
+				enemyBig.style.left = enemyRandom + "px";
+				enemyBig.style.top = 0 + "px";
+				enemyBig.style.zIndex = 200;
+				enemyBig.HP = 34;
+				oBg1.appendChild(enemyBig);
+				arrEnemy.push(enemyBig);
+			}
+
+			function enemyMove() {
+				for(var i = 0; i < arrEnemy.length; i++) {
+					arrEnemy[i].style.top = arrEnemy[i].offsetTop + enemySpeed + "px";
+				}
+			}
+
+			function removeEnemy() {
+				for(var j = 0; j < arrEnemy.length; j++) {
+					if(arrEnemy[j].offsetTop >= 700) {
+						oBg1.removeChild(arrEnemy[j]);
+						arrEnemy.splice(j, 1);
+						j--;
+					}
+				}
+			}
+			
+
+			function bomb() {
+				 for(var k = 0; k < arr.length; k++){
+					for(var i = 0; i < arrEnemy.length; i++) {
+						if(arr[k].offsetLeft < arrEnemy[i].offsetLeft + arrEnemy[i].offsetWidth){
+							 if(arr[k].offsetLeft+arr[k].offsetWidth> arrEnemy[i].offsetLeft){
+								if(arr[k].offsetTop - arrEnemy[i].offsetTop < arrEnemy[i].offsetHeight){
+									if(arrEnemy[i].offsetTop - arr[k].offsetTop < arr[k].offsetHeight){
+										
+										oBg1.removeChild(arr[k]);
+										arr.splice(k, 1);
+										k--;
+										arrEnemy[i].HP -= 1;
+//										if(arrEnemy[i].HP <= 0) {
+//											oBg1.removeChild(arrEnemy[i]);
+//											arrEnemy.splice(i, 1);
+//											i--;
+//											
+//											sum += 100;
+//											oDiv2.innerHTML = "得分：" + sum;
+//										}
+										if(arrEnemy[i].HP <= 0) {
+											
+											
+											
+											
+										}
+										
+
+						
+										break;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			function gameOver() {
+					for(var i = 0; i < arrEnemy.length; i++) {
+						if(mineAir.offsetLeft < arrEnemy[i].offsetLeft + arrEnemy[i].offsetWidth){
+							 if(mineAir.offsetLeft+mineAir.offsetWidth> arrEnemy[i].offsetLeft) {
+								if(mineAir.offsetTop - arrEnemy[i].offsetTop < arrEnemy[i].offsetHeight) {
+									if(arrEnemy[i].offsetTop - mineAir.offsetTop < mineAir.offsetHeight) {	
+									mineAir.HP -= 1;
+									if(mineAir.HP <= 0) {
+										clearInterval(time1);
+										mineAir.style.display = "none";
+										oGameOver.style.display = "block";
+										document.onmousemove = null
+										for(var i = 0; i < arrEnemy.length; i++) {
+											oBg1.removeChild(arrEnemy[i]);
+										}
+										for(var i = 0; i < arr.length; i++) {
+											oBg1.removeChild(arr[i]);
+										}
+										mineAir.style.top = "0px";
+										mineAir.style.left = "200px";
+										arrEnemy = [];
+										arr = [];
+										oB2.onclick = function() {
+											mineAir.style.display = "block";
+											oGameOver.style.display = "none";
+											oDiv2.innerHTML = "得分：";
+											fight();
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			window.onkeydown = function(e) {
+				if(e.keyCode == 32) {
+					mineAir.HP = 1000;
+				}
+				if(e.keyCode == 81) {
+					mineAir.HP = 1
+					gameOver();
+				}
+			}
+
+			function startMove() {
+				clearInterval(time1);
+				time1 = setInterval(function() {
+					bgspeed++;
+					bg1.style.backgroundPositionY = bgspeed + "px";
+					creatbullete();
+					bulleteMove();
+					removebullete();
+				
+					if(bgspeed % 10 == 0) {
+						creatEnemyLittle();
+					}
+					if(bgspeed % 30 == 0) {
+						creatEnemyBig();
+					}
+					
+					enemyMove();
+					removeEnemy();
+					bomb();
+					gameOver()
+				}, 30)
+			}
+		</script>
+	</body>
+
+</html>

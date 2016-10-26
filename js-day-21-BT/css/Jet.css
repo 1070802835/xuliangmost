@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	border: 0;
+}
+
+#bg1 {
+	width: 512px;
+	height: 768px;
+	background-image: url(../img/img_bg_level_4.jpg);
+	repeat-y;
+	margin: 0 auto;
+	position: relative;
+	z-index: 10;
+}
+
+#bg1-1 {
+	position: absolute;
+	top: 700px;
+	width: 512px
+}
+
+#bg1-2 {
+	position: absolute;
+	top: 500px;
+	width: 300px;
+	height: 100px;
+	display: none;
+	opacity: 0;
+	margin-left: 110px;
+}
+
+#mineair {
+	position: absolute;
+	top: 0;
+	width: 118px;
+	height: 82px;
+	display: none;
+	z-index: 30;
+}
+
+#div2 {
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	position: absolute;
+	left: 264px;
+	top: 26px;
+	z-index: 40;
+	color: darkred;
+}
+
+#ganmeOver {
+	width: 512px;
+	height: 768px;
+	background: black;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	display: none;
+}
+
+#ganmeOver p {
+	display: block;
+	width: 512px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	color: red;
+	font-weight: bolder;
+	font-size: 34px;
+	margin-top: 200px;
+}
+
+#ganmeOver a img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 300px;
+}

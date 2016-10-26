@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fna(){
+				alert(1);
+			}
+			fna();
+			var fna=function(){
+				 
+				alert(3);
+			}
+			function fna(){
+				 
+				alert(2);
+			}
+			fna();
+			
+			var arr = [12,23,11212,3,134,3343]
+//			12      12       12      12      12     3
+//			23      23       23      23      3      12
+//			11212   3        3       3       23     23 
+//			3       134      134     134     134    134
+//			134     3343     3343    3343    3343   343
+//			3343    11212    11212   11212   11212  11212
+//			for(var i=0;i<arr.length;i++){				//按照从小到大排序
+//				for(var j=0;j<arr.length-i;j++){
+//					if(arr[j]>=arr[j+1]){
+//						var temp = arr[j];
+//						arr[j] = arr[j+1];
+//						arr[j+1] = temp;
+//					}
+//				}
+//			}
+//			document.write(arr);	
+//			
+			
+			arr.sort(function(a,b){
+				return a-b;
+			})
+			
+			document.write(arr);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组综合练习</title>
+</head>
+<body>
+	push:<input type="text" id="txt1">
+	<input type="button" id="btn1" value="push">
+	<input type="button" id="btn2" value="sort">
+	oldData:<input type="text" id="txt2">
+	newData:<input type="text" id="txt3">
+	<input type="button" id="btn3" value="transform">
+	<div id="container"></div>
+	<script>
+		var oTxt1=document.getElementById("txt1");
+		var oBtn_push=document.getElementById("btn1");
+		var oBtn_sort=document.getElementById("btn2");
+		var oDiv=document.getElementById("container");
+		var arr=[];
+		oBtn_push.onclick=function(){
+			arr.push(oTxt1.value);
+			oDiv.innerHTML=arr.toString();
+			oTxt1.value="";
+		}
+		oBtn_sort.onclick=function(){
+			arr.sort(function(a,b){
+				if(a<b){
+					return -1;
+				}else{
+					return 1;
+				}
+			})
+			oDiv.innerHTML=arr.toString();
+		}
+		
+		
+		
+		var oTxt2=document.getElementById("txt2");
+		var oTxt3=document.getElementById("txt3");
+		var oBtn_transform=document.getElementById("btn3");
+		
+		
+		
+		
+//		oBtn_transform.onclick=function(){
+//			var oldData=oTxt2.value;
+//			var newData=oTxt3.value;
+//			var index=0;
+//			while(true){ 
+//				if(arr[index]==oldData){
+//					index=arr.indexOf(oldData,index);    //;不能少
+//					arr[index]=newData; 
+//				}else{
+//					break;
+//				}
+//				
+//			}
+//			oDiv.innerHTML=arr.toString();
+//		}
+//		
+		
+		
+		
+		
+		oBtn_transform.onclick=function(){
+			var oldData=oTxt2.value;
+			var newData=oTxt3.value;
+			for(var index=0;index<arr.length;){ 
+//				index=arr.indexOf(oldData,index);
+				if(arr[index]==oldData){
+					
+					arr[index]=newData; 
+				}else{
+					break;
+				}
+			}
+			oDiv.innerHTML=arr.toString();
+		}
+	</script>
+	
+</body>
+</html>

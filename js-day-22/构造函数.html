@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//var person1= new creatPerson("person1","hehe","11");
+			//new 的作用    定义一个新的对象  就省去了   第一步跟return
+			var person1=new Person("hehe","11");
+			var person2=new Person("dqwdqw","123");
+			
+			
+			
+			function Person(name,age){
+//				var obj=new Object();			//省去了创建
+				this.name=name;
+				this.age=age;
+				this.showname=function(){
+					
+					alert(this.name);
+				}
+				
+//				return obj						//省去了返回值
+			}
+			
+			alert(person2.name);
+			alert(person2.age)
+		</script>
+		
+	</body>
+</html>

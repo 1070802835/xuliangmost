@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cookieUtil</title>
+    <script src="js/cookieUtil.js"></script>
+
+</head>
+<body>
+<input type="button" id="bt" value="delete"/>
+<script>
+    setCookie("testCookieUtil","cookieValueTest高",30);
+    var cookieValue=getCookie("testCookieUtil");
+    document.write(cookieValue);
+    var oBt=document.getElementById("bt");
+    oBt.onclick=function(){
+        removeCookie("testCookieUtil");
+    }
+</script>
+</body>
+</html>

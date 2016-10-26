@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<input type="button" name="b1" id="b1" value="生成数列" />
+			<input type="button" name="b2" id="b2" value="去重" />
+			<div id="div1"></div>
+			
+			<script type="text/javascript">
+				var arr=[];
+				var oB1=document.getElementById("b1");
+				var oB2=document.getElementById("b2");
+				var oDiv1=document.getElementById("div1");
+				oB1.onclick=function(){
+					for(var i=0;i<10;i++){
+					arr[i]=parseInt(Math.random()*10);
+					}
+					oDiv1.innerHTML=arr;
+				}
+				
+				
+				oB2.onclick=function(){
+					for(var i=0;i<arr.length;i++){
+						
+						for(var k=i+1;k<arr.length;k++){
+							if(arr[i]==arr[k]){					//妈的   为什么为我会写indexOf
+								arr.splice(k,1);
+							}	
+						}
+					}
+					oDiv1.innerHTML=arr;
+				}
+				
+			</script>	
+	</body>
+</html>

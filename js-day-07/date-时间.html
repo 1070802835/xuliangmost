@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>date</title>
+	</head>
+	<body>
+		
+		<div id="div1"></div>
+		<script>
+//			var date=new Date();
+//			var year=date.getFullYear();
+//			var moth=date.getMonth();
+//			var day=date.getDay();
+//			
+//		 
+//			dw(day);
+//
+//			document.write("<hr/>")
+//			
+//			
+//			
+//			var date1=new Date();
+//			date1.setDate(date1.getDate()+7);             //eg:提示用户7天内保存密码，时间自动根据月份改变
+//			dw(date1);
+//
+//			function dw(n){
+//				document.write(n+"<br />");
+//			}
+//			
+//			
+//			
+//			var arr=[];
+//			arr[0]="今天周日";
+//			arr[1]="今天周一";
+//			arr[2]="今天周二";
+//			arr[3]="今天周三";
+//			arr[4]="今天周四";
+//			arr[5]="今天周五";
+//			arr[6]="今天周六";
+//			var i=date.getDay();
+//			dw(arr[i]);
+			
+			
+			
+			
+		
+			
+			setInterval(function(){
+				var dat3=new Date();	
+				var dat31=dat3.getFullYear();
+				var dat32=dat3.getMonth();
+				var dat33=dat3.getDate();
+				var dat34=dat3.getHours()
+				var dat36=dat3.getMinutes()
+				var dat35=dat3.getSeconds()
+				var div1=document.getElementById("div1");
+				
+				if(parseInt(dat35)<10){
+					div1.innerHTML=dat31+"年-"+dat32+"月-"+dat33+"日&ensp;&ensp;"+dat34+":"+dat36+":0"+dat35;
+				}
+				else if(parseInt(dat36)<10){
+					div1.innerHTML=dat31+"年-"+dat32+"月-"+dat33+"日&ensp;&ensp;"+dat34+":0"+dat36+":"+dat35;
+				}else if(parseInt(dat34)<10){
+					div1.innerHTML=dat31+"年-"+dat32+"月-"+dat33+"日&ensp;&ensp;0"+dat34+":"+dat36+":"+dat35;
+				}
+				
+				
+				else{
+					div1.innerHTML=dat31+"年-"+dat32+"月-"+dat33+"日&ensp;&ensp;"+dat34+":"+dat36+":"+dat35;
+				}
+				 
+				
+			},1)
+			
+			
+			
+			
+
+
+
+
+		</script>
+		
+		
+		
+	</body>
+</html>

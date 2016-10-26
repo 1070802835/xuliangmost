@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>消失-显示</title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			img{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="滑动" />
+		<img src="img/bg1.jpg"/>
+		<script type="text/javascript">
+			var flag=true; 
+			$("input[name='b1']").click(function(){
+				if(flag){
+					$("img").slideDown("slow");
+					flag=false;
+				}else{
+					$("img").slideUp("slow");
+					flag=true;
+				}
+			})
+//			$("input[name='b1']").one("click",function(){		//one   能点击一次
+//				if(flag){
+//					$("img").slideDown("slow");
+//					flag=false;
+//				}else{
+//					$("img").slideUp("slow");
+//					flag=true;
+//				}
+//			})
+			
+		</script>
+	</body>
+</html>

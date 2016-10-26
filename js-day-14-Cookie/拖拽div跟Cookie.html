@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{width: 100px;height: 100px;border-radius: 100px;background: black;position: absolute;box-shadow: 0px 0px 15px 10px  aqua;}
+		</style>
+		<script src="js/Cookie.js"></script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<script type="text/javascript">
+			var oDiv=document.getElementById("div1");
+			divPosition();
+			var date=new Date();
+			date.setDate(date.getDate()+14);
+			oDiv.onmousedown=function(e){
+				e=e||window.event;
+				e.preventDefault();
+				var disx=e.offsetX;
+				var disy=e.offsetY;
+				document.onmousemove=function(e){
+					e=e||window.event;
+					e.preventDefault();
+					var x=e.clientX;
+					var y=e.clientY;
+					oDiv.style.left=x-disx+"px";
+					oDiv.style.top=y-disy+"px";
+				}
+				document.onmouseup=function(e){
+					document.onmousemove=null;
+					var left=oDiv.offsetLeft;
+					var top=oDiv.offsetTop;
+					document.cookie="divposition="+left+"&"+top+";expires="+date;
+				}
+			}
+			function divPosition(){
+				var odivposition=shopping.getCookie("divposition");
+				var oDivposition=odivposition.split("&");
+				oDiv.style.left=oDivposition[0]+"px";
+				oDiv.style.top=oDivposition[1]+"px";
+			
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#b1{position: fixed;bottom: 100px;right: 50px;background:deepskyblue;line-height: 50px;text-align: center;width:50px;height: 50px;display: none;}
+			#div2{height: 4000px;width:20px;background: red;}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="" id="b1" value="top" />
+		<div id="div2"></div>
+		<script type="text/javascript">
+			var oB1=document.getElementById("b1");
+			var time1;
+			var flag=false;
+			
+			
+			oB1.onclick=function(){
+						
+						clearInterval(time1)
+						
+						time1=setInterval(function(){
+						flag=true;
+						var a=document.documentElement.scrollTop||document.body.scrollTop;
+						document.documentElement.scrollTop-=30;//scrollTop的值一直在变 ，  所以要不停的赋值
+						document.body.scrollTop-=30;
+						if(a<=0){clearInterval(time1)}
+						
+						},40);
+					
+			}
+			
+			window.onscroll=function(){
+				var a=document.documentElement.scrollTop||document.body.scrollTop;
+				if(a>500){
+				oB1.style.display="block";
+				}else{
+					oB1.style.display="none";
+				}
+				if(flag){
+					flag=false;
+				}else{
+					clearInterval(time1)
+				}
+			}
+		</script>
+	</body>
+</html>

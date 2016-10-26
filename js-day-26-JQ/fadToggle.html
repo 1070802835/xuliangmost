@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>消失-出现</title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			div{
+				width: 150px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="来回消失" />
+		<div>我是第一个div</div>
+		<div>我是第二个div</div>
+		<div>我是第三个div</div>
+		<div>我是第四个div</div>
+		<div>我是第五个div</div>
+		<script type="text/javascript">
+			$("input[name='b1']").click(function(){
+				$("div").fadeToggle("slow","linear")	
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+
+	<body>
+		<a href="#" hreflang="En">a1</a>
+		<a href="#" hreflang="en-1">a2</a>
+		<a href="#" hreflang="en2En">a3</a><br />
+		<input type="button" name="b10" id="b1" value="1" />
+		<input type="button" name="b1-2" id="b2" value="2" />
+		<input type="button" name="b1 34" id="b3" value="3" />
+		<input type="button" name="b1565" id="b4" value="4" />
+		<input type="button" id="b5" value="5" />
+		<input type="button" id="b6" value="6" />
+		<script type="text/javascript">
+//						$("a[hreflang='en']").html("12321");
+//						$("a[hreflang|='en']").html("12321");
+			// |选择指定属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-” ）的元素。
+			//			$("a[hreflang*='en']").html("12321");
+			//选择所有属性里面有en的
+			//			$("input[name='b1']").val("b1");
+			//			$("input[name|='b1']").val("b2");
+			//			$("input[name*='b1']").val("b3");
+
+			//			if($("input[name*='b1']")){
+			//				$("input[name*='b1']").val("b3");	
+			//			}
+
+			//			$("input[name~=b1]").css("color","red")	
+			//选择name里面有  b1 这个  单词   的
+			//			$("a[hreflang$='En']").html("en");
+			//以En为结尾的      	 ^同理  开头
+
+//			$("input[name]").css("color", "white")
+//				.css("border", "1px solid #444")
+//				.css("background","brown")
+				//有name属性的
+			
+//			$("input[value='1']").css("color","red")
+			//选择value是“1”的
+				
+//			$("#b1").one('click',function(){
+//				alert(1)
+//			})
+//			$("#b1").css("background","red");
+//			$('input[id]').one('click', function(){
+//				  var idString = $(this).val() + ' = ' + $(this).attr('id');
+//				  $(this).val(idString);
+//				});
+			$('input[id]').mousedown(function(){			//跟监听写法一样   省略on
+				alert(1)
+			})
+				
+				//点击    在one里面
+		</script>
+	</body>
+
+</html>

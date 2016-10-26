@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			//缺点   存了相同的东西   占用内存
+			var person1=creatPerson("hehe","11","1632");
+			var person2=creatPerson("HEHEH","11","1632");
+			function creatPerson(name,age,className){
+				var obj=new Object();
+				obj.name=name;
+				obj.age=age;
+				obj.className=className;
+				obj.showname=function(){
+					
+					alert(this.name);
+				}
+				
+				return obj
+			}
+			
+			alert(person1.name);
+			alert(person1.age);
+			alert(person1.className);
+		</script>
+		
+	</body>
+</html>

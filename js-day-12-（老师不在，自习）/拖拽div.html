@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{width: 70px;height: 70px;border-radius:70px;position: absolute;text-align: center;line-height: 70px;}
+			/*div{box-shadow:5px 5px 155px 80px yellow;}*/
+		</style>
+	</head>
+	<body>
+		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+		<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+		
+	
+	
+		<script type="text/javascript">
+
+			
+			
+			
+			var oDivlist=document.getElementsByTagName("div");
+			var	arr=["red","blue","green","yellow","deepskyblue","deeppink","pink","coral","turquoise","fuchsia"]
+			
+			for(var k=0;k<oDivlist.length;k++){
+				oDivlist[k].style.zIndex=1;
+				var a=k%10;
+				oDivlist[k].style.background=arr[a];
+				oDivlist[k].style.left=k*12+"px";
+				var c=Math.floor(Math.random()*100);
+				oDivlist[k].innerHTML=c;
+			}
+			oDivlist[oDivlist.length-1].innerHTML="";
+			var index=1;
+			for(var i=0;i<oDivlist.length;i++){
+				
+				
+				
+				
+				oDivlist[i].onmousedown=function(e){
+					index++;
+					e.preventDefault();
+					e=e||window.event;
+					var that=this;
+					this.style.zIndex=index;
+					var disx=e.clientX-this.offsetLeft;//oDiv1.offsetleft是指div1到他的父级元素left跟top的值
+					var disy=e.clientY-this.offsetTop;//这里的父级元素就是body
+					//这里的disx其实就是e.offsetX,Y同理
+					document.onmousemove=function(e){
+						e=e||window.event;
+						e.preventDefault();
+						var x=e.clientX;
+						var y=e.clientY;
+						var x1=x-disx;
+						var bW=document.body.clientWidth||document.documentElement.clientWidth;
+						var bH=document.body.clientHeight||document.documentElement.clientHeight;
+						var y1=y-disy;
+						if(x1<0){
+							x1=0;
+						}
+						if(y1<0){
+							y1=0;
+						}
+						if(x1>bW-that.offsetWidth){	//这里用That.style.width不行，只能用offsetWidth;
+							x1=bW-that.offsetWidth;
+							
+						}
+						if(y1>bH-that.offsetHeight){
+							y1=bH-that.offsetHeight;
+							
+						}
+						
+						that.style.left=x1+"px";
+						that.style.top=y1+"px"
+					}
+					document.onmouseup=function(e){
+						e=e||window.event;
+						document.onmousemove=null;
+						var dIsl=this.offsetLeft;
+						var dIst=this.offsetTop;
+					}
+				}
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+//			oDiv2.onmousedown=function(e){
+//				e.preventDefault();
+//				e=e||window.event;
+//				var disx=e.clientX-oDiv2.offsetLeft;//oDiv1.offsetleft是指div1到他的父级元素left跟top的值
+//				var disy=e.clientY-oDiv2.offsetTop;
+//				document.onmousemove=function(e){
+//					e=e||window.event;
+//					e.preventDefault();
+//					var x=e.clientX;
+//					var y=e.clientY;
+//					oDiv2.style.left=x-disx+"px";
+//					oDiv2.style.top=y-disy+"px"
+//				}
+//				
+//				document.onmouseup=function(e){
+//					e=e||window.event;
+//					document.onmousemove=null;
+//					var dIsl=oDiv1.offsetLeft;
+//					var dIst=oDiv1.offsetTop;
+//				}
+//			}
+//			
+//			oDiv3.onmousedown=function(e){
+//				e.preventDefault();
+//				e=e||window.event;
+//				var disx=e.clientX-oDiv3.offsetLeft;//oDiv1.offsetleft是指div1到他的父级元素left跟top的值
+//				var disy=e.clientY-oDiv3.offsetTop;
+//				document.onmousemove=function(e){
+//					e=e||window.event;
+//					e.preventDefault();
+//					var x=e.clientX;
+//					var y=e.clientY;
+//					oDiv3.style.left=x-disx+"px";
+//					oDiv3.style.top=y-disy+"px"
+//				}
+//				
+//				document.onmouseup=function(e){
+//					e=e||window.event;
+//					document.onmousemove=null;
+//					var dIsl=oDiv1.offsetLeft;
+//					var dIst=oDiv1.offsetTop;
+//				}
+//			}
+//			
+//			oDiv4.onmousedown=function(e){
+//				e.preventDefault();
+//				e=e||window.event;
+//				var disx=e.clientX-oDiv4.offsetLeft;//oDiv1.offsetleft是指div1到他的父级元素left跟top的值
+//				var disy=e.clientY-oDiv4.offsetTop;
+//				document.onmousemove=function(e){
+//					e=e||window.event;
+//					e.preventDefault();
+//					var x=e.clientX;
+//					var y=e.clientY;
+//					oDiv4.style.left=x-disx+"px";
+//					oDiv4.style.top=y-disy+"px"
+//				}
+//				
+//				document.onmouseup=function(e){
+//					e=e||window.event;
+//					document.onmousemove=null;
+//					var dIsl=oDiv1.offsetLeft;
+//					var dIst=oDiv1.offsetTop;
+//				}
+//			}
+//			
+//			oDiv5.onmousedown=function(e){
+//				e.preventDefault();
+//				e=e||window.event;
+//				var disx=e.clientX-oDiv5.offsetLeft;//oDiv1.offsetleft是指div1到他的父级元素left跟top的值
+//				var disy=e.clientY-oDiv5.offsetTop;
+//				document.onmousemove=function(e){
+//					e=e||window.event;
+//					e.preventDefault();
+//					var x=e.clientX;
+//					var y=e.clientY;
+//					oDiv5.style.left=x-disx+"px";
+//					oDiv5.style.top=y-disy+"px"
+//				}
+//				
+//				document.onmouseup=function(e){
+//					e=e||window.event;
+//					document.onmousemove=null;
+//					var dIsl=oDiv1.offsetLeft;
+//					var dIst=oDiv1.offsetTop;
+//				}
+//			}
+//			
+//			oDiv6.onmousedown=function(e){
+//				e.preventDefault();
+//				e=e||window.event;
+//				var disx=e.clientX-oDiv6.offsetLeft;//oDiv1.offsetleft是指div1到他的父级元素left跟top的值
+//				var disy=e.clientY-oDiv6.offsetTop;
+//				document.onmousemove=function(e){
+//					e=e||window.event;
+//					e.preventDefault();
+//					var x=e.clientX;
+//					var y=e.clientY;
+//					oDiv6.style.left=x-disx+"px";
+//					oDiv6.style.top=y-disy+"px"
+//				}
+//				
+//				document.onmouseup=function(e){
+//					e=e||window.event;
+//					document.onmousemove=null;
+//					var dIsl=oDiv1.offsetLeft;
+//					var dIst=oDiv1.offsetTop;
+//				}
+//			}
+		</script>
+	</body>
+</html>

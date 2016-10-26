@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{width: 500px;height: 500px;background: darkturquoise;}
+			#div2{width: 200px;height: 200px;background: navajowhite;}
+			#div3{width: 100px;height: 100px;background: red;}
+		</style>
+		<script src="js/fengzhuang.js"></script>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3"></div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var oDiv1=document.getElementById("div1");
+			var oDiv2=document.getElementById("div2");
+			var oDiv3=document.getElementById("div3");
+			
+			
+			
+			oDiv1.addEventListener("click",fn1,false);
+			function fn1(){
+				alert(this.id);
+			}
+			oDiv2.addEventListener("click",fn2,false);
+			function fn2(e){
+				if(e.stopPropagation){
+					e.stopPropagation();
+				}else{
+					e.cancelBubble=true;
+				}
+				alert(this.id);
+				
+//				oDiv2.removeEventListener("click",fn2,false)
+			}
+			
+//			oDiv3.addEventListener("click",fn3,false);
+//			function fn3(){
+//				alert(this.id);
+			oDiv3.addEventListener("click",fn3,false);
+				function fn3(){
+					
+					alert(this.id);
+					
+				}
+//			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window</title>
+</head>
+<body>
+document 属于window下的一个属性；
+window  是最大的对象；   window 可以省略；
+window.document=> document.
+<script>
+
+
+    dh();
+    //宽度 高度
+    var width=document.documentElement.clientWidth||document.body.clientWidth;
+    var height=document.documentElement.clientHeight||document.body.clientHeight;
+    dw(width);
+    dw(height);
+
+    dh();
+    dw(window.screen.availWidth);
+    dw(window.screen.availHeight);
+
+    dh();
+    var location1=window.location;
+    dw(location1.href);
+
+    //window.history.back();
+    //window.history.forward();
+
+    function dw(a){
+        document.write(a);
+        document.write("<br/>");
+    }
+    function dh(){
+        document.write("<hr/>");
+    }
+</script>
+</body>
+</html>
