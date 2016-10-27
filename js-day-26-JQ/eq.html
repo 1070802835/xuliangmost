@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+
+	<body>
+		<a href="#" hreflang="hhh">
+			<a id="a1" href="#">2</a><br />
+			<a href="#">3</a><br />
+			<a href="#">4</a><br />
+			<a href="#">5</a><br />
+		</a>
+		<br />
+		
+		<a href="#">6</a><br />
+		<a href="#">7</a><br />
+
+		<script type="text/javascript">
+//			$("a:eq(1)").text("我是下标1");
+//			$("a").eq(3).text("我是下标3");
+//			$("#a4").eq(2).css("color","red");
+			$("a[hreflang='hhh']").css("color","red");//  颜色给补上？
+			
+		</script>
+
+	</body>
+
+</html>

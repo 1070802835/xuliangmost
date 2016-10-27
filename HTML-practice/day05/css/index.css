@@ -1,7 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-div,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,p{ margin:0; padding:0;}
-
-#top{width:1100px;height:65px; margin:0 auto;}
-#top #logo{ width:216px; height:65px;background:red url(../images/1.jpg) no-repeat;}
-#top #logo img{ background-position:15px 0 10px 49px;}

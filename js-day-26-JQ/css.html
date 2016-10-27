@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			div {
+				width: 300px;
+				height: 300px;
+				background: red;
+				margin: 140px;
+				position: absolute;	
+				/*left: 400px;
+				top: 400px;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<div></div>
+		<div></div>
+
+		<script type="text/javascript">
+			//			console.log($("div").eq(0).css(["margin","padding"]))
+			$("div").css({  //css设置多个    要用对象的方法
+				
+				"width": "100px",
+				"height":"100px",
+				"background":"yellow"
+			});
+			
+			alert($("div").css("background-color"));
+			
+		</script>
+	</body>
+
+</html>

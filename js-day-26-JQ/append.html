@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			div{
+				/*width:300px;
+				height: 100px;
+				background: red;*/
+				
+			}
+			.big{
+				width: 300px;
+				height: 100px;
+			}
+			.Cl{
+				background: yellow;
+			}
+			
+			input{
+				width: 200px;
+				height: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div></div>
+		<script type="text/javascript">
+			$("div").append("<input />");
+			$("input").mouseover(function(){
+				$(this).toggleClass("Cl")
+			})
+			
+			$("<input type='button' />").appendTo("div");
+			$("input").mouseover(function(){
+				$(this).toggleClass("Cl big")
+			})
+			
+			
+			
+		</script>
+	</body>
+</html>

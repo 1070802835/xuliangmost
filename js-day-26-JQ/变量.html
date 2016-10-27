@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a,b;
+			(function(){
+				alert("第一个a="+a);
+				alert("第一个b="+b);
+				var a=b=c=3;    //同等于   var a=3;  b=3;    c=3;     b，c变为全局变量
+				alert("第二个a="+a);
+				alert("第二个b="+b);
+				alert("第二个c="+c)
+			})();
+			alert("第三个a="+a);
+			alert("第三个b="+b);
+			alert("第三个c="+c)
+			
+		</script>
+	</body>
+</html>
