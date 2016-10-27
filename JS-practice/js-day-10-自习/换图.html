@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			div{width: 730px;height: 454px;margin: 0 auto;position: relative;overflow: hidden;}
+			#img1{position: absolute;top: 0px; left: 0px;}
+			#img2{position: absolute;top: 0px; left: 730px;}
+			input{width:200px;height: 100px;line-height: 100px;text-align: center;background: red;border: 0;}
+			#b1{margin-left: 500px;}
+			input:focus{outline: none}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="img1" src="img/1.jpg"/>
+			<img id="img2" src="img/2.jpg"/>
+			
+		</div>
+		<input type="button" name="b1" id="b1" value="上一张" />
+		<input type="button" name="b2" id="b2" value="下一张" />
+		
+		
+		
+		<script type="text/javascript">
+			var oB1=document.getElementById("b1");
+			var oB2=document.getElementById("b2");
+			var time1,time2;
+			var iMg1=document.getElementById("img1")
+			var iMg2=document.getElementById("img2")
+			var a=0;			
+			
+			
+			oB2.onclick=function(){
+				clearInterval(time1);
+				a=0;
+				time1=setInterval(function(){
+					a--;
+					if(a>-730){
+						iMg1.style.left=a+"px";
+						iMg2.style.left=a+730+"px";
+					}
+					
+					
+				},0.1)	
+			}
+			
+			
+			oB1.onclick=function(){
+				clearInterval(time2);
+				var b=0;
+				iMg1.style.left=-730+"px";
+				iMg2.style.left=b+"px";
+				time2=setInterval(function(){
+					b++;
+					if(b-730<0){
+						iMg1.style.left=-730+b+"px";
+						iMg2.style.left=b+"px";
+					}
+				},0.1)	
+			}
+	
+		</script>
+	</body>
+</html>

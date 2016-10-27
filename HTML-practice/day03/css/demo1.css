@@ -1,0 +1,11 @@
+/* CSS Document */
+
+
+/*li{ width:300px; height:300px; margin:0 auto; list-style-image:url(../images/bg.jpg); list-style-position:inside;}
+
+body{background-image:url(../images/1.jpg); width:1000px; height:1000px; background-repeat:repeat-x; background-repeat:repeat-y}
+body{width:1000px; height:1000px; border:1 red sloid;}*/
+#box{width:1000px; height:200px; border:1px black solid;}
+#box1,#box2,#box3{width:200px; height:200px; background-color:red; float:right;}
+#box2{background:#03F; float:right;}
+#box3{ background:pink; float:right;}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			function Person(schoolid) {
+				this.schoolid = schoolid;
+			}
+
+			Person.prototype.showName = function() {
+				alert(this.name);
+			}
+			Person.prototype.showAge = function() {
+				alert(this.age);
+			}
+			Person.prototype.showSchoolID = function() {
+				alert(this.schoolid);
+			}
+			var person1 = new Person("中科院");
+			var person2 = new Person("中科院");
+
+			function Teacher(name, age) {
+				this.name = name;
+				this.age = age;
+				this.sex = 1
+			}
+
+			
+			Teacher.prototype = person1; //让Teacher的原型变为person1这个对象
+			
+			//这一步跟下一步不能换位置   会导致原型覆盖
+			
+			
+			Teacher.prototype.jiangke = function() {//这是把ff添加到了person1这个实例里面
+				alert("jk")
+			}
+			
+			
+			
+			
+			var teacher1 = new Teacher("xul", 22);
+
+			function Student(name, age) {
+				this.name = name;
+				this.age = age;
+				this.sex = 1
+			}
+			Student.prototype = person2;
+			var student1 = new Student("KK", 10);
+			teacher1.showName();//xul
+			teacher1.showAge();//22
+			teacher1.jiangke();//jk
+			teacher1.showSchoolID();//中科院
+			student1.showName();//KK
+			student1.showAge();//10
+			student1.showSchoolID();//中科院
+			student1.jiangke();//undefined 
+			//因为student是以person2为原型，   Teacher.prototype.jiangke=function()改的是person1
+			//而person2没有
+		</script>
+	</body>
+
+</html>

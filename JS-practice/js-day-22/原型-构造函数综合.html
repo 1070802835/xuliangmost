@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+			var person1 = new Person("hehe", "11");
+			var person2 = new Person("dqwdqw", "123");
+
+			function Person(name, age) {
+				this.name = name;
+				this.age = age;
+			}
+			Person.prototype.classNmae = "1632";
+			Person.prototype.showname = function() {
+					alert(this.name);
+				}
+				//			alert(person2.name);
+				//			alert(person2.age)
+				//			person1.showname();
+			alert(person1.showname());
+		</script>
+
+	</body>
+
+</html>

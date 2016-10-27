@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="随机数组" />
+		<input type="button" name="b2" id="b2" value="冒泡一次" />
+		<input type="button" name="b3" id="b3" value="冒泡" />
+		<div id="div1" style="color: red;font-size: 22px;font-weight: bolder;">
+		</div>
+		<script type="text/javascript">
+			var b1=document.getElementById("b1");
+			var b2=document.getElementById("b2");
+			var b3=document.getElementById("b3");
+			var div1=document.getElementById("div1");
+			var arr=[];
+			b1.onclick=function(){
+				for(var i=0;i<10;i++){
+				arr[i]=parseInt(Math.random()*100);			//Math.random--随机0-1之间的小数，包括0不包括1
+				}
+				div1.innerHTML=arr;
+			}
+			b2.onclick=function(){
+				for(var i=0;i<arr.length-1;i++){			 //arr.length-1   可以省去一次冒泡  提高效率
+					if(arr[i]>arr[i+1]){
+						var temp=arr[i];					//设置一个空的arr，arr[i]赋值给temp
+						arr[i]=arr[i+1];					//将arr[i+1]赋值给arr[i]
+						arr[i+1]=temp;						//将temp赋值给arr[i+1]
+					}										//PS.后两者顺序不能改变,改变了的话，arr[i+1]就会提前改掉
+				}div1.innerHTML=arr;
+			}
+			
+			b3.onclick=function(){
+				for(var j=0;j<arr.length-1;j++){
+					for(var i=0;i<arr.length-1;i++){  			//为了优化  可以换成i<arr.length-1-k
+						if(arr[i]>arr[i+1]){
+							var temp=arr[i];
+							arr[i]=arr[i+1];
+							arr[i+1]=temp;
+						}
+					}
+				}
+				div1.innerHTML=arr;
+			}
+		</script>
+	</body>
+</html>

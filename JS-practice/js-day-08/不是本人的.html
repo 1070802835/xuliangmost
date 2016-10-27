@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新建表格</title>
+		<style type="text/css">
+			td{			
+				width:100px;height:36px;background: cadetblue;border: 2px solid;		/*是TD的边框*/
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		
+		<input type="text" id="txt01" placeholder="请输入要插进去表格的行数"/>
+		<input type="text" id="txt02" placeholder="请输入要插进去表格的列数"/>
+		<input type="button" id="btn01" value="生成表格"/>
+		<div id="div01">
+		
+		</div>
+		
+		<script type="text/javascript">
+			var oTxt01=document.getElementById("txt01");
+			var oTxt02=document.getElementById("txt02");
+			var oBtn01=document.getElementById("btn01");
+			var oDiv01=document.getElementById("div01")
+			oBtn01.onclick=function(){
+				var row=oTxt01.value;  //输入行数
+				var column=oTxt02.value;  //输入列数
+				var tb=document.createElement("table");
+				for(var i=0;i<oTxt01.value;i++){
+					var tr=document.createElement("tr");				//这里是createElement，
+					for(k=0;k<oTxt02.value;k++){						//本来是getElementById  写错
+						var td=document.createElement("td");
+						oDiv01.appendChild(tb);							//放到小循环里面  本来放到外面 错
+						tb.appendChild(tr);								//顺序写错
+						tr.appendChild(td);
+					}
+					
+				}
+				
+			}
+		</script>
+	</body>
+</html>

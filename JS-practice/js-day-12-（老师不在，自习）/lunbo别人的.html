@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 400px;
+				height: 400px;
+				margin: 50px auto;
+				position: relative;
+				/*overflow: hidden;*/
+			}
+			img{
+				width: 400px;
+				height: 400px;
+				position: absolute;
+				
+			}
+			#d1{
+				left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"><img src="1.jpg"  id="m1"/><img src="images/1.jpg" />
+		<img src="images/3.jpg" /><img src="images/4.jpg" /><img src="images/5.jpg" />
+		<img src="images/6.jpg" /><img src="images/7.jpg" /><img src="images/8.jpg" />
+		<img src="images/9.jpg" /></div>
+		
+			<script type="text/javascript">
+				var bOx=document.getElementById("box");
+				var imglist=document.getElementsByTagName("img");
+				for(var i=0;i<imglist.length;i++){
+					imglist[i].style.left=i*400+"px"
+					
+				}
+				var timer;
+				bOx.onmouseout=function(){
+					timer=setInterval(function(){
+						for(var k=0;k<imglist.length;k++){
+							imglist[k].style.left=imglist[k].offsetLeft-1+"px"
+							if(imglist[k].offsetLeft==-400){
+								imglist[k].style.left="3200px";
+							}
+						}	
+					},3)
+				}
+				bOx.onmouseover=function(){
+					clearInterval(timer)
+				}	
+			</script>
+		
+	</body>
+</html>

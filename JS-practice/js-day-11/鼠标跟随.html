@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		img{width: 100px;height: 100px;position: absolute;}
+	</style>
+	<body>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		<img src="img/1.gif"/>
+		
+		<script type="text/javascript">
+
+			var oImglist=document.getElementsByTagName("img");
+			var time;
+
+
+			document.onmousedown=function(e){
+				clearInterval(time);
+				e=e||window.event;
+				e.preventDefault();
+					document.onmousemove=function(e){
+						e=e||window.event;
+						var x=e.clientX;
+						var y=e.clientY;
+						oImglist[0].style.left=x+"px";
+						oImglist[0].style.top=y+"px";
+						for(var i=oImglist.length-1;i>0;i--){
+							oImglist[i].style.left=oImglist[i-1].style.left;
+							oImglist[i].style.top=oImglist[i-1].style.top;
+						}
+					}
+					
+					document.onmouseup=function(e){
+						var sum=0;
+						e=e||window.event;
+						
+						document.onmousemove=null;
+							time=setInterval(function(){
+								for(var k=oImglist.length-1;k>0;k--){
+									oImglist[k].style.left=oImglist[k-1].style.left;
+									oImglist[k].style.top=oImglist[k-1].style.top;
+								}sum++;
+								
+							if(sum==42){
+								clearInterval(time)
+							}
+								
+							},20)
+						
+						
+					}
+					
+				}
+				
+				
+				
+		</script>
+	</body>
+</html>

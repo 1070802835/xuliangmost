@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/Most.js"></script>
+		<script src="js/jquery-3.1.1.js"></script>
+		<!--<script src="js/moveUtil.js"></script>-->
+		<style type="text/css">
+			div{width: 8px;height: 8px;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var screenWidth=document.body.clientWidth||document.documentElement.clientHeight;
+//			var screenWidth=window.screen.availWidth;
+			var screenHeight=document.body.clientHeight||document.documentElement.clientHeight;
+//			var screenHeight=window.screen.availHeight;
+			var rows=Math.floor(screenWidth/8);
+			var arr=[];
+			var flag1=true;
+			for(var i=0;i<rows;i++){
+				var oDiv=document.createElement("div");
+				
+				var lEft=parseInt(Math.random()*(screenWidth-8));
+				var tOp=parseInt(Math.random()*(screenHeight-8));
+				oDiv.style.background=rgb();
+				oDiv.style.left=lEft+"px";
+				oDiv.style.top=tOp+"px";
+				document.body.appendChild(oDiv);
+				arr.push(oDiv);					
+			}
+			function rgb(){
+				var a=parseInt(Math.random()*258);
+				var b=parseInt(Math.random()*258);
+				var c=parseInt(Math.random()*258);
+				return "rgb("+a+","+b+","+c+")";
+			}
+			
+//			document.onclick=function(){
+//				flag1=!flag1;
+//				var divlist=document.getElementsByTagName("div");
+//				for(var j=0;j<arr.length-1;j++){
+//					for(var i=0;i<arr.length-1;i++){  			
+//						if(pOw(arr[i])<pOw(arr[i+1])){
+//							var temp=arr[i];
+//							arr[i]=arr[i+1];
+//							arr[i+1]=temp;
+//						}
+//					}
+//				}
+//				if(flag1){
+//					for(var k=0;k<arr.length;k++){
+//						var cols=Math.floor(screenHeight/rows)
+//						var target={
+//							"left":k*8,
+//							"top":k*cols
+//						}
+//					yd.move(arr[k],target);
+//					}
+//				}
+//				if(!flag1){
+//					for(var k=0;k<arr.length;k++){
+//						if(k<=Math.floor(arr.length/2)){
+//							var cols=screenHeight/2;
+//							var target={
+//							"left":(k*8)+200,
+//							"top":cols+46
+//							}
+//							yd.move(arr[k],target);
+//						}else{
+//							var cols=Math.ceil(screenHeight/rows);
+//							var j=Math.floor(k-arr.length/2);
+//							
+//							var target={
+//							"left":560,
+//							"top":j*cols
+//							}
+//							yd.move(arr[k],target);
+//						}	
+//					}
+//				}
+//				
+//			}
+
+			document.onclick=function(){
+//				for(var j=0;j<arr.length-1;j++){
+//					for(var i=0;i<arr.length-1;i++){  			
+//						if(pOw(arr[i])<pOw(arr[i+1])){
+//							var temp=arr[i];
+//							arr[i]=arr[i+1];
+//							arr[i+1]=temp;
+//						}
+//					}
+//				}
+				if(flag1){
+					for(var i=0;i<arr.length;i++){
+					var cols=Math.floor(screenHeight/rows)+0.4;
+					$("div:eq("+i+")").animate({
+						left:i*8,
+						top:i*cols
+					},3000)
+					
+					}
+				}
+				if(!flag1){
+					for(var i=0;i<arr.length;i++){
+					var cols=Math.floor(screenHeight/rows);
+					if(i<=Math.floor(arr.length/2)){
+						var cols=screenHeight/2;
+						$("div:eq("+i+")").animate({
+							left:(i*8)+200,
+							top:cols+46
+						},3000)
+						
+					}else{
+							var cols=Math.ceil(screenHeight/rows);
+							var j=Math.floor(i-arr.length/2);
+							
+							$("div:eq("+i+")").animate({
+								left:560,
+								top:j*cols
+							},3000)
+						}
+					
+					
+					
+					}
+					
+				}
+				
+			}
+
+			
+			
+			function pOw(element){
+				return Math.pow(element.offsetLeft,2)+Math.pow(element.offsetTop,2);
+			}
+		</script>
+	</body>
+</html>

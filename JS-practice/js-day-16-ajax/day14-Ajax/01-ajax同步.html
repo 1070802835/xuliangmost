@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>ajax同步</title>
+	</head>
+	<body>
+		<input type="text" value="previous" />
+		<h5>你好啊</h5>
+		<input type="button" id="btn" value="change" />
+		<script type="text/javascript">
+			var text = document.getElementsByTagName("h5")[0];
+			var oBtn = document.getElementById("btn");
+			oBtn.onclick = function(){
+				//1 创建一个ajax对象
+				var xhr = new XMLHttpRequest();
+				//2 发送同步请求
+				xhr.open("get","data/mydata.txt",false);
+				//3 发送
+				xhr.send();
+				if(xhr.readyState == 4){
+					if(xhr.status == 200){
+						text.innerHTML = xhr.responseText;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>拖拽</title>
+    <style>
+        *{padding:0;margin:0}
+        div{width:100px;height:100px;
+            background: #000;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var xx;
+    var yy;
+    var oDiv=document.getElementById("div1");
+    oDiv.onmousedown=function(e){
+        xx= e.offsetX;
+        yy= e.offsetY;
+        document.onmousemove=function(e){
+            var x= e.clientX;
+            var y= e.clientY;
+            // y-yy<0
+            var nTop=y-yy;  //<0
+            if(nTop<0){
+                nTop=0;
+            }
+            var dHeight=document.body.clientHeight||document.documentElement.clientHeight;
+            if(nTop>dHeight-oDiv.offsetHeight){
+                nTop=dHeight-oDiv.offsetHeight;
+            }
+            /*var nLeft=x-xx;
+            if(nLeft<0){
+                nLeft=0;
+            }
+            var dWidth=document.body.clientWidth||document.documentElement.clientWidth;
+            if(nLeft>dWidth-oDiv.offsetWidth){
+                nLeft=dWidth-oDiv.offsetWidth;
+            }*/
+            var dWidth=document.body.clientWidth||document.documentElement.clientWidth;
+            var nLeft=Math.max(Math.min(x-xx,dWidth-oDiv.offsetWidth),0);
+
+
+            oDiv.style.left=nLeft+"px";
+            oDiv.style.top=nTop+"px";
+        }
+    }
+    oDiv.onmouseup=function(){
+        document.onmousemove=null;
+
+        var top=oDiv.offsetTop;
+        var left=oDiv.offsetLeft;
+        document.cookie="odivposition="+top+"&"+left;
+    }
+    setDiv();
+    function setDiv(){
+        var strCookie=document.cookie;
+        var arrCookie=strCookie.split("; ");
+        for(var i=0;i<arrCookie.length;i++){
+            var arrItem=arrCookie[i].split("=");
+            if(arrItem[0]=="odivposition"){
+                //var value=arrItem[1];//15&339
+                var arrPositon=arrItem[1].split("&");
+                oDiv.style.top=arrPositon[0]+"px";
+                oDiv.style.left=arrPositon[1]+"px";
+            }
+        }
+    }
+</script>
+</body>
+</html>

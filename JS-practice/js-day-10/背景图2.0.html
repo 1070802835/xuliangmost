@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			table{border-collapse:collapse ;}
+			td{border:0;background: white;width: 20px;height: 20px;background: darkturquoise;}
+			#div1{background: url(img/bg1.jpg) no-repeat -800px 2px;width: 600px;height: 600px;margin: 0 auto;}
+			img{border: 0;}	
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<input type="button" name="b1" id="b1" value="开始" />
+		<script type="text/javascript">
+			var oDiv1=document.getElementById("div1");
+			var oTb=document.createElement("table");
+			var oB1=document.getElementById("b1");
+			for(var i=0;i<30;i++){
+				var oTr=document.createElement("tr");
+				for(var k=0;k<30;k++){
+					var oTd=document.createElement("td");
+					oTr.appendChild(oTd);
+				}	oTb.appendChild(oTr);
+					oDiv1.appendChild(oTb)
+			}
+			var oTdlist=oDiv1.getElementsByTagName("td");
+			
+			var arr=[];
+			for(var j=0;j<900;j++){
+				arr.push(j);
+			}
+			var time;
+			oB1.onclick=function(){
+				clearInterval(time);
+				time=setInterval(function(){
+					var a=Math.floor(Math.random()*arr.length);
+					oTdlist[arr[a]].style.opacity=0;
+					arr.splice(a,1);
+					if(arr.length==0){
+						clearInterval(time);
+						alert(11)
+					}
+				},1000)
+					
+			}
+//			 var arr=[];
+//			 oB1.onclick=function(){
+//			 	setInterval(function(){
+//			 		var a=Math.floor(Math.random()*100);
+//				 	arr.push(a);
+//				 	for(var k=0;k<arr.length;k++){
+//				 		if(k==arr.indexOf(a,k)){
+//				 			break;
+//				 		}else{
+//					 		oTdlist[arr[a]].style.opacity=0;
+//					 	}
+//				 		
+//			 		}	
+//			 	},1)
+//			 	
+//			 	
+//			 	
+//			 }
+			 
+			 
+			 
+		</script>
+	</body>
+</html>

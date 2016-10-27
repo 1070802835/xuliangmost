@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			td{width:40px;height: 20px;border: 1px solid black;}
+		</style>
+	</head>
+	<body>
+		<input type="text" name="t1" id="t1" value="" placeholder="请输入行数" />
+		<input type="text" name="t2" id="t2" value="" placeholder="请输入列数"/>
+		<input type="button" name="b1" id="b1" value="生成表格" />
+		<a href="Preject3.html" style="text-decoration: none;">去往第三题</a>
+		<div id="div1"></div>
+		<input type="button" name="b2" id="b2" value="添加一行" />
+		
+		<script type="text/javascript">
+			var t1=document.getElementById("t1");
+			var t2=document.getElementById("t2");
+			var b1=document.getElementById("b1");
+			var oB2=document.getElementById("b2");
+			var div1=document.getElementById("div1");
+			var tr;
+			var td;
+			var tb;
+			
+			b1.onclick=function(){
+				div1.innerHTML="";
+				tb=document.createElement("table");
+				for(i=0;i<t1.value;i++){
+					tr=document.createElement("tr");
+					for(k=0;k<t2.value;k++){
+						td=document.createElement("td");
+							div1.appendChild(tb);
+							tb.appendChild(tr);
+							tr.appendChild(td);
+					}	 
+					
+				}oB2.onclick=function(){
+					var a="";
+			        var tr1=document.createElement("tr");
+			        for(var j=0;j<t2.value;j++){
+			        	a+="<td>&ensp;</td>";
+			        }
+			        tr1.innerHTML=a
+			      	tb.appendChild(tr1);
+			       
+			        tr1.lastChild.innerHTML="删除";
+					tr1.lastChild.addEventListener("click",fn1,false);
+						function fn1(){
+						this.parentNode.parentNode.removeChild(this.parentNode);
+					}
+					 
+				}
+				trdel();
+				
+			}
+				
+			
+			
+			
+			
+			
+			function trdel(){
+				var oTdList=document.getElementsByTagName("td");
+				var oTrList=document.getElementsByTagName("tr");
+				for(k=0;k<t1.value;k++){
+				
+					oTrList[k].lastChild.innerHTML="删除";
+					oTrList[k].lastChild.addEventListener("click",fn,false);
+						function fn(){
+						this.parentNode.parentNode.removeChild(this.parentNode);
+							//监听
+						
+					}
+				}
+			}
+			
+			
+			
+			
+				
+			
+		</script>
+	</body>
+</html>

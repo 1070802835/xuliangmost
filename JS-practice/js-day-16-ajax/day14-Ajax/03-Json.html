@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" value="previous" />
+		<input type="button" id="btn1" value="show" />
+		<input type="button" id="btn2" value="showmore" />
+		<input type="button" id="btn3" value="showmore2" />
+		<h5>
+			<p>height</p>
+			<p>weight</p>
+			<p>son</p>
+		</h5>
+		
+		<script>
+			var text = document.getElementsByTagName("h5")[0];
+			var oBtn1 = document.getElementById("btn1");
+			var oBtn2 = document.getElementById("btn2");
+			var oBtn3 = document.getElementById("btn3");
+			oBtn1.onclick = function(){
+				var xhr = new XMLHttpRequest();
+				xhr.open("get","data/myJson1.json",false);
+				xhr.onreadystatechange = function(){
+				//alert(xhr.readyState);
+					if(xhr.readyState == 4){
+						if(xhr.status == 200){
+							var content = xhr.responseText;
+							//get的是字符串，一定要转
+							var subcon = JSON.parse(content);
+							//alert(subcon.total);
+							text.innerHTML = "<p>"+subcon.height+"</p><p>"+subcon.weight+"</p><p>"+getAll(subcon.son)+"</p><p>"+subcon.tels+"</p>";
+						}
+					}else{
+						alert("404 NOT FOUND");
+					}
+				}
+				xhr.send();
+			}
+			oBtn2.onclick = function(){
+				var xhr = new XMLHttpRequest();
+				xhr.open("get","data/myJson2.json",false);
+				xhr.onreadystatechange = function(){
+				//alert(xhr.readyState);
+					if(xhr.readyState == 4){
+						if(xhr.status == 200){
+							var content = xhr.responseText;
+							var subcon = JSON.parse(content);
+							text.innerHTML = "<p>"+subcon[0].weight+"</p><p>"+subcon[1].height+"</p><p>"+subcon[2].son.name+"</p>";
+						}
+					}else{
+						alert("404 NOT FOUND");
+					}
+				}
+				xhr.send();
+			}
+			oBtn3.onclick = function(){
+				var xhr = new XMLHttpRequest();
+				xhr.open("get","data/myJson3.json",false);
+				xhr.onreadystatechange = function(){
+				//alert(xhr.readyState);
+					if(xhr.readyState == 4){
+						if(xhr.status == 200){
+							var content = xhr.responseText;
+							var subcon = JSON.parse(content);
+							text.innerHTML = "<p>"+subcon[0].weight+"</p><p>"+subcon[1].height+"</p><p>"+subcon[2].son.name+"</p>";
+						}
+					}else{
+						alert("404 NOT FOUND");
+					}
+				}
+				xhr.send();
+			}
+			
+			function getAll(obj){
+				var i;
+				var content = "";
+				for  (i in obj){
+					if(typeof obj[i] == "object"){
+						content = content + getAll(obj[i]) + "\n";
+					}else{
+						content = content + obj[i] + "\n";	
+					}
+				}
+				return content;
+			}
+		</script>
+	</body>
+</html>

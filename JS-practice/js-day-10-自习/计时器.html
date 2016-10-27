@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="" id="b1" value="开始/暂停" />
+		<input type="button" name="" id="b2" value="清空" />
+		<div id="div1"></div>
+		
+		<script type="text/javascript">
+			var oB1=document.getElementById("b1");
+			var oB2=document.getElementById("b2");
+			var oDiv1=document.getElementById("div1");
+			
+			var hm=0;// 毫秒
+			var m=0;//秒
+			var fen=0;//分
+			var a=true;
+			var time1;
+			
+			oB1.onclick=function(){
+				if(a){
+					a=false;
+					time1=setInterval(function(){
+					hm++;
+					if(hm>99){
+						m++;
+						hm=0;
+						if(m>59){
+							fen++;
+							m=0;
+						}
+					}	
+					oDiv1.innerHTML=fen+"分"+m+"秒"+hm+"毫秒"
+					
+				},10)
+				}
+				else{
+					clearInterval(time1);
+					a=true;
+				}	
+			}
+			oB2.onclick=function(){
+				clearInterval(time1);
+					hm=0;
+					m=0;
+					fen=0;
+					a=true;
+				oDiv1.innerHTML=fen+"分"+m+"秒"+hm+"毫秒"
+				
+			}
+		</script>
+	</body>
+</html>

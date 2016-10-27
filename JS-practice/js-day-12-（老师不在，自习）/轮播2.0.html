@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{position:relative;margin: 0 auto;overflow: hidden;width: 800px;height: 600px;margin-top: 50px;}
+			img{width: 800px;height: 600px;position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<img src="images1/1.jpg"/>
+			<img src="images1/2.jpg"/>
+			<img src="images1/3.jpg"/>
+			<img src="images1/4.jpg"/>
+			<img src="images1/5.jpg"/>
+			<img src="images1/6.jpg"/>
+			<img src="images1/7.jpg"/>
+			<img src="images1/8.jpg"/>
+			<img src="images1/9.jpg"/>
+			<img src="images1/10.jpg"/>
+		</div>
+		<script type="text/javascript">
+		
+			var oImglist=document.getElementsByTagName("img");
+			var oDiv1=document.getElementById("div1")
+			oDiv1.onmouseout=function(e){
+				for(var i=0;i<10;i++){
+				oImglist[i].style.left=i*800+"px";
+				oImglist[i].style.top=0+"px";
+				}
+				e=e||window.event;
+				
+				var time=setInterval(function(){
+					for(var k=0;k<10;k++){
+						oImglist[k].style.left=oImglist[k].offsetLeft-1+"px";
+						if(oImglist[k].offsetLeft==-800){
+							oImglist[k].style.left="7200px";
+						}
+					}
+				},10)	
+			}
+			
+			
+			oDiv1.onmouseover=function(e){
+				e=e||window.event;
+				oDiv1.onmouseout=null;
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

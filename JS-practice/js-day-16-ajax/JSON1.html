@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="t1" id="t1" value="13" />
+		<input type="button" name="b1" id="b1" value="上一个" />
+		<input type="button" name="b2" id="b2" value="下一个" />
+		<div id="div1">
+
+		</div>
+		
+		<script type="text/javascript">
+			var oDiv1=document.getElementById("div1");
+			var oB1=document.getElementById("b1");
+			var oB2=document.getElementById("b2");
+			var xhr=new XMLHttpRequest();
+			var i=0;
+			var dat=new Date();
+			dat.getTime();
+			xhr.open("GET","JSON/data3.json?t="+dat.getTime(),true);
+			//加上JSON/data3.json?t="+dat.getTime()，是防止缓存
+			xhr.onreadystatechange=function(){
+			if(xhr.readyState==4){
+			if(xhr.status==200){
+				var data=xhr.responseText;
+//				alert(data);
+				var newdata=JSON.parse(data);
+//				alert(newdata);
+				oB1.onclick=function(){
+					i--;
+					if(i<0){
+					i=newdata.length-1;
+				}
+					oDiv1.innerHTML="<p>"+newdata[i].name+"</p><p>"+newdata[i].Number+"</p><p>"+newdata[i].sex+"</p>";
+				}
+				oB2.onclick=function(){
+					i++;
+					if(i>newdata.length-1){
+					i=0;
+				}
+					oDiv1.innerHTML="<p>"+newdata[i].name+"</p><p>"+newdata[i].Number+"</p><p>"+newdata[i].sex+"</p>";
+				}
+				
+				
+	//							var str="("+data+")";
+	//							var obj=eval(str);
+				
+				
+					
+			}
+		}
+	}
+	
+	xhr.send();
+				
+				
+				
+				
+
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>test</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var o = {
+					"height" : "186cm",
+					"weight" : "68kg",
+					"gender" : "male",
+					"son" : {
+						"name" : "xu liang",
+						"gender" : "undefined",
+						"lover" : "Big Sea"
+					},
+					"tels" : [123,456,789]
+				}
+			
+			var show = getAll(o);
+			alert(show);
+			
+			function getAll(obj){
+				var i;
+				var content = "";
+				for  (i in obj){
+					if(typeof obj[i] == "object"){
+						content = content + getAll(obj[i]) + "\n";
+					}else{
+						content = content + obj[i] + "\n";	
+					}
+					
+				}
+				return content;
+			}
+		</script>
+	</body>
+</html>

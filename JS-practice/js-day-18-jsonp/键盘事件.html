@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{margin: 0;padding: 0;}
+			#div1{width: 30px;height: 30px;background: red;position: absolute;}
+			#div2{width: 800px;height: 600px;border: 1px solid lightcoral;position: relative;margin: 50px auto;}
+		</style>
+	</head>
+	<body>
+		<div id="div2">
+			<div id="div1"></div>
+		</div>
+		
+		<script type="text/javascript">
+		var oDiv1=document.getElementById("div1");
+		var oDiv2=document.getElementById("div2");
+//		var oDiv3;
+		
+			
+//			crea();
+//			Move();
+		var time1;
+			document.onkeydown=function(e){
+				clearInterval(time1);
+//				alert(e.keyCode);
+				switch(e.keyCode){
+					case 37:
+						var a=oDiv1.offsetLeft;
+						time1=setInterval(function(){
+							if(a<=0){
+								clearInterval(time1);
+								oDiv1.style.left=0+"px";
+							}else{
+								oDiv1.style.left=a+"px";
+								a-=30;
+							}
+						},500);
+						break;
+						
+						case 38:
+						var a=oDiv1.offsetTop;
+						time1=setInterval(function(){
+							
+							if(a<=0){
+								clearInterval(time1);
+								oDiv1.style.top=0+"px";
+							}else{
+								oDiv1.style.top=a+"px";
+							a-=30;
+							}
+							
+							
+						},500);
+						break;
+						
+						case 39:
+						var a=oDiv1.offsetLeft;
+						time1=setInterval(function(){
+							
+							if(a>=800-30){
+								clearInterval(time1);
+								oDiv1.style.left=770+"px";
+							}else{
+								oDiv1.style.left=a+"px";
+							a+=30;
+							}
+							
+						},500);
+						break;
+						
+						case 40:
+						var a=oDiv1.offsetTop;
+						time1=setInterval(function(){
+							
+							if(a>=600-30){
+								clearInterval(time1);
+								oDiv1.style.top=570+"px";
+							}else{
+								oDiv1.style.top=a+"px";
+							a+=30;
+							}
+							
+						},500);
+						break;
+				}
+			
+			}
+//			function Move(){
+//					if((oDiv1.offsetLeft+30==oDiv3.offsetLeft&&oDiv1.offsetTop+30>oDiv3.offsetTop)||(oDiv1.offsetLeft+30==oDiv3.offsetLeft&&oDiv1.offsetTop<oDiv3.offsetTop+30)){
+//						oDiv2.removeChild(oDiv3);
+//						alert(1);
+//					}
+//				
+//			}
+//			function crea(){
+//			oDiv3=document.createElement("div");
+//			oDiv3.style.width=30+"px";
+//			oDiv3.style.height=30+"px";
+//			oDiv3.style.position="absolute";
+//			oDiv3.style.background="#00FFFF";
+//			oDiv2.appendChild(oDiv3);
+//			var x=Math.floor(Math.random()*770);
+//			var y=Math.floor(Math.random()*570);
+//				oDiv3.style.left=x+"px";
+//				oDiv3.style.top=y+"px";
+//		}
+			
+			
+			
+		</script>
+	</body>
+</html>

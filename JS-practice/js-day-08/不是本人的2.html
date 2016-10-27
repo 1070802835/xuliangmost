@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM生成表格</title>
+	<style>
+		td{border:1px solid;
+			width: 100px;
+			height: 30px
+			}
+	</style>
+</head>
+<body>
+	<!-- 如何实现点击delete删除行呢？？？ -->
+
+		行数：<input type="text" id="txt1">
+		列数：<input type="text" id="txt2">
+		<button id="btn">creat</button>
+	<div id="container">
+		
+	</div>
+		
+	<script>
+		var oDiv=document.getElementById('container');
+		var oTxt1=document.getElementById('txt1');
+		var oTxt2=document.getElementById('txt2');
+		var oBtn=document.getElementById('btn');
+		var tB=document.createElement("table");
+		var tR;
+		var tD;
+		
+		tB.setAttribute("id","table")				//给table加个id为"table"
+
+		oBtn.onclick=function(){
+			oDiv.innerHTML="";
+			var rows=parseInt(oTxt1.value);
+			var cols=parseInt(oTxt2.value);
+			
+			
+			for(var i=0;i<rows;i++){
+				tR=document.createElement("tr");
+				tB.appendChild(tR);
+				for(var j=0;j<cols;j++){
+					tD=document.createElement("td");
+					tR.appendChild(tD);
+					
+				}
+				oDiv.appendChild(tB);
+				var tdDelete=document.createElement("td");
+				var btDelete=document.createElement("input");
+				btDelete.type="button";
+				btDelete.value="delete";
+				tR.appendChild(tdDelete);
+				tdDelete.appendChild(btDelete);
+				tB.appendChild(tR);
+				
+//				btDelete.onclick=function(){
+//					var tr=this.parentNode.parentNode;
+//					tr.parentNode.removeChild(tr);
+					//this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+				}
+
+
+
+				// var otD=tR.getElementsByTagName("td");		
+				// var otD_txt=document.createTextNode('delete');   //要先document引用，然后appendChild给父元素
+				// otD[cols-1].appendChild(otD_txt);		//直接td  innerHTML就可以
+				// //tD.innerHTML="delete";		//???
+				// //var oRemove=tD.parentNode;
+ 
+//			}
+			//oDiv.innerHTML=tB;
+			tbcolor();
+		}	
+
+		function tbcolor(){
+			var oTds=document.getElementsByTagName("td");
+			var arr=["#6DE9F9","#4CE2E2","#55ADCE","#2A737C","#124660"]
+			for(var k=0;k<oTds.length;k++){
+				var l=k%5;
+				oTds[k].style.background=arr[l];
+			}
+
+		}
+	</script>
+</body>
+</html>

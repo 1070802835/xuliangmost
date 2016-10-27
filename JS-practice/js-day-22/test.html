@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function foo(){
+				get=function(){
+					console.log(1);
+				}
+				return this;
+			}
+			foo.get=function(){
+				console.log(2);
+			}
+			foo.prototype.get=function(){
+				console.log(3);
+			}
+			get();
+			
+			var get=function(){
+				console.log(4);
+			}
+			
+			function get(){
+				console.log(5);
+			}
+			foo.get();
+			get();
+			foo().get();
+			get();
+			new foo.get();
+			new foo().get();
+			new new foo().get();
+		</script>
+	</body>
+</html>

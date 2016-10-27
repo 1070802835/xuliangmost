@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+		
+		<script type="text/javascript">
+			var s1="ABCabc";
+			dw(s1.charAt(1));							//charAt:返回下标代表的元素
+			dw(s1.charCodeAt(1));    					 //charcodeAt:返回下标代表的元素的编码
+			var s2=String.fromCharCode(99);				// String.fromCharCode():返回编码代表的元素
+			dw(s2);										
+			function dw(n){
+				document.write(n+"<br />");
+			}
+			
+			
+			var s3=String("abc");
+			var s4=String("ABCabc");
+			var ss1=s3.concat(s4);					//将两个字符串合并
+			dw(ss1);
+			//ss1=[abcABCabc]											
+			var ss2=ss1.slice(2,4); 		 	//节选下标2的元素
+			dw(ss2);
+			
+			var ss3=ss1.indexOf("b",2);			//从前面找到元素的下标
+			dw(ss3);
+			
+			var ss4=ss1.lastIndexOf("b");		//从后面找到元素下标   eg:abc11abc	|找到第二个a|abc11找到第一个a
+			dw(ss4);
+			
+			
+			
+			var ss5=ss1.indexOf("abc");			//长度大于1且能找到
+			dw(ss5);							//找到第一个字符 的位置:0
+			
+			
+			var ss6=ss1.toLowerCase();			//把字符串里面的所有英文字母变成小写
+			dw(ss6);
+			var ss7=ss1.toUpperCase();			//把字符串里面的所有英文字母变成大写
+			dw(ss7);
+
+			var ss8=ss1.replace("b","p");		//把字符串里面的b换成P，只换过第一个，
+			dw(ss8)
+			
+			var ss9=ss1.split("c");				//分割，分隔符为C:找到c然后进行分割，没有就不分割
+			dw(ss9);
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

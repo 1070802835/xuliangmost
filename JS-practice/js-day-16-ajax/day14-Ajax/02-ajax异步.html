@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ajax异步</title>
+	</head>
+	<body>
+		<input type="text" value="previous" />
+		<h5>你好啊</h5>
+		<input type="button" id="btn1" value="onreadystatechange放第3步" />
+		<input type="button" id="btn2" value="onreadystatechange放第2步" />
+		<script>
+			var text = document.getElementsByTagName("h5")[0];
+			var oBtn1 = document.getElementById("btn1");
+			var oBtn2 = document.getElementById("btn2");
+			oBtn1.onclick = function(){
+				var xhr = new XMLHttpRequest();
+				xhr.open("get","data/mydata.txt",false);
+				xhr.onreadystatechange = function(){
+					alert(xhr.readyState);
+					if(xhr.readyState == 4){
+						if(xhr.status == 200){
+							text.innerHTML = xhr.responseText;
+						}
+					}else{
+						alert("404 NOT FOUND");
+					}
+				}
+				xhr.send();
+			}
+			oBtn2.onclick = function(){
+				var xhr = new XMLHttpRequest();
+				xhr.onreadystatechange = function(){
+					alert(xhr.readyState);
+					if(xhr.readyState == 4){
+						if(xhr.status == 200){
+							text.innerHTML = xhr.responseText;
+						}
+					}else{
+						alert("404 NOT FOUND");
+					}
+				}
+				xhr.open("get","data/mynewdata.txt",false);
+				xhr.send();
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"height" : "186cm",
+	"weight" : "68kg",
+	"gender" : "male",
+	"son" : {
+		"name" : "xu liang",
+		"gender" : "undefined",
+		"lover" : "Big Sea"
+	},
+	"tels" : [123,456,789]
+}

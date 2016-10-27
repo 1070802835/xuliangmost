@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="加载下一页" />
+		<p id="p1"></p>
+		
+		
+		
+		<script type="text/javascript">
+			var oP1=document.getElementById("p1")
+			
+			var pageIndex=1;
+			var oB1=document.getElementById("b1");
+			oB1.onclick=function(){
+				oP1.innerHTML="";
+				pageIndex++;
+				var sr=document.createElement("script");
+				sr.src="http://10.17.158.44:8077/Product/GetProductsByPage_get?pagesize=10&pageindex="+pageIndex+"&callback=fn1";
+				document.body.appendChild(sr);
+			}
+			
+//			fn1();//这里不能调用  不然的话   会报错   因为function之后    下面的script已经是在调用
+			function fn1(arrdata){
+				arrdata.sort(function(a,b){
+					var oa=JSON.parse(a.Data).total;
+					var ob=JSON.parse(b.Data).total;
+					return ob-oa;
+				})
+				
+				
+				for(var i=0;i<arrdata.length;i++){
+					var oBj=JSON.parse(arrdata[i].Data);
+					oP1.innerHTML+="姓名:"+oBj.name+"&ensp;"+"&ensp;"+"&ensp;"+"分数:"+oBj.total+"<br>";
+				}
+				
+				
+			}
+			var srp=document.createElement("script");
+			srp.src="http://10.17.158.44:8077/Product/GetProductsByPage_get?pagesize=10&pageindex=1&callback=fn1";
+			document.body.appendChild(srp);
+
+		</script>
+		<!--<script src="http://10.17.158.44:8077/Product/GetProductsByPage_get?pagesize=10&pageindex=1&callback=fn1"></script>-->
+	</body>
+</html>
