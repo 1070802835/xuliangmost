@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+ul{ width:1000px; height:100px;background-color:#000; margin:400px auto;}
+ul li{height:100px; float:left; list-style:none; line-height:100px}
+ul li a{ height:100px; text-decoration:none; color:#FFF; padding:0 55px; display:block; }
+ul li a:hover{background-color:red;}
