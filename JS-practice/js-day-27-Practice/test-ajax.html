@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			var xhr=new XMLHttpRequest();
+			xhr.open("GET","js/test.json",true);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4){
+					if(xhr.status==200){
+						var Txt=JSON.parse(xhr.responseText);
+						for(var i=0;i<Txt.length;i++){
+							$("div").text(Txt[i].name)
+						}
+					}
+				}
+			}
+			xhr.send();
+			
+		</script>
+	</body>
+</html>
