@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴效果</title>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <link rel="stylesheet" href="css/accordion.css">
+</head>
+<body>
+<div id="main">
+    <ul>
+        <li>
+            <div class="des"><h4>园林酒店</h4></div>
+            <div style="background: url(img/1.jpg) center;"></div>
+        </li>
+        <li>
+            <div class="des"><h4>设计师酒店</h4></div>
+            <div style="background: url(img/2.jpg) center;"></div>
+        </li>
+        <li>
+            <div class="des"><h4>青年旅社</h4></div>
+            <div style="background: url(img/3.jpg) center;"></div>
+        </li>
+        <li>
+            <div class="des"><h4>特色客栈</h4></div>
+            <div style="background: url(img/4.jpg) center;"></div>
+        </li>
+        <li>
+            <div class="des"><h4>海岛酒店</h4></div>
+            <div style="background: url(img/5.jpg) center;"></div>
+        </li>
+        <li>
+            <div class="des"><h4>海外温泉</h4></div>
+            <div style="background: url(img/6.jpg) center;"></div>
+        </li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function(){
+        $("ul li").hover(function(){
+            $(this).stop(true).animate({width:"400px"},500).siblings().stop(true).animate({width:"160px"},500);
+        },function(){
+        	 $("ul li").animate({width:"200px"},500)
+        });
+    });
+</script>
+</body>
+</html>

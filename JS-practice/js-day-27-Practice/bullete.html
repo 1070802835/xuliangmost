@@ -19,8 +19,7 @@
 					top:900
 				}
 				$(document.body).append("<div class='c1'></div>");
-				$(".c1").css({width:"20px",height:"20px",backgroundColor:"red",position:"absolute"})
-				$(".c1").animate(tar,2000,function(){
+				$(".c1").css({width:"20px",height:"20px",backgroundColor:"red",position:"absolute"}).animate(tar,2000,function(){
 					$(this).removeAttr("class").addClass("c2");
 					creatMove();
 				}
@@ -32,7 +31,7 @@
 				time=setInterval(function(){
 					var a=Math.round(parseFloat($(".c1").css("left")))
 					if(1500-a<=100){
-						$("div").remove(".c2");
+						$(".c2").remove();
 					}
 				},30)
 			}
