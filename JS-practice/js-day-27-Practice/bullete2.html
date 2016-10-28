@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+	<body>
+		<input type="button" name="b1" id="b1" value="停止" />
+		<script>
+			var time;
+			move();
+			var i=0;
+			creatMove();
+			$("input").click(function(){
+				$("div").stop();
+			})
+			function creatMove(){
+				var tar={
+					left:1000,
+					top:500,
+					width:200,
+					height:200,
+					borderRadius:200
+				}
+				$(document.body).append("<div class='c1'></div>");
+				$(".c1").css({width:"1px",height:"1px",border:"1px solid red",position:"absolute"})
+				$(".c1").animate(tar,2000
+					,function(){
+					$(this).removeAttr("class").addClass("c2");
+					$("div").remove(".c2");
+				}
+					)
+			}
+			function move(){
+				clearInterval(time);
+				time=setInterval(function(){
+					i++;
+					if(i==100){
+						clearInterval(time);
+						move();
+						i=0;
+					}
+					creatMove();
+				},40)
+			}
+		</script>
+	</body>
+</html>
