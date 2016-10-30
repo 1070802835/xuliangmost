@@ -12,12 +12,12 @@
 			deleteMove();
 			$("input").click(function(){
 				$("div").stop();
-			})
+			});
 			function creatMove(){
 				var tar={
-					left:1500,
-					top:900
-				}
+					left:900,
+					top:600
+				};
 				$(document.body).append("<div class='c1'></div>");
 				$(".c1").css({width:"20px",height:"20px",backgroundColor:"red",position:"absolute"}).animate(tar,2000,function(){
 					$(this).removeAttr("class").addClass("c2");
@@ -29,8 +29,8 @@
 				creatMove();
 				clearInterval(time);
 				time=setInterval(function(){
-					var a=Math.round(parseFloat($(".c1").css("left")))
-					if(1500-a<=100){
+					var a=Math.round(parseFloat($(".c1").css("left")));
+					if(700-a<=50){
 						$(".c2").remove();
 					}
 				},30)

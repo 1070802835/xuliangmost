@@ -10,8 +10,7 @@
 	<div></div>
 	<input type="button" name="b1" id="b1" value="Stop" />
 	<script type="text/javascript">
-		$("div").css({"position":"absolute",width:100,height:100,backgroundColor:"red"});
-		$("div").animate({
+		$("div").css({"position":"absolute",width:100,height:100,backgroundColor:"red"}).animate({
 			width:300,
 			height:300,
 			left:800
@@ -23,7 +22,7 @@
 			width:300,
 			height:300,
 			left:0
-		},3000)
+		},3000);
 		$("input").on("click",function(){
 			$("div").stop(false,true)
 		})
