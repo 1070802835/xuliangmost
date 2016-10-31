@@ -21,7 +21,7 @@
 				var lEft=parseInt(Math.random()*(screenWidth-8));
 				var tOp=parseInt(Math.random()*(screenHeight-8));
 				$(document.body).append("<div></div>");
-				$("div").eq(i).css({backgroundColor:rgb(),position:"absolute",left:lEft+"px",top:tOp+"px",width:"8px",height:"8px",borderRadius:"8px"})
+				$("div").eq(i).css({backgroundColor:rgb(),position:"absolute",left:lEft+"px",top:tOp+"px",width:"8px",height:"8px",borderRadius:"8px"});
 				arr.push($("div").eq(i));
 				arrleft.push(parseInt($("div").eq(i).css("left")));
 				arrtop.push(parseInt($("div").eq(i).css("top")));

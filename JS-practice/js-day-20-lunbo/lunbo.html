@@ -14,7 +14,7 @@
 			#ul2 li{float: left;width: 30px;height: 30px;background: lightgray;list-style: none;margin-left: 5px;text-align: center;line-height: 30px;}
 			#ul2 li:hover{cursor: pointer;}
 			#ul2 .Up{background: lightskyblue;}
-			#ul2 .Down{background: background: lightgray;}
+			#ul2 .Down{background:lightgray;}
 		</style>
 	</head>
 	<body>
@@ -65,13 +65,13 @@
 					var Index=e.target.index;
 					var target={
 						"left":-1*(Index)*800
-					}
+					};
 					yd.move(oUl1,target);
-					e.target.className="Up"
+					e.target.className="Up";
 					
 					startMove();
 				}	
-			}
+			};
 			
 			
 			
@@ -89,7 +89,7 @@
 						index++;
 						var target={
 							"left":-1*(index)*800
-						}
+						};
 						yd.move(oUl1,target);
 						for(var i=0;i<liList.length;i++){
 							liList[i].className="Down"
@@ -108,7 +108,7 @@
 		
 			oDiv1.onmouseover=function(){
 				flag=false;
-			}
+			};
 			
 			oDiv1.onmouseout=function(){
 				flag=true;

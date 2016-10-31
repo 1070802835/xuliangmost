@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<script src="js/jquery-3.1.1.js"></script>
-		<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+		<!--<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>-->
 	</head>
 	<body>
 		<input type="text" name="t1" id="t1" placeholder="请输入rows" style="height: 30px;"/>
@@ -23,7 +23,7 @@
 				for(var i=0;i<rows;i++){
 					$("table").append("<tr></tr>");
 				}
-				for(var i=0;i<cols;i++){
+				for(var k=0;k<cols;k++){
 					$("tr").append("<td></td>");
 				}
 				$("td").css({width:"150px",height:"40px",border:" 1px solid black",textAlign:"left"})
@@ -35,16 +35,16 @@
 					var newtr=$(this).parent().clone(true);
 					newtr.children("td").html("").css("background","red");
 					$(this).parent().before(newtr);
-				})
+				});
 				$("input[name='addbottom']").click(function(){
 					var newtr=$(this).parent().clone(true);
 					
 					newtr.children("td").html("").css("background","gold");
 					$(this).parent().after(newtr);
-				})
+				});
 				$("input[name='delete1']").click(function(){
 					$(this).parent().detach();
-				})
+				});
 //				$("input[name='b2']").click(function(){
 //					$("div").slideToggle("slow");
 //				});
@@ -57,7 +57,7 @@
 					$("input[class='in1']").val(content);
 					$("input[class='in1']").click(function(e){
 						e.stopPropagation();
-					})
+					});
 					$("input[class='in1']").blur(function(){
 						var content=$(this).val();
 						$(that).text(content);

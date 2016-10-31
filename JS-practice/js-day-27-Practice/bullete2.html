@@ -11,27 +11,61 @@
 			var time;
 			move();
 			var i=0;
-			creatMove();
+//			creatMove();
 			$("input").click(function(){
 				$("div").stop();
-			})
+			});
 			function creatMove(){
 				var tar={
-					left:1000,
-					top:500,
+					left:900,
+					top:400,
 					width:200,
 					height:200,
 					borderRadius:200
-				}
+				};
 				$(document.body).append("<div class='c1'></div>");
-				$(".c1").css({width:"1px",height:"1px",border:"1px solid red",position:"absolute"})
-				$(".c1").animate(tar,2000
+				$(".c1").css({width:"1px",height:"1px",border:"1px solid red",position:"absolute"}).animate(tar,2000
 					,function(){
 					$(this).removeAttr("class").addClass("c2");
 					$("div").remove(".c2");
 				}
 					)
 			}
+
+			function creatMove2(){
+				var tar={
+					left:900,
+					top:400,
+					width:200,
+					height:200,
+					borderRadius:200
+				};
+				$(document.body).append("<div class='c3'></div>");
+				$(".c3").css({width:"1px",height:"1px",border:"1px solid red",position:"absolute",top:0,right:0}).animate(tar,2000
+						,function(){
+							$(this).removeAttr("class").addClass("c4");
+							$("div").remove(".c4");
+						}
+				)
+			}
+
+			function creatMove3(){
+				var tar={
+					left:900,
+					top:400,
+					width:200,
+					height:200,
+					borderRadius:200
+				};
+				$(document.body).append("<div class='c5'></div>");
+				$(".c5").css({width:"1px",height:"1px",border:"1px solid red",position:"absolute",top:0,left:400}).animate(tar,2000
+						,function(){
+							$(this).removeAttr("class").addClass("c6");
+							$("div").remove(".c6");
+						}
+				)
+			}
+
 			function move(){
 				clearInterval(time);
 				time=setInterval(function(){
@@ -42,6 +76,8 @@
 						i=0;
 					}
 					creatMove();
+					creatMove2();
+					creatMove3();
 				},40)
 			}
 		</script>

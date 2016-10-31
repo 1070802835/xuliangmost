@@ -111,40 +111,13 @@
 					dd();
 				}, 2500)
 			}
-//			$("#Lb").on("mouseover",function(){
-//				clearInterval(time);
-//			})
-//
-//			$("#Lb").on("mouseout",function(){
-//				Run()
-//			})
-//			$("#Lb #sp1").click(function(e){
-//				clearInterval(time);
-//				if(e.target==this){
-//					$("ul li").stop();
-//					index--;
-//					if(index==-1){
-//						index=4;
-//					}
-//					$("ul li").eq(index).fadeIn(1000).siblings().fadeOut(1000);
-//				}
-//			});
-//			$("#Lb #sp2").click(function(e){
-//				if(e.target==this){
-//					$("ul li").stop();
-//					index++;
-//					if(index==5){
-//						index=0;
-//					}
-//					$("ul li").eq(index).fadeIn(1000).siblings().fadeOut(1000);
-//				}
-//			});
-
-
-
 			$("#Lb").on("mouseover",function(){
 				clearInterval(time);
-				$("#Lb #sp1").click(function(e){
+			}).on("mouseout",function(){
+				Run();
+			});
+
+			$("#sp1").click(function(e){
 				clearInterval(time);
 				if(e.target==this){
 					$("ul li").stop();
@@ -152,26 +125,50 @@
 					if(index==-1){
 						index=4;
 					}
-					dd();
-					alert("左")
+					$("li").eq(index).fadeIn(1000).siblings().fadeOut(1000);
 				}
 			});
-			$("#Lb #sp2").click(function(e){
+			$("#sp2").click(function(e){
 				if(e.target==this){
-					$("ul li").stop();
+					$(this).stop();
 					index++;
 					if(index==5){
 						index=0;
 					}
-					dd();
-					alert("右")
+					$("li").eq(index).fadeIn(1000).siblings().fadeOut(1000);
 				}
 			});
-			})
 
-			$("#Lb").on("mouseout",function(){
-				Run()
-			})
+
+
+//			$("#Lb").on("mouseover",function(){
+//				clearInterval(time);
+//				$("#sp2").on("click",function (e) {
+//				clearInterval(time);
+//				if(e.target==this){
+//					$("ul li").stop();
+//					index--;
+//					if(index==-1){
+//						index=4;
+//					}
+//					dd();
+//					alert("左")
+//				}
+//			});
+//			$("#sp2").on("click",function (e) {
+//				if(e.target==this){
+//					$("ul li").stop();
+//					index++;
+//					if(index==5){
+//						index=0;
+//					}
+//					dd();
+//					alert("右")
+//				}
+//			})
+//			}).on("mouseout",function(){
+//				Run()
+//			})
 
 
 
