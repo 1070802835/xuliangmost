@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<input type="text" name="t1" id="t1" value="" placeholder="请输入手机号码">
+	<input type="button" id="b1" value="获取">
+	<input type="button" id="b2" value="脑筋急转弯">
+	<input type="button" id="b3" value="偷看答案">
+	<div id="div1"></div>
+	<div id="div2"></div>
+	<script>
+
+		$("#b1").click(function () {
+			var Num=$("#t1").val();
+			var setttings={
+				url:"http://apis.baidu.com/apistore/mobilenumber/mobilenumber?",
+				headers:{
+					apikey:"03f463163ebfdf244422edd94668af52"
+				},
+				dataType:"json",
+				data:{
+					phone:Num
+				},
+				success:function (data) {
+					alert("success");
+					alert(data.retData.city);
+					console.log(data);
+				},
+				error:function () {
+					alert("false")
+				},
+				complete:function () {
+					alert("complete")
+				}
+				,
+				404:function () {
+					alert(404)
+				}
+			};
+			$.ajax(setttings);
+		});
+
+		$("#b2").click(function () {
+			$("#div1").html("");
+			$("#div2").html("");
+			var Num=$("#t1").val();
+			var setttings={
+				url:"http://apis.baidu.com/txapi/naowan/naowan",
+				headers:{
+					apikey:"03f463163ebfdf244422edd94668af52"
+				},
+				dataType:"json",
+				success:function (data) {
+//					alert("success");
+					$("#div1").html("问题:"+data.newslist[0].quest);
+					$("#b3").click(function (){
+						$("#div2").html("答案:"+data.newslist[0].result);
+					})
+				},
+				error:function () {
+					alert("false")
+				},
+				complete:function () {
+//					alert("complete")
+				}
+				,
+				404:function () {
+					alert(404)
+				}
+			};
+			$.ajax(setttings);
+		})
+
+
+
+	</script>
+</body>
+</html>
