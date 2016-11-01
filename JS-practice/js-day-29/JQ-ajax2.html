@@ -18,7 +18,7 @@
 			pageindex:1
 		},
 		success:function (data) {
-//			console.log(Data[1].Data.name);
+//			console.log(data);
 			for(var i=0;i<data.length;i++){
 				var a=data[i].Data;
 				$("#div1").html($("#div1").html()+JSON.parse(a).name+"&ensp;"+"&ensp;"+JSON.parse(a).total+"<br/>");
@@ -30,7 +30,7 @@
 			alert("error")
 		},
 		complete:function () {
-			alert("complete")
+			alert("完成了")
 		},
 		404:function () {
 			alert(404)

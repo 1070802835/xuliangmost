@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax.load</title>
+	<script src="../js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div id="top"></div>
+	<script>
+		$("#top").load("master/demo.html").children().first().click(function () {
+			alert(1)
+		})
+	</script>
+</body>
+</html>
