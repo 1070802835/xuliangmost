@@ -68,7 +68,7 @@ a{
 }
 #First{
 	display: block;
-	width:68px;
+	width:64px;
 	height:36px;
 	line-height: 36px;
 	text-align: center;
@@ -79,18 +79,18 @@ a{
 	outline: none;
 }
 #t1{
-	width:244px;
+	width:240px;
 	height:34px;
 	border:0;
 	float: left;
 }
-#t0{
-	width:244px;
-	height:34px;
-	border:0;
-	float: left;
-	display: none;
-}
+/*#t0{*/
+	/*width:240px;*/
+	/*height:34px;*/
+	/*border:0;*/
+	/*float: left;*/
+	/*display: none;*/
+/*}*/
 .po{
 	position: relative;
 }
@@ -106,9 +106,6 @@ a{
 	background:url("../images/sign-error-bg.png") no-repeat 0	center;
 	display: none;
 }
-.errorShow{
-	display: block;
-}
 
 
 
@@ -123,7 +120,7 @@ a{
 }
 #sp1{
 	display: block;
-	width:56px;
+	width:52px;
 	height:36px;
 	line-height: 36px;
 	text-align: center;
@@ -132,7 +129,7 @@ a{
 	border-right: 0;
 }
 #checknum{
-	width:100px;
+	width:106px;
 	height:38px;
 	line-height: 38px;
 	float:right;
@@ -146,7 +143,7 @@ a{
 
 
 #t2{
-	width:140px;
+	width:130px;
 	height:34px;
 	float: left;
 	border:1px solid #e3e2e2;
@@ -162,7 +159,7 @@ a{
 }
 #sp2{
 	display: block;
-	width:80px;
+	width:70px;
 	height:36px;
 	line-height: 36px;
 	text-align: center;
@@ -172,31 +169,32 @@ a{
 
 }
 #t3{
-	width:150px;
+	width:120px;
 	height:34px;
 	float: left;
 	border:1px solid #e3e2e2;
 	border-left:0;
 }
 #b1{
-	width:78px;
+	width:106px;
 	height:38px;
-	background: #323232;
+	background: red;
 	line-height: 38px;
-	text-align:center;
+	/*text-align:center;*/
 	font-weight:bolder;
 	border:0;
 	color: #fff;
 	float: right;
 }
+.b1{
+	font-size: 10px;
+
+}
 #b1:hover{
 	cursor: pointer;
 }
-#b1:active{
-	background: #666;
-	line-height: 42px;
-}
 
+/*在css里面改的点击样式*/
 
 
 #Password{
@@ -207,7 +205,7 @@ a{
 }
 #sp3{
 	display: block;
-	width:48px;
+	width:60px;
 	height:36px;
 	line-height: 36px;
 	text-align: center;
@@ -215,7 +213,7 @@ a{
 
 }
 #t4{
-	width:264px;
+	width:250px;
 	height:34px;
 	border:0;
 	float: left;
@@ -231,7 +229,7 @@ a{
 }
 #sp4{
 	display: block;
-	width:66px;
+	width:60px;
 	height:36px;
 	line-height: 36px;
 	text-align: center;
@@ -239,7 +237,7 @@ a{
 
 }
 #t5{
-	width:246px;
+	width:240px;
 	height:34px;
 	border:0;
 	float: left;

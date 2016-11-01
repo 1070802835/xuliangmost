@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div id="div1" style="width: 300px;height: 500px;background: red;position: relative;">
+		<div id="div2" style="width: 400px;height: 500px;background: yellow;position: absolute;left: 200px;top: 0;display: none;">
+
+		</div>
+
+
+	</div>
+
+
+	<script>
+		$("#div1").hover(function () {
+			$("#div2").stop().css("display","block").animate({
+				left:300
+			},400);
+		},function () {
+			$("#div2").css({display:"none",left:200})
+		},400)
+
+
+	</script>
+</body>
+</html>
