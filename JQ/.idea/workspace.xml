@@ -22,15 +22,17 @@
     <favorites_list name="JQ" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4601852">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="sign.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/My project/js/sign.js">
+          <file leaf-file-name="Top2.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/My project/base/Top2.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-388">
-                  <caret line="199" column="6" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="6" />
-                  <folding />
+                <state relative-caret-position="302">
+                  <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+                  <folding>
+                    <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -39,24 +41,24 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="sign in.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/My project/html/sign in.html">
+          <file leaf-file-name="Top2.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/My project/css/Top2.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="515">
-                  <caret line="48" column="25" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="25" />
-                  <folding>
-                    <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
+                <state relative-caret-position="131">
+                  <caret line="293" column="13" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sign.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/My project/css/sign.css">
+          <file leaf-file-name="Top2.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/My project/js/Top2.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="38">
-                  <caret line="217" column="13" selection-start-line="217" selection-start-column="13" selection-end-line="217" selection-end-column="13" />
-                  <folding />
+                <state relative-caret-position="1021">
+                  <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#0#49#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -90,15 +92,15 @@
         <option value="$PROJECT_DIR$/JQ-day-5-ajax.load/ajax.load.html" />
         <option value="$PROJECT_DIR$/My project/css/signBase.css" />
         <option value="$PROJECT_DIR$/My project/js/signBase.js" />
-        <option value="$PROJECT_DIR$/My project/css/Top2.css" />
-        <option value="$PROJECT_DIR$/My project/js/Top2.js" />
-        <option value="$PROJECT_DIR$/My project/base/Top2.html" />
         <option value="$PROJECT_DIR$/My project/js/Top1.js" />
-        <option value="$PROJECT_DIR$/My project/css/Top1.css" />
         <option value="$PROJECT_DIR$/My project/base/Top1.html" />
         <option value="$PROJECT_DIR$/My project/html/sign in.html" />
         <option value="$PROJECT_DIR$/My project/js/sign.js" />
         <option value="$PROJECT_DIR$/My project/css/sign.css" />
+        <option value="$PROJECT_DIR$/My project/css/Top1.css" />
+        <option value="$PROJECT_DIR$/My project/js/Top2.js" />
+        <option value="$PROJECT_DIR$/My project/css/Top2.css" />
+        <option value="$PROJECT_DIR$/My project/base/Top2.html" />
       </list>
     </option>
   </component>
@@ -242,7 +244,7 @@
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
@@ -379,7 +381,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/Documents/HBuilderProjects/js-day-26-JQ" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -450,15 +452,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1478052650317</updated>
-      <workItem from="1478052652107" duration="26027000" />
+      <workItem from="1478052652107" duration="35353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26027000" />
+    <option name="totallyTimeSpent" value="35353000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -575,38 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/My project/base/Top2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My project/css/Top2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My project/js/Top2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My project/js/Top1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JQ-day-5-ajax.load/ajax.load.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -623,35 +593,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/My project/base/Top1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My project/css/Top1.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/My project/html/sign in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="48" column="25" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="25" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/My project/js/sign.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-388">
+        <state relative-caret-position="19">
           <caret line="199" column="6" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="6" />
           <folding />
         </state>
@@ -659,8 +603,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/My project/css/sign.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="217" column="13" selection-start-line="217" selection-start-column="13" selection-end-line="217" selection-end-column="13" />
+        <state relative-caret-position="-2714">
+          <caret line="234" column="13" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/html/sign in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/base/Top1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="67" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/css/Top1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="128" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/js/Top1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="43" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/js/Top2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1021">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/base/Top2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="96" column="14" selection-start-line="96" selection-start-column="14" selection-end-line="96" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/css/Top2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="293" column="13" selection-start-line="293" selection-start-column="13" selection-end-line="293" selection-end-column="13" />
           <folding />
         </state>
       </provider>

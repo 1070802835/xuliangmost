@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+	</head>
+	<body>
+		<input type="text" name="t1" id="t1" value="" />
+		<input type="button" name="b1" id="b1" value="666" />
+		<div id="div1">
+			
+		</div>
+		
+		<script>
+			$("#b1").click(function(){
+				var arr1=$("#t1").val().split("").reverse().join("");
+//				alert(arr2)
+				$("#div1").html(arr1);
+			})
+		</script>
+	</body>
+</html>

@@ -92,7 +92,7 @@ li{
 #ul-mid li a{
 	color: red;
 	padding:0 10px;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 #ul-mid li #a1{
@@ -116,7 +116,7 @@ li{
 #ul-right li a{
 	color:#666;
 	padding:0 15px;
-	font-size:10px;
+	font-size:12px;
 	/*display: block;*/
 }
 #ul-right li a:hover{
