@@ -5,7 +5,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img
 body{
 	font-size: 12px;
 	font-family:"Microsoft Yahei";
-	background: black;
+
 }
 li{
 	list-style: none;
@@ -13,15 +13,47 @@ li{
 a{
 	text-decoration: none;
 }
+.w{
+	width: 1190px;
+	margin:0 auto;
+}
+#ul3{
+	width:322px;
+	margin:18px 0 18px 0;
+	height:32px;
+	line-height:32px;
+	font-size: 16px;
+}
+#ul3 a{
+	padding:0 30px;
+	color: #666;
+	/*display: block;*/
+}
+#ul3 a:hover{
+	color: red;
+}
+#ul3 #a1{
+	padding-left: 0;
+}
+#ul3 li{
+	height:32px;
+}
+#ul3 li:nth-of-type(1){
+	border-right:1px solid #999;
+}
+
 #bg{
-	margin-top:100px;
-	max-width: 1440px;
+	/*margin-top:100px;*/
+	/*max-width: 1440px;*/
 	height:553px;
 	background:url("../images/sign-bg.png") no-repeat;
 	position: relative;
+	background-size: cover;
 	border-top:1px solid #dcdbde
 }
-
+.w1{
+	height:553px;
+}
 
 
 
@@ -30,22 +62,21 @@ a{
 #Sign{
 	width: 378px;
 	height:530px;
+	float: right;
 	background:#fff;
-	position: absolute;
-	right:40px;
 	margin-top: 12px;
-	/*padding-left:34px;*/
+	display: none;
 }
 #Sign input:focus{
 	outline: none;
 }
-#contain{
+.contain{
 	width:348px;
 	height:40px;
 	border-bottom:1px solid #f3f3f3;
 	margin: 24px auto;
 }
-#sign-in{
+.sign-in{
 	width:124px;
 	height:40px;
 	background: #f3f3f3;
@@ -56,13 +87,13 @@ a{
 	font-weight: bolder;
 	margin-left: 54px;
 }
-#sign-in:hover{
+.sign-in:hover{
 	cursor: pointer;
 }
-#sign-up:hover{
+.sign-up:hover{
 	cursor: pointer;
 }
-#sign-up{
+.sign-up{
 	width:124px;
 	height:40px;
 	background: #333;
@@ -94,7 +125,7 @@ a{
 }
 #t1{
 	width:240px;
-	height:34px;
+	height:36px;
 	border:0;
 	float: left;
 }
@@ -127,7 +158,7 @@ a{
 
 #Check{
 	width:312px;
-	height:36px;
+	height:38px;
 
 
 	margin:28px 33px
@@ -158,7 +189,7 @@ a{
 
 #t2{
 	width:130px;
-	height:34px;
+	height:36px;
 	float: left;
 	border:1px solid #e3e2e2;
 	border-left: 0;
@@ -167,15 +198,15 @@ a{
 
 #Message{
 	width:312px;
-	height:36px;
+	height:38px;
 
 	margin:0 auto;
 }
 #sp2{
 	display: block;
 	width:70px;
-	height:36px;
-	line-height: 36px;
+	height:34px;
+	line-height: 34px;
 	text-align: center;
 	float: left;
 	border:1px solid #e3e2e2;
@@ -272,10 +303,10 @@ a{
 #sp5:hover{
 	text-decoration: underline;
 }
-#Check1{
+#Check1 {
 	position: absolute;
-	top:9px;
-	left:0;
+	top: 9px;
+	left: 0;
 }
 #Sure{
 	display: block;
@@ -287,6 +318,90 @@ a{
 	color: #fff;
 	background: #e1373a;
 }
+#Sure:hover{
+	cursor: pointer;
+}
+
+#foot{
+	width:728px;
+	/*float: left;*/
+	height:24px;
+	font-size: 12px;
+	line-height: 24px;
+	text-align: center;
+	margin: 0 auto;
+	color: #b1b1c7;
+
+}
+#foot a{
+	color: #b1b1c7;
+}
+#foot #a2{
+	padding:10px 24px;
+}
+#foot a:hover{
+	color:red
+}
+
+
+#Sign2{
+	width: 378px;
+	height:530px;
+	float: right;
+	background:#fff;
+	margin-top: 12px;
+}
+#Sign2 .pnm{
+	/*float: left;*/
+	width:320px;
+	height:210px;
+	margin:0 auto;
+	/*border:1px solid #e3e2e2;*/
+}
+#Sign2 .pnm input{
+	/*float: left;*/
+	width: 314px;
+	/*margin: 0 auto;*/
+	height:36px;
+	text-indent: 44px;
+}
+#Sign2 .pnm input:focus{
+	outline:none;
+}
+#Sign2 .pnm a{
+	float: right;
+	margin:36px 0 6px 0;
+	text-decoration: underline;
+	color: #666;
+}
+#Sign2 .pnm a:hover{
+	color: red;
+}
+
+#pnm1{
+	background: url("../images/sign2-bg1.png") no-repeat 12px center;
+	border:1px solid #e3e2e2;
+	margin-top: 36px;
+}
+#pnm2{
+	background: url("../images/sign2-bg2.png") no-repeat 12px center;
+	border:1px solid #e3e2e2;
+	margin-top: 36px;
+}
+
+.Sure{
+	width: 314px;
+	height:40px;
+	margin: 0 auto;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: #e1373a;
+}
 .Sure:hover{
 	cursor: pointer;
 }
+/*.Sure:active{*/
+	/*line-height: 45px;*/
+	/*background: #ea7173;*/
+/*}*/

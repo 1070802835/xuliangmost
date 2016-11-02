@@ -1,8 +1,24 @@
-$blue : #1875e7;　
-$width:100px;
-$height:100px;
-　　div {
-  color : $blue;
-  width:$width;
-  height:$height
-  　　}
+$color:yellow;
+$color2:blue;
+$width:666px;
+$left:left;
+
+
+#div1{
+  width: $width;
+  height:$width/2;
+  border-bottom-#{$left}-radius: $width;
+  background:orange;
+  font-size: 24px;
+  color: $color;
+}
+#div2{
+  width: $width/4;
+  height:$width/4;
+  border-top-right-radius: $width;
+  background:red;
+  font-size: 20px;
+  color: $color2;
+  text-align:center;
+  line-height:$width/4 ;
+}

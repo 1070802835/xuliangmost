@@ -1,38 +1,19 @@
-/*
-Error: Invalid CSS after "$width:100px": expected "{", was ";"
-        on line 2 of E:\iCloud\xuliangmost\JQ\JQ-day-6-sass\sass\demo1.scss
+#div1 {
+  width: 666px;
+  height: 333px;
+  border-bottom-left-radius: 666px;
+  background: orange;
+  font-size: 24px;
+  color: yellow; }
 
-1: $blue : #1875e7;銆€
-2: $width:100px;
-3: $height:100px;
-4: 銆€銆€div {
-5:   color : $blue;
-6:   width:$width;
-7:   height:$height
+#div2 {
+  width: 166.5px;
+  height: 166.5px;
+  border-top-right-radius: 666px;
+  background: red;
+  font-size: 20px;
+  color: blue;
+  text-align: center;
+  line-height: 166.5px; }
 
-Backtrace:
-E:\iCloud\xuliangmost\JQ\JQ-day-6-sass\sass\demo1.scss:2
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1165:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:641:in `block'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:635:in `ruleset'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
-C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
-C:/Program Files (x86)/Koala/bin/sass:18:in `load'
-C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"$width:100px\": expected \"{\", was \";\"\A         on line 2 of E:\iCloud\xuliangmost\JQ\JQ-day-6-sass\sass\demo1.scss\A \A 1: $blue : #1875e7;銆€\A 2: $width:100px;\A 3: $height:100px;\A 4: 銆€銆€div {\A 5:   color : $blue;\A 6:   width:$width;\A 7:   height:$height"; }
+/*# sourceMappingURL=demo1.css.map */

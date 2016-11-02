@@ -2,6 +2,29 @@
  * Created by Administrator on 2016/11/1.
  */
 
+$("#top").load("../base/Top1.html");
+
+
+
+$(".sign-in").click(function () {
+	$("#Sign").css("display","none");
+	$("#Sign2").css("display","block");
+});
+
+$(".sign-up").click(function () {
+	$("#Sign2").css("display","none");
+	$("#Sign").css("display","block");
+});
+
+
+
+
+
+
+
+
+
+
 checknum();
 
 
@@ -43,6 +66,21 @@ $("#Sure").mouseenter(function () {
 
 
 
+$(".Sure").mousedown(function (e) {
+	e.preventDefault();
+	$(this).css({
+		lineHeight:"45px",
+		background:"#ea7173"
+	})
+}).mouseup(function () {
+	$(this).css({background:"#e1373a",lineHeight:"40px"});
+})
+
+
+//登录界面的确认按钮
+
+
+
 $("#checknum").mousedown(function (e) {
 	e.preventDefault();
 	$(this).html("");
@@ -77,7 +115,8 @@ $("#t1").blur(function () {
 			$("#Error").css("display","block").text("请输入手机号");
 			$("#phone").css("border-color","red");
 		}
-		if($("#First").val()=="Email"){
+		// if($("#First").val()=="Email")
+		else{
 			$("#Error").css("display","block").text("请输入邮箱");
 			$("#phone").css("border-color","red");
 		}
@@ -90,7 +129,8 @@ $("#t1").blur(function () {
 					$("#Error").text("请输入手机号");
 				}
 			}
-			if($("#First").val()=="Email"){
+			// if($("#First").val()=="Email")
+			else{
 				checksign.Email();
 				if($("#t1").val().length==0){
 					$("#Error").text("请输入邮箱");
@@ -155,10 +195,18 @@ $("#t1").blur(function () {
 // });
 //验证邮箱
 
+
+
 $("#t2").blur(function () {
-	if($("#t2").val().length==0){
-		$("#Error1").css("display","block").text("请输入验证码");
-		$("#sp1,#t2").css("border-color","red");
+	if($("#t1").val().length==0){
+		if($("#t2").val().length==0){
+			$("#sp1,#t2").css("border-color","red");
+		}
+	}else{
+		if($("#t2").val().length==0){
+			$("#Error1").css("display","block").text("请输入验证码");
+			$("#sp1,#t2").css("border-color","red");
+		}
 	}
 }).focus(function () {
 	if($("#t1").val().length==0){
@@ -177,20 +225,13 @@ $("#t2").blur(function () {
 
 
 
-
-
-
-
 		$("#phone").css("border-color","red");
-
 	}else{
 		$(this).keyup(function () {
-			checksign.Checknum();
 			if($("#t2").val().length==0){
-
 				$("#Error1").css("display","block").text("请输入验证码");
-				$("#sp1,#t2").css("border-color","red");
 			}
+			checksign.Checknum();
 		})
 	}
 
@@ -231,11 +272,10 @@ var checksign={
 
 	Checknum:function () {
 		if(parseInt($("#t2").val())!==num){
-			$(this).parent().css("borderColor","red");
+			$("#sp1,#t2").css("borderColor","red");
 			$("#Error1").css("display","block").text("验证码输入错误")
 		}else{
-
-			$(this).parent().css("borderColor","#e3e2e2");
+			$("#sp1,#t2").css("borderColor","#e3e2e2");
 			$("#Error1").css("display","none");
 		}
 	}
@@ -251,12 +291,12 @@ function checknum() {
 	}
 }
 
-function runTime(That,time1) {
-	var tim=time1;
+function runTime(That,time) {
+
 	var time1=setInterval(function () {
-			tim--;
-			$(That).val("重新获取:"+tim);
-			if(tim==0){
+			time--;
+			$(That).val("重新获取:"+time);
+			if(time==0){
 				clearInterval(time1);
 				$(That).removeAttr("disabled").css({background:"red"}).val("点击获取验证码")
 			}
