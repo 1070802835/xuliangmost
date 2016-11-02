@@ -7,64 +7,65 @@
 	<link rel="stylesheet" href="../css/sign.css">
 </head>
 <body>
-
-	<div id="Sign">
-		<div id="contain">
-			<div id="sign-in">登录</div>
-			<div id="sign-up">注册</div>
-		</div>
-		<div id="phone" class="po">
-			<select name="First" id="First">
-				<option selected id="opt1" value="phone" >手机号</option>
-				<option id="opt2" value="Email">邮箱</option>
-			</select>
-			<input type="text" name="most" id="t1" maxlength="11" placeholder=" 请输入手机号码">
-			<!--<input type="text" name="most" id="t0" placeholder=" 请输入邮箱号">-->
-			<div id="Error" class="Error">
-
+	<div id="bg">
+		<div id="Sign">
+			<div id="contain">
+				<div id="sign-in">登录</div>
+				<div id="sign-up">注册</div>
 			</div>
-		</div>
+			<div id="phone" class="po">
+				<select name="First" id="First">
+					<option selected id="opt1" value="phone" >手机号</option>
+					<option id="opt2" value="Email">邮箱</option>
+				</select>
+				<input type="text" name="most" id="t1" maxlength="11" placeholder=" 请输入手机号码">
+				<!--<input type="text" name="most" id="t0" placeholder=" 请输入邮箱号">-->
+				<div id="Error" class="Error">
 
-		<div id="Check" class="po">
-			<span id="sp1">验证码</span>
-			<input maxlength="4" name="most" type="text" id="t2" >
-			<div id="checknum"></div>
-			<div id="Error1" class="Error">
+				</div>
 			</div>
-		</div>
 
-
-		<div id="Message" class="po">
-			<span id="sp2">短信验证码</span>
-			<input name="most" type="text" id="t3" >
-			<input name="most" type="button" id="b1" value="点击获取验证码">
-			<div id="Error2" class="Error">
-
+			<div id="Check" class="po">
+				<span id="sp1">验证码</span>
+				<input maxlength="4" name="most" type="text" id="t2" >
+				<div id="checknum"></div>
+				<div id="Error1" class="Error">
+				</div>
 			</div>
-		</div>
 
-		<div id="Password" class="po">
-			<span id="sp3">密码</span>
-			<input name="most" type="password" id="t4" placeholder="字母、数字、符号均可,6-25个字符以内" >
-			<div id="Error3" class="Error">
 
+			<div id="Message" class="po">
+				<span id="sp2">短信验证码</span>
+				<input name="most" type="text" id="t3" >
+				<input name="most" type="button" id="b1" value="点击获取验证码">
+				<div id="Error2" class="Error">
+
+				</div>
 			</div>
-		</div>
+
+			<div id="Password" class="po">
+				<span id="sp3">密码</span>
+				<input name="most" type="password" id="t4" placeholder="字母、数字、符号均可,6-25个字符以内" >
+				<div id="Error3" class="Error">
+
+				</div>
+			</div>
 
 
-		<div id="Confirm">
-			<span id="sp4">确认密码</span>
-			<input type="password" id="t5" >
-		</div>
+			<div id="Confirm">
+				<span id="sp4">确认密码</span>
+				<input type="password" id="t5" >
+			</div>
 
 
-		<div id="Register">
-			<input type="checkbox" name="Check1" id="Check1">
-			我已阅读并同意<a href="#" id="sp5">《优购会员注册协议》</a>
-		</div>
+			<div id="Register">
+				<input type="checkbox" name="Check1" id="Check1">
+				我已阅读并同意<a href="#" id="sp5">《优购会员注册协议》</a>
+			</div>
 
-		<div id="Sure">
-			同意并注册
+			<div id="Sure">
+				同意并注册
+			</div>
 		</div>
 	</div>
 	<script src="../js/sign.js"></script>

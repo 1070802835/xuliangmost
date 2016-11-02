@@ -13,13 +13,27 @@ li{
 a{
 	text-decoration: none;
 }
+#bg{
+	margin-top:100px;
+	max-width: 1440px;
+	height:553px;
+	background:url("../images/sign-bg.png") no-repeat;
+	position: relative;
+	border-top:1px solid #dcdbde
+}
+
+
+
+
+
+
 #Sign{
 	width: 378px;
 	height:530px;
 	background:#fff;
 	position: absolute;
 	right:40px;
-	margin-top: 40px;
+	margin-top: 12px;
 	/*padding-left:34px;*/
 }
 #Sign input:focus{

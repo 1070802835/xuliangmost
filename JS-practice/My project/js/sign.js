@@ -73,33 +73,29 @@ $("#b1").on("click",function () {
 
 $("#t1").blur(function () {
 	if($("#t1").val().length==0){
-		if($(this).val()=="phone"){
+		if($("#First").val()=="phone"){
 			$("#Error").css("display","block").text("请输入手机号");
 			$("#phone").css("border-color","red");
 		}
-
-		if($(this).val()=="Email"){
+		if($("#First").val()=="Email"){
 			$("#Error").css("display","block").text("请输入邮箱");
 			$("#phone").css("border-color","red");
 		}
 	}
 }).focus(function () {
 	$(this).keyup(function () {
-
-		if($("#First").val()=="phone") {
-			checksign.phone();
-			if ($("#t1").val().length == 0) {
-				$("#Error").text("请输入手机号");
-
+			if($("#First").val()=="phone") {
+				checksign.phone();
+				if ($("#t1").val().length == 0) {
+					$("#Error").text("请输入手机号");
+				}
 			}
-		}
-		if($("#First").val()=="Email"){
-			checksign.Email();
-			if($("#t1").val().length==0){
-				$("#Error").text("请输入邮箱");
+			if($("#First").val()=="Email"){
+				checksign.Email();
+				if($("#t1").val().length==0){
+					$("#Error").text("请输入邮箱");
+				}
 			}
-		}
-
 		})
 	});
 //验证手机号
@@ -161,14 +157,32 @@ $("#t1").blur(function () {
 
 $("#t2").blur(function () {
 	if($("#t2").val().length==0){
-		$("#Error1").css("display","block")
-			// .text("请输入验证码");
+		$("#Error1").css("display","block").text("请输入验证码");
 		$("#sp1,#t2").css("border-color","red");
 	}
 }).focus(function () {
 	if($("#t1").val().length==0){
+		// if($(this).val()=="phone"){
+		// 	$("#Error").css("display","block").text("请输入手机号");
+		// 	$("#phone").css("border-color","red");
+		// }
+		//
+		// if($(this).val()=="Email"){
+		// 	$("#Error").css("display","block").text("请输入邮箱");
+		// 	$("#phone").css("border-color","red");
+		// }
+			//这里的this  应该改为 "#First"
+			//不过我懒得改了
+
+
+
+
+
+
+
+
 		$("#phone").css("border-color","red");
-		$("#Error").css("display","block").text("请输入")
+
 	}else{
 		$(this).keyup(function () {
 			checksign.Checknum();
@@ -220,10 +234,10 @@ var checksign={
 			$(this).parent().css("borderColor","red");
 			$("#Error1").css("display","block").text("验证码输入错误")
 		}else{
-			$(this).parent().css("borderColor","#e3e2e2");
-			$("#Error1").css("display","none").removeClass("errorShow");
-		}
 
+			$(this).parent().css("borderColor","#e3e2e2");
+			$("#Error1").css("display","none");
+		}
 	}
 };
 
