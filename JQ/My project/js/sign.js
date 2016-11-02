@@ -16,15 +16,6 @@ $(".sign-up").click(function () {
 	$("#Sign").css("display","block");
 });
 
-
-
-
-
-
-
-
-
-
 checknum();
 
 
@@ -32,11 +23,11 @@ $("#First").bind("change",function (){
 	$("#Error").css("display","none");
 
 	if($(this).val()=="phone"){
-		$("#t1").val("").attr("placeholder","请输入手机号码")
+		$("#t1").val("").attr("placeholder","请输入手机号码").attr("maxlength","11");
 
 	}
 	if($(this).val()=="Email"){
-		$("#t1").val("").attr("placeholder","请输入邮箱号")
+		$("#t1").val("").attr("placeholder","请输入邮箱号");
 	}
 });
 //点击切换手机号-邮箱
@@ -74,7 +65,7 @@ $(".Sure").mousedown(function (e) {
 	})
 }).mouseup(function () {
 	$(this).css({background:"#e1373a",lineHeight:"40px"});
-})
+});
 
 
 //登录界面的确认按钮
@@ -122,6 +113,15 @@ $("#t1").blur(function () {
 		}
 	}
 }).focus(function () {
+    // if($("#t1").val()=="phone"){
+    //     $(this).attr("maxlength","11");
+    //     alert(1)
+    // }
+    // if($("#t1").val()=="Email"){
+    //     $(this).attr("maxlength","");
+    // }
+
+
 	$(this).keyup(function () {
 			if($("#First").val()=="phone") {
 				checksign.phone();
@@ -135,7 +135,8 @@ $("#t1").blur(function () {
 				if($("#t1").val().length==0){
 					$("#Error").text("请输入邮箱");
 				}
-			}
+			};
+
 		})
 	});
 //验证手机号

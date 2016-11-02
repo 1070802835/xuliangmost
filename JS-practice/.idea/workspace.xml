@@ -1,100 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fa34bcb-8053-42ba-8ef0-388de8949f8b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/Contains.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/animate.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/append.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/css.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/detach.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/eq.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/fadIn.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/fadOut.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/fadTo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/fadToggle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/img/bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/js/jquery-3.0.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/js/jquery-3.1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/js/jquery-3.1.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/show-hidden.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/slide-toggle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/slideDown-up.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/slideToggle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/toggle-class.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/乱序-还能回来版.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/创建表格And实施编辑-压缩版.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/创建表格And实施编辑.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/变量.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/子元素过滤器.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/属性选择器.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-26-JQ/表单过滤.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/Stop.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/bullete.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/bullete2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/css/accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/img/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/img/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/img/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/img/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/img/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/img/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/index111.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/js/jquery-2.1.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/js/jquery-3.1.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/js/jquery.easing.1.3.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/js/jquery.easing.compatibility.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/js/saparallax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/js/test.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/jsonp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/test-ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/test2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-27-Practice/手风琴-KK.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/Flappy Bird.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/img/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/img/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/img/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/img/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/img/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/img/button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/js/jquery-3.1.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/lubbo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/手风琴.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ-LB/淡入淡出+轮播.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/Flappy Bird.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/demo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/img/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/img/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/img/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/img/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/img/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/img/button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/js/jquery-3.1.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/lubbo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/手风琴.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-28-JQ/淡入淡出+轮播.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/JQ-ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/JQ-ajax2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/demo1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/js/jquery-3.1.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/json/json1.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-29/test1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-30-ajax.load/ajax.load.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js-day-30-ajax.load/master/demo.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/My project/css/sign.css" afterPath="$PROJECT_DIR$/My project/css/sign.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/My project/html/sign in.html" afterPath="$PROJECT_DIR$/My project/html/sign in.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/My project/js/sign.js" afterPath="$PROJECT_DIR$/My project/js/sign.js" />
-    </list>
+    <list default="true" id="2fa34bcb-8053-42ba-8ef0-388de8949f8b" name="Default" comment="" />
     <ignored path="JS-practice.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -164,8 +71,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="886" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -265,6 +172,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JS-practice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -289,17 +217,6 @@
             <PATH_ELEMENT USER_OBJECT="js-day-28-JQ-LB">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JS-practice" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -414,17 +331,18 @@
       <workItem from="1478009328541" duration="897000" />
       <workItem from="1478049820851" duration="2639000" />
       <workItem from="1478052624400" duration="29000" />
+      <workItem from="1478099711532" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24446000" />
+    <option name="totallyTimeSpent" value="24490000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2013889" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14568081" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -704,20 +622,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-jsonp-test/js/jquery-3.1.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-jsonp-test/demo1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js-jsonp-test/js/jquery-3.1.1.js" />
+    <entry file="file://$PROJECT_DIR$/js-jsonp-test/demo1.html" />
     <entry file="file://$PROJECT_DIR$/My project/html/sign in.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -726,13 +632,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/My project/q.xsl" />
-    <entry file="file://$PROJECT_DIR$/My project/js/sign.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/js/sign.js" />
     <entry file="file://$PROJECT_DIR$/My project/css/sign.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -740,13 +640,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js-day-31-sass/sass/demo.scss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js-day-31-sass/sass/demo.scss.css" />
   </component>
   <component name="masterDetails">
     <states>
