@@ -6,15 +6,15 @@ $("#top").load("../base/Top1.html");
 
 
 
-$(".sign-in").click(function () {
-	$("#Sign").css("display","none");
-	$("#Sign2").css("display","block");
-});
-
-$(".sign-up").click(function () {
-	$("#Sign2").css("display","none");
-	$("#Sign").css("display","block");
-});
+// $(".sign-in").click(function () {
+// 	$("#Sign").css("display","none");
+// 	$("#Sign2").css("display","block");
+// });
+//
+// $(".sign-up").click(function () {
+// 	$("#Sign2").css("display","none");
+// 	$("#Sign").css("display","block");
+// });
 
 checknum();
 
