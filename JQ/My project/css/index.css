@@ -1,0 +1,9 @@
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img, form, fieldset, label, table, th, td{
+	margin: 0;
+	padding:0;
+}
+body{
+	font-size: 12px;
+	font-family:"Microsoft Yahei";
+
+}

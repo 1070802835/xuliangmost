@@ -2,6 +2,9 @@
 	margin:0;
 	padding:0;
 }
+body{
+	background: #f8f8f8;
+}
 a{
 	text-decoration: none;
 }
@@ -374,7 +377,7 @@ li{
 	left:0;
 	border: 1px solid #d1d3d4;
 	background: #f5f5f5;
-	/*display:none;*/
+	display:none;
 	border-top:0;
 	/*text-align:center;*/
 }
@@ -415,11 +418,15 @@ li{
 #details dl:hover{
 	background: #666;
 }
-#details dl:hover a{
+#details dl:hover dt a{
+	color:white;
+}
+#details dl:hover dd a{
 	color:white;
 }
 
 .Detail{
+	clear: both;
 	width:148px;
 	height:460px;
 	border:1px solid #d1d3d4;
@@ -427,11 +434,13 @@ li{
 	top:1px;
 	left:174px;
 	font-size:0.5vw;
+	background: #fff;
 	display:none;
 }
 .Deatils{
 	width:120px;
-	margin:0 auto;
+	margin-left:15px;
+	float: left;
 	position: relative;
 }
 .Deatils p{

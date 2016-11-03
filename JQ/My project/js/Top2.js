@@ -90,20 +90,31 @@ $("#top2-right-shop").hover(function () {
 
 
 
-$("#all").hover(function (e) {
+$(".all").hover(function (e) {
 	e.preventDefault();
-	// $("#details").stop().slideDown("fast");
+	$("#details").stop().slideDown("fast");
 },function () {
-	// $("#details").stop().slideUp("fast");
+	$("#details").stop().slideUp("fast");
 });
 
 
 
-$("#details").hover(function () {
-	var Index=$(this).children().index();
-	// alert(Index);
-	$(".Detail").eq(Index).css('display','block');
+$("#details dl").hover(function () {
+	var Index=$(this).index();
+	$(".Detail").stop().eq(Index).css('display','block').animate({
+		left:"197px"
+	},400);
 
 },function () {
-	// $(".Detail").css('display','block');
+	$(".Detail").stop().css({
+		display:'none',
+		left:"174px"
+	});
+});
+$(".Deatils p").hover(function () {
+	$(this).stop().animate({
+		marginLeft:"10px"
+	},300)
+},function () {
+	$(this).stop().css("marginLeft",0)
 });
