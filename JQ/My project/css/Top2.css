@@ -197,8 +197,15 @@ li{
 	position:absolute;
 	left:0;
 	top:26px;
-
 }
+/*#top2 .a1 img{*/
+	/*position: absolute;*/
+	/*left:0;*/
+/*}*/
+/*#top2 .a1 .im1{*/
+	/*height:0;*/
+	/*top:82px;*/
+/*}*/
 #top2-mid{
 	height:62px;
 	width:528px;

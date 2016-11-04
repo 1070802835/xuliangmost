@@ -25,6 +25,7 @@ li{
 	padding-bottom: 20px;
 	border:1px solid #ececec;
 	border-top:0;
+	position: relative;
 }
 #p1{
 	width:100%;
@@ -42,6 +43,7 @@ li{
 	border-top:1px solid #e8e8e8;
 	margin:18px auto;
 	overflow: hidden;
+	position: relative;
 
 }
 #mark a{
@@ -59,6 +61,25 @@ li{
 #mark a:hover{
 	color: red;
 }
+#foot .sign-change{
+	width:11px;
+	height:21px;
+	display:block;
+	position: absolute;
+}
+#foot .sign-change:hover{
+	cursor: pointer;
+}
+#foot .sign-change1{
+	background:url("../images/foot-sign-change.png") no-repeat 0 center;
+	z-index:3;
+}
+#foot .sign-change2{
+	background:url("../images/foot-sign-change.png") no-repeat -12px center;
+	z-index:3;
+}
+
+
 #ulwrap{
 	width:1108px;
 	/*float: left;*/
@@ -131,6 +152,9 @@ li{
 	float: left;
 	margin-top:24px;
 }
+#foot2ul a:hover{
+	color:red;
+}
 #foot2ul p{
 	width:150px;
 	height:20px;
@@ -146,6 +170,8 @@ li{
 	color: #666;
 	font-weight:bolder;
 }
+
+
 #foot2ul .footp{
 	text-indent: 20px;
 }
@@ -181,12 +207,46 @@ li{
 	right:0;
 	top:0;
 }
+#foot3{
+	width:100%;
+	height:103px;
+	background:black;
+}
+#foot3div1{
+	height: 103px;
+	background:url("../images/foot-logo.png") no-repeat left center;
+	color:white;
+}
+#foot3div1 a{
+	color: #fff;
+}
+#foot3div1 p{
+	width:1050px;
+	height:24px;
+	line-height: 24px;
+	float: right;
+	text-align:right;
+	font-size:10px;
+}
+#foot3ul1{
+	float:right;
+}
+#foot3ul1 li{
+	height:26px;
+	line-height: 26px;
+}
+#foot3ul1 li a{
+	padding:0 10px;
+	/*float: left;*/
+	border-left:1px solid #fff;
 
-
-
-
-
-
+}
+#foot3ul1 li:nth-of-type(1) a{
+	border-left:0;
+}
+#foot3ul1 a:hover{
+	color:red;
+}
 
 
 

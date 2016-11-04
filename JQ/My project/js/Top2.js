@@ -118,3 +118,19 @@ $(".Deatils p").hover(function () {
 },function () {
 	$(this).stop().css("marginLeft",0)
 });
+
+//以上都是优购自身的效果
+
+// $("#top2 .a1").hover(function () {
+// 	$(this).children().first().animate({
+// 		top:"82px",
+// 		height:0
+// 	},400);
+// 	$(this).children().last().animate({
+// 		top:0,
+// 		height:"82px"
+// 	},400);
+// },function () {
+//
+// });
+

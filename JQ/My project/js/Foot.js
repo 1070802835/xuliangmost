@@ -25,3 +25,24 @@ for(var i=0;i<48;i++){
 	}
 }
 //优购的前端太垃圾   所以我就选用了图片整合~~~~
+var Top=parseInt($("#foot").css("height"))/2-parseInt($(".sign-change1").css("height"))/2-parseInt($("#mark").css("height"))/4;
+$(".sign-change1").css({
+	left:"12px",
+	top:Top
+});
+$(".sign-change2").css({
+	right:"12px",
+	top:Top
+});
+var flag=true;
+
+
+$(".sign-change").click(function () {
+	if(flag){
+		$("#mark a").css("backgroundImage","url('../images/foot-sign2.png')")
+	}else{
+		$("#mark a").css("backgroundImage","url('../images/foot-sign.png')")
+	}
+	flag=!flag;
+});
+
