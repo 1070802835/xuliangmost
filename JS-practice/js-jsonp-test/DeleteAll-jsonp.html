@@ -8,7 +8,6 @@
 		<script type="text/javascript">
 					function fn1(arrdata){
 					for(var i=0;i<arrdata.length;i++){
-						
 						try{
 							var srp=document.createElement("script");
 							srp.src="http://10.17.158.224:2801/Product/DeleteProductById_get?id="+arrdata[i].Id+"&type="+arrdata[i].Type;
@@ -24,6 +23,6 @@
 				
 				
 		</script>
-		<script src="http://10.17.158.224:2801/Product/GetProductsByPage_get?pagesize=100&pageindex=1&callback=fn1"></script>
+		<script src="http://10.17.158.13:8081/Product/GetProductsByPage_get?pagesize=100&pageindex=1&callback=fn1"></script>
 	</body>
 </html>

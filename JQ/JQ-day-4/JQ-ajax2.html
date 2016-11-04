@@ -18,11 +18,12 @@
 			pageindex:1
 		},
 		success:function (data) {
-//			console.log(data);
+			console.log(data);
 			for(var i=0;i<data.length;i++){
 				var a=data[i].Data;
-				$("#div1").html($("#div1").html()+JSON.parse(a).name+"&ensp;"+"&ensp;"+JSON.parse(a).total+"<br/>");
-			}			//这里需要JSON.parse()转一下   因为上面   dataType写了jsonp了
+//				console.log(a);
+				$("#div1").html($("#div1").html()+JSON.parse(a).userId+"&ensp;"+"&ensp;"+JSON.parse(a).userPw+"<br/>");
+			}			//这里需要JSON.parse()转一下   
 
 //			alert(JSON.parse(a).name)
 		},
@@ -30,7 +31,7 @@
 			alert("error")
 		},
 		complete:function () {
-			alert("完成了")
+//			alert("完成了")
 		},
 		404:function () {
 			alert(404)

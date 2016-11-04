@@ -1,0 +1,21 @@
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img, form, fieldset, label, table, th, td{
+	margin: 0;
+	padding:0;
+}
+body{
+	font-size: 12px;
+	font-family:"Microsoft Yahei";
+	background: #f8f8f8;
+}
+img{
+	border:0;
+}
+a{
+	text-decoration: none;
+}
+#rightNav{
+	position: fixed;
+	right:0;
+	top:200px;
+
+}

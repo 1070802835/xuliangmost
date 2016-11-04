@@ -24,6 +24,15 @@ for(var i=0;i<48;i++){
 		})
 	}
 }
+
+for(var i=0;i<5;i++){
+	$("#foot3div2 .safe").eq(i).css({
+		backgroundPosition:i*-108+'px '+'0px'
+})
+}
+
+
+
 //优购的前端太垃圾   所以我就选用了图片整合~~~~
 var Top=parseInt($("#foot").css("height"))/2-parseInt($(".sign-change1").css("height"))/2-parseInt($("#mark").css("height"))/4;
 $(".sign-change1").css({

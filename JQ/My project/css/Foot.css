@@ -3,10 +3,12 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img
 	padding:0;
 }
 body{
-
 	font-size: 12px;
 	font-family:"Microsoft Yahei";
 	background: #f8f8f8;
+}
+img{
+	border:0;
 }
 a{
 	text-decoration: none;
@@ -29,7 +31,7 @@ li{
 }
 #p1{
 	width:100%;
-	height:24px;
+	height:27px;
 	text-indent:4px;
 	color: #666;
 	border-bottom:2px solid #808080;
@@ -42,6 +44,7 @@ li{
 	border-left:1px solid #e8e8e8;
 	border-top:1px solid #e8e8e8;
 	margin:18px auto;
+	margin-bottom: 10px;
 	overflow: hidden;
 	position: relative;
 
@@ -83,7 +86,7 @@ li{
 #ulwrap{
 	width:1108px;
 	/*float: left;*/
-	height:148px;
+	height:170px;
 	margin:0 auto;
 }
 #ulwrap ul{
@@ -91,8 +94,8 @@ li{
 
 }
 #ulwrap ul li{
-	height:36px;
-	line-height: 36px;
+	height:40px;
+	line-height: 40px;
 	/*margin-right: 50px;*/
 	width:520px;
 	border-bottom:1px dashed #e8e8e8;
@@ -101,6 +104,7 @@ li{
 	float: left;
 	color: #888;
 	margin-left:20px;
+	font-size:14px;
 }
 #ulwrap ul li a:hover{
 	color: red;
@@ -160,14 +164,14 @@ li{
 	height:20px;
 }
 #foot2ul p a{
-	color: #999;
+	color: #777;
 }
 
 #foot2ul p:nth-of-type(1){
 	height:24px;
 }
 #foot2ul p:nth-of-type(1) a{
-	color: #666;
+	color: #555;
 	font-weight:bolder;
 }
 
@@ -247,9 +251,26 @@ li{
 #foot3ul1 a:hover{
 	color:red;
 }
+#foot3div2{
+	/*width:1050px;*/
+	height:40px;
+	margin-top:10px;
+	float: right;
+}
 
-
-
+#foot3div2 .safe{
+	float:left;
+	width:108px;
+	height:40px;
+	background: url("../images/foot-sign3.png") no-repeat;
+	margin-left:10px;
+}
+#footlast{
+	width:100%;
+	height:14px;
+	background: #fff;
+	border-top:1px solid #1f1c09;
+}
 
 
 

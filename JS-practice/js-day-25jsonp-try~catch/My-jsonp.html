@@ -18,16 +18,12 @@
 			
 //			fn1();//这里不能调用  不然的话   会报错   因为function之后    下面的script已经是在调用
 			function fn1(arrdata){
-
-				
 				for(var i=0;i<arrdata.length;i++){
 					if(arrdata[i].Data){
 						var oBj=JSON.parse(arrdata[i].Data)
 						oP1.innerHTML+=oBj.name+"&ensp;"+"&ensp;"+"&ensp;"+oBj.total+"<br>";
 					}
 				}
-				
-				
 			}
 //			var srp=document.createElement("script");
 //			srp.src="http://10.17.158.241:8081/Product/GetProductsByPage_get?pagesize=10&pageindex=1&callback=fn1";
@@ -35,6 +31,7 @@
 
 		</script>
 		<script src="http://10.17.158.241:8081/Product/GetProductsByPage_get?pagesize=10&pageindex=1&callback=fn1"></script>
+
 		
 		<!--<!--xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");ajax post方式写在开头  让浏览器识别-->
 		
