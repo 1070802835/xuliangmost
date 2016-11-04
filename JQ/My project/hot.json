@@ -1,0 +1,74 @@
+[
+  {
+    "order":1,
+    "src":"../img/girl_index/ajax_img/1.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+  "order":2,
+  "src":"../img/girl_index/ajax_img/2.jpg",
+  "name":"dusty mini 长款贴标连帽风衣",
+  "price":"&yen;407.00"
+},
+  {
+    "order":3,
+    "src":"../img/girl_index/ajax_img/3.jpg",
+    "name":"Dr.Martens  女款 8 Eye Boot",
+    "price":"&yen;750.00"
+  },
+  {
+    "order":4,
+    "src":"../img/girl_index/ajax_img/4.jpg",
+    "name":"cherrykoko 破洞牛仔九分裤",
+    "price":"&yen;500.00"
+  },
+  {
+    "order":5,
+    "src":"../img/girl_index/ajax_img/5.jpg",
+    "name":"M.WOWL 圆领条纹毛衣",
+    "price":"&yen;219.00"
+  },
+  {
+    "order":6,
+    "src":"../img/girl_index/ajax_img/6.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+    "order":7,
+    "src":"../img/girl_index/ajax_img/7.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+    "order":8,
+    "src":"../img/girl_index/ajax_img/8.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+    "order":9,
+    "src":"../img/girl_index/ajax_img/9.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+    "order":10,
+    "src":"../img/girl_index/ajax_img/10.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+    "order":11,
+    "src":"../img/girl_index/ajax_img/11.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  },
+  {
+    "order":12,
+    "src":"../img/girl_index/ajax_img/12.jpg",
+    "name":"PUCCA&copy; 口袋拼接圆领卫衣",
+    "price":"&yen;629.00"
+  }
+]
