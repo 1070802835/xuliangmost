@@ -187,7 +187,6 @@ $.ajax({
 			var Id=data[i].id;
 			var Name=data[i].name;
 			var Sr=data[i].sr;
-
 			creatProduct(Id,Name,Sr);
 		};
 	},
@@ -195,16 +194,22 @@ $.ajax({
 		alert(1)
 	}
 });
-
+// for(var i=0;i<data.length;i++){
+//
+//
+//
+// }
 function creatProduct(id,name,sr) {
-	$(".main-right").append("<dl class='right-dl1'><dt class='right-dt1'><a href='javascript:void(0)'>"+id+"</a></dt><dd>"+name+"</dd><a href='javascript:void(0)' class='right-dl1-a'></a></dl>");
+	// var url1='images/index-product'+sr+'.jpg'
+	$(".main-right").append("<dl class='right-dl1'><dt class='right-dt1'><a href='javascript:void(0)'>"+id+"</a></dt><dd>"+name+"</dd><a href='javascript:void(0)' class="+sr+"></a></dl>");
+
 	$(".right-dl1").css({
 		width:'156px',
 		height:'208px',
 		float:'left',
 		marginTop:'8px',
 		marginLeft:'24px'
-	});
+	}).append("");
 	$(".right-dt1").css({
 		width:'156px',
 			height:'44px',
@@ -221,12 +226,11 @@ function creatProduct(id,name,sr) {
 		lineHeight:'20px',
 		color:'#666',
 		textAlign:'center'
-	});
-	$(".right-dl1-a").css({
+	}).next().css({
 		display:'block',
 		width:'156px',
 		height:'130px',
-		background:"rl('images/index-product"+sr+".jpg') no-repeat center"
+		background:"url('images/index-product"+sr+".jpg') no-repeat center"
 
 	});
 	console.log(sr);
