@@ -231,9 +231,7 @@ function creatProduct(id,name,sr) {
 		width:'156px',
 		height:'130px',
 		background:"url('images/index-product"+sr+".jpg') no-repeat center"
-
 	});
 	console.log(sr);
-
 }
 
