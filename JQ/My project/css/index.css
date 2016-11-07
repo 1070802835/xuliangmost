@@ -5,5 +5,87 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img
 body{
 	font-size: 12px;
 	font-family:"Microsoft Yahei";
+	/*overflow-x: hidden;*/
+}
+#Lb{
+	width: 100%;
+	max-width: 1190px;
+	height: 469px;
+	position: relative;
+	z-index: 5;
+	margin: 20px auto;
+}
 
+#Lb #LB-ul1{
+	width: 100%;
+	max-width: 1190px;
+	position: relative;
+	z-index: 9;
+}
+
+#Lb #LB-ul1 li{
+	list-style: none;
+	/*float: left;*/
+	width: 100%;
+	max-width: 1190px;
+	position: absolute;
+}
+
+#Lb #LB-ul1 li img {
+	width: 100%;
+	max-width: 1190px;
+}
+
+#Lb #LB-sp1 {
+	display: block;
+	width: 71px;
+	height: 71px;
+	background:url("../images/LB-button.png") -71px 0;
+	position: absolute;
+	/*top: 300px;*/
+	left: -30px;
+	z-index: 10;
+}
+
+#Lb #LB-sp2 {
+	display: block;
+	width: 71px;
+	height: 71px;
+	background: url("../images/LB-button.png") no-repeat -71px -71px;
+	position: absolute;
+	/*top: 300px;*/
+	right: -30px;
+	z-index: 10;
+}
+#Lb #LB-ann{
+	width:100%;
+	height:32px;
+	max-width: 1190px;
+	position: absolute;
+	bottom:10px;
+	z-index:20;
+}
+#Lb #LB-ann #ann-an{
+	width:180px;
+	background: #363636;
+	/*float: left;*/
+	height:32px;
+	margin:0 auto;
+	border-radius:32px;
+	opacity:0.7;
+}
+#Lb #LB-ann #ann-an li{
+	width: 16px;
+	height:16px;
+	border-radius: 16px;
+	background: #787878;
+	/*position: absolute;*/
+	/*z-index:20;*/
+	float: left;
+	list-style:none;
+	margin:8px 10px 0 10px;
+}
+#Lb #LB-ann #ann-an li:hover{
+	background: #c7d1d6;
+	cursor: pointer;
 }

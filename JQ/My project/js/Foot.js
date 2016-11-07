@@ -48,9 +48,9 @@ var flag=true;
 
 $(".sign-change").click(function () {
 	if(flag){
-		$("#mark a").css("backgroundImage","url('../images/foot-sign2.png')")
+		$("#mark a").css("backgroundImage","url('images/foot-sign2.png')")
 	}else{
-		$("#mark a").css("backgroundImage","url('../images/foot-sign.png')")
+		$("#mark a").css("backgroundImage","url('images/foot-sign.png')")
 	}
 	flag=!flag;
 });
