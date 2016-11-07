@@ -101,56 +101,135 @@ $("#hot-sign-list a").hover(function () {
 });
 
 for(var j=0;j<10;j++){
-	$(".main-list a").eq(j).css({
+	$(".main-list1 a").eq(j).css({
 		backgroundPosition:j*-90+'px '+'4px'
 	})
 }
+for(var j=0;j<10;j++){
+	$(".main-list2 a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'-100px'
+	})
+}
+for(var j=0;j<10;j++){
+	$(".main-list3 a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'-160px'
+	})
+}
+for(var j=0;j<10;j++){
+	$(".main-list4 a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'-55px'
+	})
+}
+for(var j=0;j<10;j++){
+	$(".main-list5 a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'-100px'
+	})
+}
+for(var j=0;j<10;j++){
+	$(".main-list6 a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'-160px'
+	})
+}
+for(var j=0;j<10;j++){
+	$(".main-list7 a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'-55px'
+	})
+}
 
-var id="阿迪NEO/匡威";
-var name="御寒防风外套&nbsp;¥199元起";
-var sr=1;
-creatProduct(id,name,sr)
+
+
+
+
+
+// for(var j=0;j<70;j++){
+// 	if(j<10){
+// 		$(".main-jist1 a").eq(j).css({
+// 		backgroundPosition:j*-90+'px '+'4px'
+// 	})
+// 	}else if(j<20){
+// 		$(".main-jist2 a").eq(j).css({
+// 		backgroundPosition:(j-10)*-90+'px '+'-200px'
+// 	})
+// 	}else if(j<30){
+// 		$(".main-jist3 a").eq(j).css({
+// 		backgroundPosition:(j-20)*-90+'px '+'-160px'
+// 	})
+// 	}else if(j<40){
+// 		$(".main-jist4 a").eq(j).css({
+// 			backgroundPosition:(j-30)*-90+'px '+'-55px'
+// 		})
+// 	}else if(j<50){
+// 		$(".main-jist5 a").eq(j).css({
+// 		backgroundPosition:(j-30)*-90+'px '+'-200px'
+// 	})
+// 	}else if(j<60){
+// 		$(".main-jist6 a").eq(j).css({
+// 			backgroundPosition:(j-30)*-90+'px '+'-160px'
+// 		})
+// 	}else{
+// 		$(".main-jist7 a").eq(j).css({
+// 			backgroundPosition:(j-30)*-90+'px '+'4px'
+// 		})
+// 	}
+// }
+
+
+
+
+
+$.ajax({
+	url:'json/index-product.json',
+	dataType:'json',
+	success:function (data) {
+		console.log(data);
+		// alert(data.length)
+		for(var i=0;i<data.length;i++){
+			var Id=data[i].id;
+			var Name=data[i].name;
+			var Sr=data[i].sr;
+
+			creatProduct(Id,Name,Sr);
+		};
+	},
+	error:function () {
+		alert(1)
+	}
+});
+
 function creatProduct(id,name,sr) {
-	$(".main-right").append("<div class='main-right1'></div>").css({
-		width:'558px',
-		height:'220px',
-		borderBottom:'1px solid #9b9b9b'
-	}).append("<div class='main-right2'></div>").css({
-		width:'558px',
-		height:'220px',
-		borderBottom:'1px solid #9b9b9b',
-		borderTop:'1px solid #ddd'
-	});
-	$(".main-right1").append("<dl class='right-dl1'><dt><a href='javascript:void(0)'>"+id+"</a></dt><dd>"+name+"</dd><a href='javascript:void(0)' class='right-dl1-a'></a></dl>");
+	$(".main-right").append("<dl class='right-dl1'><dt class='right-dt1'><a href='javascript:void(0)'>"+id+"</a></dt><dd>"+name+"</dd><a href='javascript:void(0)' class='right-dl1-a'></a></dl>");
 	$(".right-dl1").css({
 		width:'156px',
 		height:'208px',
-		float:'left'
-	}).children().first().css({
+		float:'left',
+		marginTop:'8px',
+		marginLeft:'24px'
+	});
+	$(".right-dt1").css({
 		width:'156px',
-		height:'44px',
-		lineHeight:'60px',
-		textAlign:'center'
-	}).children().first().css({
+			height:'44px',
+			lineHeight:'60px',
+			textAlign:'center'
+	}).children().css({
 		color:'#000',
 		fontSize:'16px',
 		fontWeight:'bolder'
 	});
-
 	$(".right-dl1 dd").css({
 		width:'156px',
 		height:'20px',
 		lineHeight:'20px',
 		color:'#666',
 		textAlign:'center'
-	})
+	});
 	$(".right-dl1-a").css({
 		display:'block',
 		width:'156px',
 		height:'130px',
 		background:"url('images/index-product"+sr+".jpg') no-repeat center"
-	})
 
+	});
+	console.log(sr);
 
 }
 

@@ -211,6 +211,7 @@ body{
 .main .main-son{
 	overflow: hidden;
 	border:1px solid #d1d3d4;
+	/*margin-top:22px;*/
 }
 
 
@@ -219,8 +220,10 @@ body{
 .main .main-left{
 	width:200px;
 	height:432px;
-	background:red;
+	/*background:red;*/
 	float: left;
+	margin-left:12px;
+	margin-top:22px;
 }
 .main .main-left .mainLeft-top{
 	overflow: hidden;
@@ -249,7 +252,8 @@ body{
 
 .main .main-left .main-list{
 	margin:0 6px;
-
+	/*overflow: hidden;*/
+	float: left;
 
 }
 .main .main-left .main-list a{
@@ -266,6 +270,9 @@ body{
 	height:430px;
 	border:1px solid #ddd;
 	float: left;
+	overflow: hidden;
+	margin-top:22px;
+	margin-left: 20px;
 }
 .main .main-mid dl{
 	float: left;
@@ -292,6 +299,10 @@ body{
 	float: left;
 	overflow:hidden;
 	background: white;
+	width:558px;
+	height:432px;
+	margin-left:20px;
+	margin-top:22px;
 }
 
 /*.main .main-son .main-right .main-right1{*/
@@ -338,7 +349,21 @@ body{
 
 /*}*/
 
+.main-last-p1{
+	display: block;
+	width:100%;
+	max-width: 1190px;
+	height:36px;
+	line-height: 36px;
+	border-bottom:2px solid #000;
+	text-indent: 4px;
 
+}
+.main-last-p1 .main-last-span{
+	float: left;
+	font-size:1.2vw;
+	color: #666;
+}
 
 
 

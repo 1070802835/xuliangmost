@@ -22,24 +22,34 @@
     <favorites_list name="JQ" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6042972">
+    <splitter split-orientation="horizontal" split-proportion="0.43777975">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index-product.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/My project/json/index-product.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+                <state relative-caret-position="285">
+                  <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/My project/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="349">
-                  <caret line="133" column="31" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+                <state relative-caret-position="653">
+                  <caret line="133" column="18" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/My project/css/index.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="234">
+                  <caret line="357" column="19" selection-start-line="357" selection-start-column="19" selection-end-line="357" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -49,21 +59,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/My project/css/index.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-59">
-                  <caret line="296" column="0" selection-start-line="296" selection-start-column="2" selection-end-line="338" selection-end-column="3" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/My project/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="537">
-                  <caret line="168" column="29" selection-start-line="151" selection-start-column="16" selection-end-line="168" selection-end-column="29" />
+                <state relative-caret-position="606">
+                  <caret line="519" column="7" selection-start-line="519" selection-start-column="7" selection-end-line="519" selection-end-column="7" />
                   <folding>
                     <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -73,16 +73,45 @@
                     <element signature="e#1224#1228#0" expanded="true" />
                     <element signature="n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#p#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="e#2337#2343#0" expanded="true" />
                     <element signature="e#2444#2448#0" expanded="true" />
-                    <element signature="n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
                     <element signature="n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-                    <element signature="e#3284#3290#0" expanded="true" />
-                    <element signature="e#3516#3522#0" expanded="true" />
-                    <marker date="1478515577679" expanded="true" signature="3392:3638" ph="..." />
-                    <marker date="1478515577679" expanded="true" signature="3427:3617" ph="..." />
-                    <marker date="1478515577679" expanded="true" signature="3678:3699" ph="..." />
+                    <element signature="e#3296#3302#0" expanded="true" />
+                    <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#p#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#3474#3480#0" expanded="true" />
+                    <element signature="e#3581#3585#0" expanded="true" />
+                    <element signature="n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#4432#4438#0" expanded="true" />
+                    <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#4609#4615#0" expanded="true" />
+                    <element signature="e#4716#4720#0" expanded="true" />
+                    <element signature="n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#5567#5573#0" expanded="true" />
+                    <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#p#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#5744#5750#0" expanded="true" />
+                    <element signature="e#5851#5855#0" expanded="true" />
+                    <element signature="e#6702#6708#0" expanded="true" />
+                    <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#p#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#6879#6885#0" expanded="true" />
+                    <element signature="e#6986#6990#0" expanded="true" />
+                    <element signature="n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#7837#7843#0" expanded="true" />
+                    <element signature="n#div#9;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#p#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#8014#8020#0" expanded="true" />
+                    <element signature="e#8121#8125#0" expanded="true" />
+                    <element signature="e#8972#8978#0" expanded="true" />
+                    <element signature="n#div#10;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#p#0;n#div#10;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="e#9149#9155#0" expanded="true" />
+                    <element signature="e#9256#9260#0" expanded="true" />
+                    <element signature="e#10107#10113#0" expanded="true" />
+                    <element signature="e#10301#10307#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -134,7 +163,6 @@
         <option value="$PROJECT_DIR$/My project/css/Right-Nav.scss" />
         <option value="$PROJECT_DIR$/My project/base/Right-Nav.css" />
         <option value="$PROJECT_DIR$/My project/demo.html" />
-        <option value="$PROJECT_DIR$/My project/base/Right-Nav.html" />
         <option value="$PROJECT_DIR$/My project/js/Foot.js" />
         <option value="$PROJECT_DIR$/My project/base/Foot.html" />
         <option value="$PROJECT_DIR$/My project/css/Right-Nav.css" />
@@ -143,9 +171,10 @@
         <option value="$PROJECT_DIR$/My project/base/Top2.html" />
         <option value="$PROJECT_DIR$/My project/css/Top2.css" />
         <option value="$PROJECT_DIR$/My project/json/index-product.json" />
-        <option value="$PROJECT_DIR$/My project/css/index.css" />
-        <option value="$PROJECT_DIR$/My project/index.html" />
+        <option value="$PROJECT_DIR$/My project/base/Right-Nav.html" />
         <option value="$PROJECT_DIR$/My project/js/index.js" />
+        <option value="$PROJECT_DIR$/My project/index.html" />
+        <option value="$PROJECT_DIR$/My project/css/index.css" />
       </list>
     </option>
   </component>
@@ -296,128 +325,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="json" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JQ" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="My project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
@@ -516,18 +424,18 @@
       <workItem from="1478136238368" duration="37396000" />
       <workItem from="1478222460890" duration="31160000" />
       <workItem from="1478480665246" duration="632000" />
-      <workItem from="1478481338424" duration="28481000" />
+      <workItem from="1478481338424" duration="36603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136246000" />
+    <option name="totallyTimeSpent" value="144368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22430556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22430556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -838,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/My project/base/Right-Nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="58" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/My project/js/Right-Nav.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -901,7 +799,7 @@
         <state relative-caret-position="279">
           <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
           <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#!!top" expanded="false" />
           </folding>
@@ -931,24 +829,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/My project/json/index-product.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        <state relative-caret-position="285">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/My project/base/Right-Nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/My project/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="133" column="31" selection-start-line="133" selection-start-column="31" selection-end-line="133" selection-end-column="31" />
+        <state relative-caret-position="653">
+          <caret line="133" column="18" selection-start-line="133" selection-start-column="18" selection-end-line="133" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/My project/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="168" column="29" selection-start-line="151" selection-start-column="16" selection-end-line="168" selection-end-column="29" />
+        <state relative-caret-position="606">
+          <caret line="519" column="7" selection-start-line="519" selection-start-column="7" selection-end-line="519" selection-end-column="7" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -958,24 +866,53 @@
             <element signature="e#1224#1228#0" expanded="true" />
             <element signature="n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#p#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#2337#2343#0" expanded="true" />
             <element signature="e#2444#2448#0" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#3284#3290#0" expanded="true" />
-            <element signature="e#3516#3522#0" expanded="true" />
-            <marker date="1478515577679" expanded="true" signature="3392:3638" ph="..." />
-            <marker date="1478515577679" expanded="true" signature="3427:3617" ph="..." />
-            <marker date="1478515577679" expanded="true" signature="3678:3699" ph="..." />
+            <element signature="e#3296#3302#0" expanded="true" />
+            <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#3474#3480#0" expanded="true" />
+            <element signature="e#3581#3585#0" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4432#4438#0" expanded="true" />
+            <element signature="n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4609#4615#0" expanded="true" />
+            <element signature="e#4716#4720#0" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#5567#5573#0" expanded="true" />
+            <element signature="n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#5744#5750#0" expanded="true" />
+            <element signature="e#5851#5855#0" expanded="true" />
+            <element signature="e#6702#6708#0" expanded="true" />
+            <element signature="n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#6879#6885#0" expanded="true" />
+            <element signature="e#6986#6990#0" expanded="true" />
+            <element signature="n#div#0;n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7837#7843#0" expanded="true" />
+            <element signature="n#div#9;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#9;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#8014#8020#0" expanded="true" />
+            <element signature="e#8121#8125#0" expanded="true" />
+            <element signature="e#8972#8978#0" expanded="true" />
+            <element signature="n#div#10;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#div#10;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#9149#9155#0" expanded="true" />
+            <element signature="e#9256#9260#0" expanded="true" />
+            <element signature="e#10107#10113#0" expanded="true" />
+            <element signature="e#10301#10307#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/My project/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-59">
-          <caret line="296" column="0" selection-start-line="296" selection-start-column="2" selection-end-line="338" selection-end-column="3" />
+        <state relative-caret-position="234">
+          <caret line="357" column="19" selection-start-line="357" selection-start-column="19" selection-end-line="357" selection-end-column="19" />
           <folding />
         </state>
       </provider>
