@@ -40,12 +40,12 @@ li{
 	border-bottom: 0;
 	position: relative;
 	text-align: center;
-	padding:0 10px;
+	/*padding:0 10px;*/
 }
 #ul-left li a{
 	/*padding:0 20px;*/
 	color: #666;
-	font-size: 0.5vw;
+	font-size: 1vw;
 	/*display: block;*/
 }
 #ul-left li:hover a{
@@ -197,6 +197,7 @@ li{
 	position:absolute;
 	left:0;
 	top:26px;
+	margin-left: 30px;
 }
 /*#top2 .a1 img{*/
 	/*position: absolute;*/
@@ -348,6 +349,9 @@ li{
 	text-align: center;
 	background: black;
 	color: #fff;
+	font-size:1.2vw;
+	letter-spacing: 2px;
+	/*font-weight:bolder;*/
 }
 /*#all:hover{*/
 	/*cursor:pointer;*/
@@ -364,7 +368,7 @@ li{
 .top3-li li a{
 	padding:0 12px;
 	color: #000;
-	font-size:1vw;
+	font-size:1.2vw;
 	font-weight:bolder;
 }
 .top3-li li a:hover{
@@ -379,6 +383,7 @@ li{
 
 #details{
 	width:198px;
+	height:470px;
 	position: absolute;
 	top:42px;
 	left:0;

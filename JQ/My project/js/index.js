@@ -8,7 +8,7 @@ colorChange();
 
 $(".c1").css("display", "none");
 function dd() {
-	$("#LB-ul1").children().eq(index).fadeIn(700).siblings().fadeOut(700);
+	$("#LB-ul1").children().eq(index).fadeIn(1000).siblings().fadeOut(1000);
 }
 function Run() {
 	clearInterval(time);
@@ -67,11 +67,90 @@ $("#ann-an").children().mouseenter(function () {
 }).mouseleave(function () {
 	Run();
 });
-
+$("#ann-an li").hover(function () {
+	var index1=$(this).index();
+	colorChange();
+});
 
 
 function colorChange() {
 	$("#ann-an").children().eq(index).css("background","#c7d1d6").siblings().css("background","#787878")
 }
 
+for(var k=0;k<4;k++){
+	$("#eg a").eq(k).css({
+		backgroundPosition:k*-267+'px '+'0px'
+	})
+}
+
+for(var i=0;i<20;i++){
+	if(i<10){
+		$("#hot-sign-list a").eq(i).css({
+			backgroundPosition:i*-110+'px '+'0px'
+		})
+	}else{
+		$("#hot-sign-list a").eq(i).css({
+			backgroundPosition:(i-10)*-110+'px '+'-50px'
+		})
+	}
+}
+$("#hot-sign-list a").hover(function () {
+	$(this).css("backgroundImage","url('images/index-sign2.png')")
+},function () {
+	$(this).css("backgroundImage","url('images/index-sign3.png')")
+});
+
+for(var j=0;j<10;j++){
+	$(".main-list a").eq(j).css({
+		backgroundPosition:j*-90+'px '+'4px'
+	})
+}
+
+var id="阿迪NEO/匡威";
+var name="御寒防风外套&nbsp;¥199元起";
+var sr=1;
+creatProduct(id,name,sr)
+function creatProduct(id,name,sr) {
+	$(".main-right").append("<div class='main-right1'></div>").css({
+		width:'558px',
+		height:'220px',
+		borderBottom:'1px solid #9b9b9b'
+	}).append("<div class='main-right2'></div>").css({
+		width:'558px',
+		height:'220px',
+		borderBottom:'1px solid #9b9b9b',
+		borderTop:'1px solid #ddd'
+	});
+	$(".main-right1").append("<dl class='right-dl1'><dt><a href='javascript:void(0)'>"+id+"</a></dt><dd>"+name+"</dd><a href='javascript:void(0)' class='right-dl1-a'></a></dl>");
+	$(".right-dl1").css({
+		width:'156px',
+		height:'208px',
+		float:'left'
+	}).children().first().css({
+		width:'156px',
+		height:'44px',
+		lineHeight:'60px',
+		textAlign:'center'
+	}).children().first().css({
+		color:'#000',
+		fontSize:'16px',
+		fontWeight:'bolder'
+	});
+
+	$(".right-dl1 dd").css({
+		width:'156px',
+		height:'20px',
+		lineHeight:'20px',
+		color:'#666',
+		textAlign:'center'
+	})
+	$(".right-dl1-a").css({
+		display:'block',
+		width:'156px',
+		height:'130px',
+		background:"url('images/index-product"+sr+".jpg') no-repeat center"
+	})
+
+
+}
 
