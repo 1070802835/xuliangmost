@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<input type="text" id="t1">
+	<input type="text" id="t2">
+	<input type="button" id="b1" value="注册">
+
+<script>
+
+	var apitype={
+		uName:"username",
+		uPassword:"userpassword"
+	};
+	$("#b1").click(function () {
+		var url="http://10.17.158.44:8010/Product/GetProductById_get";
+		var Uname=$("#t1").val();
+		var Upassword=$("#t2").val();
+
+		var setting={
+			dataType:'jsonp',
+			type:'get',
+			data:{
+				id:Uname,
+				data:{
+					1:Uname,
+					2:Upassword,
+					'type':apitype.uName
+				}
+			},
+			success:function () {
+				alert("sucess")
+			},
+			error:function () {
+				alert("error")
+			}
+		};
+		$.ajax(url,setting);
+	});
+
+
+
+
+</script>
+</body>
+</html>

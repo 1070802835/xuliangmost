@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa34bcb-8053-42ba-8ef0-388de8949f8b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../JQ/My project/html/index.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../JQ/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/base/Foot.html" afterPath="$PROJECT_DIR$/../JQ/My project/base/Foot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/base/Right-Nav.html" afterPath="$PROJECT_DIR$/../JQ/My project/base/Right-Nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/base/Top2.html" afterPath="$PROJECT_DIR$/../JQ/My project/base/Top2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/css/Right-Nav.css" afterPath="$PROJECT_DIR$/../JQ/My project/css/Right-Nav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/css/Top2.css" afterPath="$PROJECT_DIR$/../JQ/My project/css/Top2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/css/index.css" afterPath="$PROJECT_DIR$/../JQ/My project/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/js/Foot.js" afterPath="$PROJECT_DIR$/../JQ/My project/js/Foot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/js/Right-Nav.js" afterPath="$PROJECT_DIR$/../JQ/My project/js/Right-Nav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../JQ/My project/js/index.js" afterPath="$PROJECT_DIR$/../JQ/My project/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JS-practice.iws" />
@@ -34,38 +26,7 @@
     <favorites_list name="JS-practice" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="send-jsonp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js-day-25jsonp-try~catch/send-jsonp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="回到顶部.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js-day-10/回到顶部.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteAll-jsonp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js-jsonp-test/DeleteAll-jsonp.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="54" selection-start-line="9" selection-start-column="54" selection-end-line="9" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -246,13 +207,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js-day-10" />
+              <option name="myItemId" value="js-jsonp-test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -281,6 +241,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,17 +355,18 @@
       <workItem from="1478099711532" duration="44000" />
       <workItem from="1478243494373" duration="5928000" />
       <workItem from="1478487097699" duration="287000" />
+      <workItem from="1478578961294" duration="221000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30705000" />
+    <option name="totallyTimeSpent" value="30926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26180556" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26180556" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -438,14 +400,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js-day-25jsonp-try~catch/send-jsonp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js-jsonp-test/DeleteAll-jsonp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -509,7 +463,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js-jsonp-test/js/jquery-3.1.1.js" />
-    <entry file="file://$PROJECT_DIR$/js-jsonp-test/demo1.html" />
     <entry file="file://$PROJECT_DIR$/My project/html/sign in.html" />
     <entry file="file://$PROJECT_DIR$/My project/q.xsl" />
     <entry file="file://$PROJECT_DIR$/My project/js/sign.js" />
@@ -536,6 +489,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js-day-10/回到顶部.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-jsonp-test/send-jsonp-play.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js-jsonp-test/demo1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js-jsonp-test/DeleteAll-jsonp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -546,16 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js-day-25jsonp-try~catch/send-jsonp.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
+        <state relative-caret-position="589">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js-day-10/回到顶部.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding />
         </state>
       </provider>
