@@ -56,9 +56,9 @@ $("#yg").hover(function () {
 //上面是右边的
 $("#ul-left li").eq(1).hover(function () {
 	// alert(1)
-	$(this).children().css("font-size","10px").html("Seoul Station");
+	$(this).children().css("font-size","12px").html("Seoul Station");
 },function () {
-	$(this).children().html("首尔站");
+	$(this).children().css("font-size","1vw").html("首尔站");
 });
 
 

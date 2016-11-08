@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<input type="text" id="t1">
+	<input type="text" id="t2">
+	<input type="button" id="b1" value="注册">
+
+<script>
+
+	var apitype={
+		uName:"username",
+		uPassword:"userpassword"
+	};
+	$("#b1").click(function () {
+		var url="http://10.17.158.241:8081/User/loginGet";//Most-get
+
+		var userId=$("#t1").val();
+		var userPw=$("#t2").val();
+		var Data=JSON.stringify({
+			name:userId,
+			password:userPw
+		});
+		var setting={
+			dataType:'jsonp',
+			data:Data,
+			success:function (data) {
+				alert(1);
+				console.log(data);
+			},
+			error:function () {
+				alert("失败")
+			}
+		};
+		$.ajax(url,setting);
+	});
+</script>
+</body>
+</html>

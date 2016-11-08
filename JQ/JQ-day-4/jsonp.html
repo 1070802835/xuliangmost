@@ -17,34 +17,42 @@
 		uPassword:"userpassword"
 	};
 	$("#b1").click(function () {
-		var url="http://10.17.158.44:8010/Product/GetProductById_get";
-		var Uname=$("#t1").val();
-		var Upassword=$("#t2").val();
+		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";//Msot-get
+//		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_post";//Msot-post
 
+
+//		var url="http://10.17.158.13:8010/Product/CreateUpdateProduct_post";//KK-post
+//		var url="http://10.17.158.13:8010/Product/CreateUpdateProduct_get";//KK-get
+//		var url="http://10.17.158.13:8010/Product/GetProductsByPage_get";//KK
+		var userId=$("#t1").val();
+		var userPw=$("#t2").val();
+		var Data=JSON.stringify({
+			"userId":userId,
+			"userPw":userPw
+		});
 		var setting={
+//			type:"post",
+			//使用post貌似再用jsonp会无效？？？！！？？！！！？？？！！
 			dataType:'jsonp',
-			type:'get',
+			/*jsonCallback:"callback",*/
 			data:{
-				id:Uname,
-				data:{
-					1:Uname,
-					2:Upassword,
-					'type':apitype.uName
-				}
+//				pagesize:10,
+//				pageindex:1
+				id:userId,
+				datajson:Data,
+				type:apitype.uName
 			},
-			success:function () {
-				alert("sucess")
+			success:function (data) {
+				alert(1);
+				console.log(data)
+				//post弹不出success？？？！！！
 			},
 			error:function () {
-				alert("error")
+				alert("失败")
 			}
 		};
 		$.ajax(url,setting);
 	});
-
-
-
-
 </script>
 </body>
 </html>

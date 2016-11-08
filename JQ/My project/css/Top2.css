@@ -115,7 +115,7 @@ li{
 #ul-mid li a{
 	color: red;
 	padding:0 10px;
-	font-size: 0.5vw;
+	font-size: 0.8vw;
 }
 
 #ul-mid li #a1{
@@ -139,7 +139,7 @@ li{
 #ul-right li a{
 	color:#666;
 	padding:0 15px;
-	font-size:0.5vw;
+	font-size:0.8vw;
 	/*display: block;*/
 }
 #ul-right li a:hover{
@@ -258,7 +258,7 @@ li{
 #top2-mid-ul li a{
 	color: #666;
 	padding:0 4px;
-	font-size:0.5vw;
+	font-size:0.8vw;
 }
 
 #top2-mid-ul li a:hover{
@@ -291,7 +291,7 @@ li{
 	width:158px;
 	height:30px;
 	line-height: 30px;
-	font-size:0.5vw;
+	font-size:0.8vw;
 	text-align:center;
 	border:1px solid #d1d3d4;
 	position:relative;
@@ -307,7 +307,7 @@ li{
 #top2-right p{
 	margin-top: 14px;
 	color: red;
-	font-size:0.5vw;
+	font-size:0.8vw;
 }
 #top2-right-shop2{
 	width:324px;

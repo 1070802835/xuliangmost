@@ -239,3 +239,147 @@ function creatProduct(id,name,sr) {
 	});
 }
 
+
+
+
+$.ajax({
+	url:'json/index-sale.json',
+	dataType:'json',
+	success:function (data) {
+		console.log(data);
+		// alert(data.length)
+		for(var i=0;i<4;i++){
+			var Sale=data[i].sale;
+			var Name=data[i].name;
+			var Sr=data[i].sr;
+			var B1=data[i].b1;
+			var D1=data[i].d1;
+			creatSale(Sr,Sale,Name,B1,D1);
+		}
+	},
+	error:function () {
+		alert(1)
+	}
+});
+
+$("#last-ul li").click(function () {
+	$(".last-dl").remove();
+	var Index=($(this).index())*4;
+
+	$.ajax({
+		url:'json/index-sale.json',
+		dataType:'json',
+		success:function (data) {
+			console.log(data);
+			for(var i=Index;i<Index+4;i++){
+				var Sale=data[i].sale;
+				var Name=data[i].name;
+				var Sr=data[i].sr;
+				var B1=data[i].b1;
+				var D1=data[i].d1;
+				creatSale(Sr,Sale,Name,B1,D1);
+			}
+		},
+		error:function () {
+			alert(1)
+		}
+	});
+
+});
+
+
+
+
+
+
+function  creatSale(sr,sale,name,b1,d1) {
+
+	$("#last-div2").append("<dl class='last-dl'><a href='javascript:void(0)' class='last-a'><img src='images/index-sale"+sr+".png'/><span class='last-span'></span></a><p class='last-p1'>"+sale+"</p><a href='javascript:void(0)' class='last-a2'>"+name+"</a><p class='last-p3'><b>"+b1+"</b><del>"+d1+"</del></p></dl>");
+	$(".last-dl").css({
+		marginTop:'20px',
+		marginLeft:'10px',
+		width:'230px',
+		float:'left'
+	});
+	// 	.children().first().css({
+	// 	textAlign:'center',
+	// 	display:'block',
+	// 	width:'230px',
+	// 	height:'238px',
+	// 	// border:'1px solid #d1d3d4',
+	// 	borderBotoom:'0',
+	// 	background:'#fff'
+	// }).children().first().css({
+	// 	verticalAlign:'center'
+	// });
+	$(".last-span").css({
+		height:'238px',
+		display:'inline-block',
+		verticalAlign:'center'
+	});
+
+	$(".last-p1").css({
+		width:'232px',
+		height:'16px',
+		background:'#f0a1a1',
+		color:'#fff',
+		fontSize:'12px',
+		lineHeight:'16px',
+		textIndent:'6px'
+	});
+
+	$(".last-a2").css({
+		width:'232px',
+		height:'40px',
+		display:'block',
+		background:'#fff',
+		color:'#666',
+		fontSize:'12px',
+		lineHeight:'20px',
+		textIndent:'6px'
+	});
+
+
+	$(".last-p3").css({
+		width:'232px',
+		height:'20px',
+		background:'#fff',
+		fontSize:'12px',
+		lineHeight:'20px',
+		textIndent:'6px'
+	});
+	// 	.children().first().css({
+	// 	color:'red'
+	// }).next().css({
+	// 	color:'#888',
+	// 	fontSize:'12px',
+	// 	marginLeft:'4px'
+	// });
+
+}
+
+$(window).scroll(function () {
+	if($(document).scrollTop()>763){
+		$(".main").each(function (index) {
+			var Height=$(document).scrollTop();
+			var Index=$(".main").eq(index).offset().top;
+			var Height1=parseInt($(".main").eq(index).css("height"))/6;
+			if(Height<Index+Height1){
+				$(".bibibi0").css("background"," #7a6e6e").eq(index).css("background","red")
+
+				if(index>5){
+					$(".bibibi0").css("background"," #7a6e6e").eq(5).css("background","red")
+				}
+				return false;
+			}
+		})
+	}else{
+		$(".bibibi0").css("background"," #7a6e6e");
+	}
+
+});
+$(window).keydown(function (e) {
+	if(e.keyCode==37){
+		alert($(document).scrollTop())
+	}
+});
