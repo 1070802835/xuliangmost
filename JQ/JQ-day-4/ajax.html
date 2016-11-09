@@ -17,10 +17,13 @@
 		uPassword:"userpassword"
 	};
 	$("#b1").click(function () {
-		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";//Msot-get
+//		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";//Msot-get
 //		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_post";//Msot-post
 
 
+		var url="http://10.17.158.13:8010/Product/CreateUpdateProduct_post";//KK-post
+//		var url="http://10.17.158.13:8010/Product/CreateUpdateProduct_get";//KK-get
+//		var url="http://10.17.158.13:8010/Product/GetProductsByPage_get";//KK
 		var userId=$("#t1").val();
 		var userPw=$("#t2").val();
 		var Data=JSON.stringify({
@@ -28,10 +31,15 @@
 			"userPw":userPw
 		});
 		var setting={
-//			type:"post",
+			type:"post",
+
+
 			//使用post貌似再用jsonp会无效？？？！！？？！！！？？？！！
-			dataType:'jsonp',
-			/*jsonCallback:"callback",*/
+			//结论：老师的接口   没对post处理     post直接能传   虽然走的是error路线
+
+
+//			dataType:'jsonp',
+
 			data:{
 //				pagesize:10,
 //				pageindex:1

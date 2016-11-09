@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+</head>
+<body>
+<input type="button" id="b1" value="啦啦">
+<input type="button" id="b2" value="呵呵">
+
+<script>
+
+	$("#b1").click(function () {
+		var tar={
+			001:2,
+			002:3
+		};
+		var tar1=JSON.stringify(tar);
+		$.cookie("tar",tar1)
+	});
+	var total=0;
+	$("#b2").click(function () {
+		var tar2=JSON.parse($.cookie("tar"),{path:"/"});
+//		console.log(tar2);
+		$.each(tar2,function () {
+			total+=parseFloat(this);
+			console.log(total)
+
+		});
+		alert(total);
+	})
+
+
+	
+	
+</script>
+</body>
+</html>
