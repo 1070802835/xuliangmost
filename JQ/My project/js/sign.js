@@ -37,6 +37,10 @@ $("#First").bind("change",function (){
 $("#Sure").mouseenter(function () {
 	if($("input[name='Check1']").is(":checked")){
 		$("#Sure").addClass("Sure");
+
+
+		//在这里写注册的账号上传到后台---代码
+
 	}
 }).mouseleave(function () {
 	$("#Sure").removeAttr("class")
@@ -76,7 +80,7 @@ $("#checknum").mousedown(function (e) {
 	e.preventDefault();
 	$(this).html("");
 	checknum();
-	checksign.Checknum();
+	checksign.checkNumber();
 }).hover(function () {
 	$(this).css("cursor","pointer")
 });
@@ -89,10 +93,31 @@ $("#b1").on("click",function () {
 	$(this).val("重新获取:10");
 	$(this).css({background:"black"}).attr("disabled","true").addClass("b1");
 	runTime("#b1",10);
+	checkMessagenum();
+
 
 });
+$("#t3").blur(function () {
+	// if($("#t1").val().length==0){
+	// 	if($("#First").val()=="phone"){
+	// 		$("#Error").css("display","block").text("请输入手机号");
+	// 		$("#phone").css("border-color","red");
+	// 	}
+	// 	// if($("#First").val()=="Email")
+	// 	else{
+	// 		$("#Error").css("display","block").text("请输入邮箱");
+	// 		$("#phone").css("border-color","red");
+	// 	}
+	// }
+	checksign.checkMessage();
+}).focus(function () {
+	$(this).keyup(function () {
+		checksign.checkMessage();
 
 
+	});
+});
+//短信验证码///////////////////
 
 
 
@@ -135,7 +160,7 @@ $("#t1").blur(function () {
 				if($("#t1").val().length==0){
 					$("#Error").text("请输入邮箱");
 				}
-			};
+			}
 
 		})
 	});
@@ -232,7 +257,7 @@ $("#t2").blur(function () {
 			if($("#t2").val().length==0){
 				$("#Error1").css("display","block").text("请输入验证码");
 			}
-			checksign.Checknum();
+			checksign.checkNumber();
 		})
 	}
 
@@ -271,7 +296,7 @@ var checksign={
 		}
 	},
 
-	Checknum:function () {
+	checkNumber:function () {
 		if(parseInt($("#t2").val())!==num){
 			$("#sp1,#t2").css("borderColor","red");
 			$("#Error1").css("display","block").text("验证码输入错误")
@@ -279,7 +304,24 @@ var checksign={
 			$("#sp1,#t2").css("borderColor","#e3e2e2");
 			$("#Error1").css("display","none");
 		}
+	},
+
+	checkMessage:function () {
+		if(parseInt($("#t3").val())!==num1){
+			$("#Message").css("borderColor","red");
+			$("#Error2").css("display","block").text("短信验证码输入错误")
+		}else{
+			$("#Message").css("borderColor","#e3e2e2");
+			$("#Error2").css("display","none");
+		}
 	}
+
+
+
+
+
+
+
 };
 
 var num;
@@ -291,6 +333,23 @@ function checknum() {
 		checknum();
 	}
 }
+
+var num1;
+function checkMessagenum() {
+	num1=Math.floor(Math.random()*10000);
+	if(num1>1000){
+		alert(num1)
+	}else{
+		checkMessagenum();
+	}
+}
+//生成验证码
+
+
+
+
+
+
 
 function runTime(That,time) {
 

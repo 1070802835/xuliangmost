@@ -365,10 +365,9 @@ $(window).scroll(function () {
 			var Index=$(".main").eq(index).offset().top;
 			var Height1=parseInt($(".main").eq(index).css("height"))/6;
 			if(Height<Index+Height1){
-				$(".bibibi0").css("background"," #7a6e6e").eq(index).css("background","red")
-
+				$(".bibibi0").css("background"," #7a6e6e").eq(index).css("background","#c81623");
 				if(index>5){
-					$(".bibibi0").css("background"," #7a6e6e").eq(5).css("background","red")
+					$(".bibibi0").css("background"," #7a6e6e").eq(5).css("background","#c81623")
 				}
 				return false;
 			}
