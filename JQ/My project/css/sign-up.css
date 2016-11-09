@@ -134,7 +134,7 @@ a{
 	position: relative;
 }
 .Error{
-	width:200px;
+	width:320px;
 	height:26px;
 	line-height: 26px;
 	text-indent:20px;
@@ -255,6 +255,7 @@ a{
 	width:250px;
 	height:34px;
 	border:0;
+	border:0;
 	float: left;
 	text-indent: 16px;
 }
@@ -265,6 +266,7 @@ a{
 	height:36px;
 	border:1px solid #e3e2e2;
 	margin: 28px auto;
+	position: relative;
 }
 #sp4{
 	display: block;

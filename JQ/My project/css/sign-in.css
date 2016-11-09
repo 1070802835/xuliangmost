@@ -103,6 +103,7 @@ margin: 24px auto;
 	width:320px;
 	height:210px;
 	margin:0 auto;
+	position: relative;
 	/*border:1px solid #e3e2e2;*/
 }
 #Sign2 .pnm input{
@@ -129,14 +130,34 @@ margin: 24px auto;
 	background: url("../images/sign2-bg1.png") no-repeat 12px center;
 	border:1px solid #e3e2e2;
 	margin-top: 36px;
+	position: relative;
 }
 #pnm2{
 	background: url("../images/sign2-bg2.png") no-repeat 12px center;
 	border:1px solid #e3e2e2;
 	margin-top: 36px;
+	position: relative;
 }
-
+.most1{
+	width:316px;
+	height:30px;
+	position: absolute;
+	top:80px;
+	left: 10px;
+	color: red;
+	display: none;
+}
+.most2{
+	width:316px;
+	height:30px;
+	position: absolute;
+	bottom:20px;
+	left: 10px;
+	color: red;
+	display: none;
+}
 .Sure{
+	display: block;
 	width: 314px;
 	height:40px;
 	margin: 0 auto;
