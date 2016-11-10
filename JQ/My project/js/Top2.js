@@ -2,8 +2,13 @@
  * Created by Administrator on 2016/11/2.
  */
 
+if($.cookie("flag")){
+	checkCookie();
+}else{
+	$("#ul-mid").css('display','block');
+	$("#ul-l-m").css('display','none');
+}
 
-checkCookie();
 
 $("#ul-right li").eq(2).hover(function () {
 
@@ -122,6 +127,19 @@ $(".Deatils p").hover(function () {
 
 //以上都是优购自身的效果
 
+
+
+
+$("#signOut").click(function () {
+	// $.removeCookie("flag");
+	$.cookie("flag","1",{expires:-1,path:"/"});
+	window.location.reload();
+
+});
+
+
+
+
 function checkCookie() {
 	if($.cookie("user")){
 		var oBject=JSON.parse($.cookie("user"));
@@ -146,7 +164,5 @@ function checkCookie() {
 		$("#ul-mid").css('display','block');
 		$("#ul-l-m").css('display','none');
 	}
-
-
 }
 

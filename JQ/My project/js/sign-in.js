@@ -56,6 +56,7 @@ $(".Sure").click(function () {
 
 					if(Data1.userNmae==$("#pnm1").val()&&Data1.userPassword==$("#pnm2").val()){
 						alert("登录成功");
+						$.cookie("flag","1",{expires:14,path:"/"})
 						// if($.cookie("user")){
 						// 	var obj = JSON.parse($.cookie("user"));
 						// }else{

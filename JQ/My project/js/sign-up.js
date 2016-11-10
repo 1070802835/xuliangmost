@@ -32,6 +32,7 @@ $("#First").bind("change",function (){
 		$("#sp2,#t3").css("borderColor","#e3e2e2");
 		$("#Error2").css("display","none");
 		$("#Password").css("borderColor","#e3e2e2");
+		$("#Message").css("display","block");
 		$("#Confirm").css("borderColor","#e3e2e2");
 		$("#Error3").css("display","none");
 		$("#Error4").css("display","none");
@@ -43,7 +44,8 @@ $("#First").bind("change",function (){
 		$("#Error").css("display","none");
 		$("#sp1,#t2").css("borderColor","#e3e2e2");
 		$("#Error1").css("display","none");
-		$("#sp2,#t3").css("borderColor","#e3e2e2");
+		$("#Message").css("display","none");
+		// $("#sp2,#t3").css("borderColor","#e3e2e2");
 		$("#Error2").css("display","none");
 		$("#Password").css("borderColor","#e3e2e2");
 		$("#Confirm").css("borderColor","#e3e2e2");
@@ -84,40 +86,80 @@ $("#Sure").mousedown(function (e) {
 	if($("input[name='Check1']").is(":checked")){
 
 		if(flag1&&flag2&&flag3&&flag4&&flag5){
-			var apitype={
-				uName:"username",
-				uPassword:"userpassword"
-			};
-			// $("#Sure").addClass("Sure");
-			$("#Sure").css({background:"#e95053",lineHeight:"44px"}).addClass("Sure");
 			var uName=$("#t1").val();
 			var uPassword=$("#t4").val();
-			var tar={
-				userNmae:uName,
-				userPassword:uPassword
-			}
-			var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+			var url="http://10.17.158.241:8081/Product/GetProductById_get";
 			var setting={
-				type:"get",
+				// type:'get',
 				dataType:"jsonp",
 				data:{
 					id:uName,
-					datajson:JSON.stringify(tar),
-					type:apitype.uName
-
+					type:"username"
 				},
-				success:function () {
-					alert("注册成功")
+				success:function (data) {
+
+					if(data){
+						alert("用户已存在")
+					}else{
+
+						var apitype={
+							uName:"username",
+							uPassword:"userpassword"
+						};
+						// $("#Sure").addClass("Sure");
+						$("#Sure").css({background:"#e95053",lineHeight:"44px"}).addClass("Sure");
+
+						var tar={
+							userNmae:uName,
+							userPassword:uPassword
+						}
+						var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+						var setting={
+							type:"get",
+							dataType:"jsonp",
+							data:{
+								id:uName,
+								datajson:JSON.stringify(tar),
+								type:apitype.uName
+
+							},
+							success:function () {
+								alert("注册成功")
+							},
+							error:function () {
+								alert("注册失败")
+							},
+							complete:function () {
+								window.location.href="sign-in.html"
+							}
+						};
+						$.ajax(url,setting);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					}
+
 				},
 				error:function () {
-					alert("注册失败")
-				},
-				complete:function () {
-					window.location.href="sign in.html"
+					alert("登录失败");
 				}
 			};
-			$.ajax(url,setting);
 
+			$.ajax(url,setting);
 
 
 

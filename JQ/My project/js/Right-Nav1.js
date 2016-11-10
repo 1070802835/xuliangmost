@@ -20,7 +20,7 @@ $("#rightNav-left .biubiubiu1").click(function () {
 
 
 
-var Height1=parseInt($("body,html").css("height"))/2-50;
+var Height1=parseInt($("body,html").css("height"))-200;
 $("#rightNav-left").css({
 	top:Height1
 });
