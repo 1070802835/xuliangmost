@@ -3,6 +3,7 @@
  */
 
 
+checkCookie();
 
 $("#ul-right li").eq(2).hover(function () {
 
@@ -121,16 +122,31 @@ $(".Deatils p").hover(function () {
 
 //以上都是优购自身的效果
 
-// $("#top2 .a1").hover(function () {
-// 	$(this).children().first().animate({
-// 		top:"82px",
-// 		height:0
-// 	},400);
-// 	$(this).children().last().animate({
-// 		top:0,
-// 		height:"82px"
-// 	},400);
-// },function () {
-//
-// });
+function checkCookie() {
+	if($.cookie("user")){
+		var oBject=JSON.parse($.cookie("user"));
+		var arr=[];
+		$.each(oBject,function (key) {
+			if(key!="index"){
+				arr.push(key);
+			}
+		});
+		for(var i=0;i<arr.length-1;i++){
+			for(var k=0;k<arr.length-1;k++){
+				if(oBject[arr[i]]<oBject[arr[i+1]]){
+					var temp=arr[i];
+					arr[i]=arr[i+1];
+					arr[i+1]=temp;
+				}
+			}
+		}
+		$("#uName").text(arr[0]);
+		$("#ul-mid").css('display','none');
+	}else{
+		$("#ul-mid").css('display','block');
+		$("#ul-l-m").css('display','none');
+	}
+
+
+}
 

@@ -1,3 +1,4 @@
+$("#top").load("../base/Top1.html");
 var flag0=false;
 var flag1=false;
 $(".Sure").click(function () {
@@ -43,17 +44,45 @@ $(".Sure").click(function () {
 				type:"username"
 			},
 			success:function (data) {
+
 				if(!data){
 					alert("用户名不存在")
-				};
+				}
 				if(data){
 					// a.userPw==$("#t2").val()
 
 					var Data1=JSON.parse(data.Data);
-					console.log(Data1);
+
 
 					if(Data1.userNmae==$("#pnm1").val()&&Data1.userPassword==$("#pnm2").val()){
-						alert("登录成功")
+						alert("登录成功");
+						// if($.cookie("user")){
+						// 	var obj = JSON.parse($.cookie("user"));
+						// }else{
+						// 	var obj ={}
+						// }
+						var obj=$.cookie("user")?JSON.parse($.cookie("user")):{};
+
+						if(obj.index){
+							var num = obj.index;
+						}else{
+							var num = 0;
+						}
+						obj.index = ++num;
+						obj[uNmae] = num;
+						// alert(obj[uNmae]);
+						var str=JSON.stringify(obj);
+						var conf=confirm("14天内免登陆");
+						if(conf){
+							$.cookie("user",str,{expires:14,path:"/"});
+							window.location.href="../index.html"
+						}else{
+							$.cookie("user",str);
+							window.location.href="../index.html"
+						}
+
+
+
 					}else{
 						alert("用户名或密码错误");
 						$("#pnm1").css({

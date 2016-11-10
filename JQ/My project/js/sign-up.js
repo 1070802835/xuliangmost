@@ -23,12 +23,33 @@ $("#First").bind("change",function (){
 	$("#Error").css("display","none");
 
 	if($(this).val()=="phone"){
-		$("#t1").val("").attr("placeholder","请输入手机号码")
-			// .attr("maxlength","11");
+		$("#t1").val("").attr("placeholder","请输入手机号码");
 
+		$("#phone").css("borderColor","#e3e2e2");
+		$("#Error").css("display","none");
+		$("#sp1,#t2").css("borderColor","#e3e2e2");
+		$("#Error1").css("display","none");
+		$("#sp2,#t3").css("borderColor","#e3e2e2");
+		$("#Error2").css("display","none");
+		$("#Password").css("borderColor","#e3e2e2");
+		$("#Confirm").css("borderColor","#e3e2e2");
+		$("#Error3").css("display","none");
+		$("#Error4").css("display","none");
+		checknum()
 	}
 	if($(this).val()=="Email"){
 		$("#t1").val("").attr("placeholder","请输入邮箱号");
+		$("#phone").css("borderColor","#e3e2e2");
+		$("#Error").css("display","none");
+		$("#sp1,#t2").css("borderColor","#e3e2e2");
+		$("#Error1").css("display","none");
+		$("#sp2,#t3").css("borderColor","#e3e2e2");
+		$("#Error2").css("display","none");
+		$("#Password").css("borderColor","#e3e2e2");
+		$("#Confirm").css("borderColor","#e3e2e2");
+		$("#Error3").css("display","none");
+		$("#Error4").css("display","none");
+		checknum()
 	}
 });
 //点击切换手机号-邮箱
@@ -427,11 +448,11 @@ var checksign={
 	Email:function () {
 		var reg= /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		if(!reg.test($("#t1").val())){
-			$(this).parent().parent().css("borderColor","red");
+			$("#phone").css("borderColor","red");
 			$("#Error").css("display","block").text("邮箱输入格式有误");
 			flag1=false;
 		}else{
-			$(this).parent().css("borderColor","#e3e2e2");
+			$("#phone").css("borderColor","#e3e2e2");
 			$("#Error").css("display","none");
 			flag1=true;
 		}
