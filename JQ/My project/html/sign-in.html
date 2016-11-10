@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>登录界面</title>
+	<link rel="shortcut icon" href="../title.ico">
 	<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
 	<link rel="stylesheet" href="../css/sign-in.css">
 	<link rel="stylesheet" href="../css/Top1.css">
 </head>
@@ -16,7 +18,7 @@
 
 	<div id="header" class="w">
 		<ul id="ul3">
-			<li><a id="a1" href="javascript:void(0)">
+			<li><a id="a1" href="../index.html">
 				<img src="../images/logo.png" alt="">
 			</a></li>
 			<li><a href="javascript:void(0)">注册新用户</a></li>
@@ -31,17 +33,17 @@
 			<div id="Sign2">
 				<div class="contain">
 					<div class="sign"><a href="javascript:void(0)">登录</a></div>
-					<div class="sign sign-up"><a href="sin%20up.html">注册</a></div>
+					<div class="sign sign-up"><a href="sign-up.html">注册</a></div>
 				</div>
 
 				<div class="pnm">
-					<input id="pnm1" type="text" placeholder="手机号/会员名称/邮箱">
+					<input id="pnm1" type="text" placeholder="手机号/会员名称/邮箱" value="admin">
 					<div class="most1">
 						用户名不能为空
 
 					</div>
 					<div class="most2">密码不能为空</div>
-					<input id="pnm2" type="password" placeholder="请输入密码">
+					<input id="pnm2" type="password" placeholder="请输入密码" value="admin">
 
 					<a href="javascript:void(0)">忘记密码?</a>
 				</div>
@@ -61,7 +63,8 @@
 	</div>
 
 
-	<script src="../js/sign.js"></script>
+
 	<script src="../js/sign-in.js"></script>
+
 </body>
 </html>

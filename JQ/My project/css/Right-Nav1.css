@@ -115,11 +115,10 @@ a{
 
 #rightNav-left{
 	width:94px;
-	height:464px;
+	height:114px;
 	/*background:red;*/
 	position:absolute;
 	left:-36px;
-	/*top:50%;*/
 }
 #rightNav-left .bibibi{
 	width:36px;
@@ -142,7 +141,7 @@ a{
 	margin-bottom:2px;
 }
 #rightNav-left .biubiubiu1{
-	margin-top:70px;
+	/*margin-top:70px;*/
 	background: #7a6e6e url("../images/Right-Nav-top-bg.png") no-repeat center;
 }
 

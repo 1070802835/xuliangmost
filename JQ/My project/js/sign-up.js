@@ -23,12 +23,35 @@ $("#First").bind("change",function (){
 	$("#Error").css("display","none");
 
 	if($(this).val()=="phone"){
-		$("#t1").val("").attr("placeholder","请输入手机号码")
-			// .attr("maxlength","11");
+		$("#t1").val("").attr("placeholder","请输入手机号码");
 
+		$("#phone").css("borderColor","#e3e2e2");
+		$("#Error").css("display","none");
+		$("#sp1,#t2").css("borderColor","#e3e2e2");
+		$("#Error1").css("display","none");
+		$("#sp2,#t3").css("borderColor","#e3e2e2");
+		$("#Error2").css("display","none");
+		$("#Password").css("borderColor","#e3e2e2");
+		$("#Message").css("display","block");
+		$("#Confirm").css("borderColor","#e3e2e2");
+		$("#Error3").css("display","none");
+		$("#Error4").css("display","none");
+		checknum()
 	}
 	if($(this).val()=="Email"){
 		$("#t1").val("").attr("placeholder","请输入邮箱号");
+		$("#phone").css("borderColor","#e3e2e2");
+		$("#Error").css("display","none");
+		$("#sp1,#t2").css("borderColor","#e3e2e2");
+		$("#Error1").css("display","none");
+		$("#Message").css("display","none");
+		// $("#sp2,#t3").css("borderColor","#e3e2e2");
+		$("#Error2").css("display","none");
+		$("#Password").css("borderColor","#e3e2e2");
+		$("#Confirm").css("borderColor","#e3e2e2");
+		$("#Error3").css("display","none");
+		$("#Error4").css("display","none");
+		checknum()
 	}
 });
 //点击切换手机号-邮箱
@@ -63,40 +86,80 @@ $("#Sure").mousedown(function (e) {
 	if($("input[name='Check1']").is(":checked")){
 
 		if(flag1&&flag2&&flag3&&flag4&&flag5){
-			var apitype={
-				uName:"username",
-				uPassword:"userpassword"
-			};
-			// $("#Sure").addClass("Sure");
-			$("#Sure").css({background:"#e95053",lineHeight:"44px"}).addClass("Sure");
 			var uName=$("#t1").val();
 			var uPassword=$("#t4").val();
-			var tar={
-				userNmae:uName,
-				userPassword:uPassword
-			}
-			var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+			var url="http://10.17.158.241:8081/Product/GetProductById_get";
 			var setting={
-				type:"get",
+				// type:'get',
 				dataType:"jsonp",
 				data:{
 					id:uName,
-					datajson:JSON.stringify(tar),
-					type:apitype.uName
-
+					type:"username"
 				},
-				success:function () {
-					alert("注册成功")
+				success:function (data) {
+
+					if(data){
+						alert("用户已存在")
+					}else{
+
+						var apitype={
+							uName:"username",
+							uPassword:"userpassword"
+						};
+						// $("#Sure").addClass("Sure");
+						$("#Sure").css({background:"#e95053",lineHeight:"44px"}).addClass("Sure");
+
+						var tar={
+							userNmae:uName,
+							userPassword:uPassword
+						}
+						var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+						var setting={
+							type:"get",
+							dataType:"jsonp",
+							data:{
+								id:uName,
+								datajson:JSON.stringify(tar),
+								type:apitype.uName
+
+							},
+							success:function () {
+								alert("注册成功")
+							},
+							error:function () {
+								alert("注册失败")
+							},
+							complete:function () {
+								window.location.href="sign-in.html"
+							}
+						};
+						$.ajax(url,setting);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					}
+
 				},
 				error:function () {
-					alert("注册失败")
-				},
-				complete:function () {
-					window.location.href="sign in.html"
+					alert("登录失败");
 				}
 			};
-			$.ajax(url,setting);
 
+			$.ajax(url,setting);
 
 
 
@@ -427,11 +490,11 @@ var checksign={
 	Email:function () {
 		var reg= /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		if(!reg.test($("#t1").val())){
-			$(this).parent().parent().css("borderColor","red");
+			$("#phone").css("borderColor","red");
 			$("#Error").css("display","block").text("邮箱输入格式有误");
 			flag1=false;
 		}else{
-			$(this).parent().css("borderColor","#e3e2e2");
+			$("#phone").css("borderColor","#e3e2e2");
 			$("#Error").css("display","none");
 			flag1=true;
 		}

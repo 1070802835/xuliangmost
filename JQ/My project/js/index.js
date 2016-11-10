@@ -181,7 +181,7 @@ $.ajax({
 	url:'json/index-product.json',
 	dataType:'json',
 	success:function (data) {
-		console.log(data);
+		// console.log(data);
 		// alert(data.length)
 		for(var i=0;i<data.length;i++){
 			var Id=data[i].id;
@@ -246,7 +246,7 @@ $.ajax({
 	url:'json/index-sale.json',
 	dataType:'json',
 	success:function (data) {
-		console.log(data);
+		// console.log(data);
 		// alert(data.length)
 		for(var i=0;i<4;i++){
 			var Sale=data[i].sale;
@@ -270,7 +270,7 @@ $("#last-ul li").click(function () {
 		url:'json/index-sale.json',
 		dataType:'json',
 		success:function (data) {
-			console.log(data);
+			// console.log(data);
 			for(var i=Index;i<Index+4;i++){
 				var Sale=data[i].sale;
 				var Name=data[i].name;
@@ -382,3 +382,4 @@ $(window).keydown(function (e) {
 		alert($(document).scrollTop())
 	}
 });
+
