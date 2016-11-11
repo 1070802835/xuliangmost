@@ -61,13 +61,13 @@ li{
 	float: left;
 }
 #Mid-second-ul1 li{
-	width:92px;
+	width:93px;
 	height:68px;
 	/*background: red;*/
 }
 #Mid-second-ul1 li a{
 	display: block;
-	width:97px;
+	width:92px;
 	height:40px;
 	background:url("../images/detail-sign.png") no-repeat;
 	border-right:1px solid #e8e8e8;
@@ -136,16 +136,15 @@ li{
 	float: left;
 	background: #fff;
 }
-#Mid-second-ul2 p{
+#Mid-second-ul2 .Mid-second-ul2-p{
 	float: left;
-
+	height:34px;
 }
 #Mid-second-ul2 .Mid-second-ul2-sp1{
 	display:block;
 	width:12px;
-	height:35px;
+	height:34px;
 	float: left;
-	background: red;
 	background: url("../images/detail-choice2.png") no-repeat center;
 
 }
@@ -155,27 +154,31 @@ li{
 	line-height: 35px;
 	position: relative;
 }
-#Mid-second-ul2 li .Mid-second-ul2-div{
-	border:1px #fff ridge ;
+.Mid-second-ul2-div{
+	border:1px #fff solid ;
 	border-bottom:0;
 	float: left;
-	height: 3px;
-	position: relative;
-	z-index: 10;
-}
-#Mid-second-ul2 li .Mid-second-ul2-div:hover{
-	border:1px #ccc ridge ;
-	border-bottom:0;
-	background:#fff ;
 	height: 27px;
 	line-height: 35px;
+	position: relative;
+
+	z-index: 3;
+}
+#Mid-second-ul2 li .Mid-second-ul2-div:hover{
+	border:1px #ccc solid ;
+	border-bottom:0;
+	background: #fff;
+	cursor: pointer;
+}
+#Mid-second-ul2 li .Mid-second-ul2-div:hover .Mid-second-ul2-sp1{
+	background:#fff url("../images/detail-choice3.png") no-repeat center;
+}
+#Mid-second-ul2 li .Mid-second-ul2-div:hover .Mid-second-ul2-p{
+	background:#fff;
 }
 #Mid-second-ul2 li:nth-of-type(1){
 	margin-left: 30px;
  }
-#Mid-second-ul2 li:hover{
-	cursor: pointer;
-}
 .Mid-second-span1{
 	height:35px;
 	width:98px;
@@ -194,13 +197,13 @@ li{
 .Mid-ul2-son{
 	position: absolute;
 	width:628px;
-	height: 126px;
-	top:27px;
-	left:0px;
-	/*background: red;*/
+	/*height: 126px;*/
+	top:28px;
+	left:-1px;
+	background: white;
 	border:1px solid #ccc;
-	/*z-index: 5;*/
 	display: none;
+	z-index: -1;
 }
 .Mid-ul2-son .Mid-ul2-son-p{
 	width:560px;
@@ -220,12 +223,14 @@ li{
 	color: #FF0000;
 }
 .Mid-ul2-son .Mid-ul2-son-p a span{
-	/*display: block;*/
-	/*float: right;*/
 	color: #999;
 }
-
-
+/*.test1{*/
+	/*display: none;*/
+/*}*/
+#Mid-second-ul2 li .test2{
+	left:-200px;
+}
 
 
 
