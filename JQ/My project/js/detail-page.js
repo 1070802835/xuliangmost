@@ -38,8 +38,8 @@ var url="json/detail-List.json";
 var setting={
 	dataType:'json',
 	success:function (data) {
-		console.log(data.most);
-		var html=template("List",data.most);
+		console.log(data.most1);
+		var html=template("List",data.most2);
 		$("#detailList").html(html);
 	},
 	error:function () {

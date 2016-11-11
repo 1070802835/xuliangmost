@@ -25,7 +25,7 @@ li{
 	/*height:500px;*/
 	background:white;
 	padding-bottom: 20px;
-	border:1px solid #ececec;
+
 	border-top:0;
 	position: relative;
 }
@@ -271,7 +271,11 @@ li{
 	background: #fff;
 	border-top:1px solid #1f1c09;
 }
-
+#mark-wrap{
+	overflow: hidden;
+	border:1px solid #ececec;
+	border-top:0;
+}
 
 
 

@@ -2,7 +2,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, span, a, img
 	margin: 0;
 	padding:0;
 }
-body{
+body,html{
 	font-size: 0.8vw;
 	font-family:"Microsoft Yahei";
 	background: white;
@@ -365,15 +365,18 @@ li{
 }
 
 #detailList{
-	height:3840px;
+	/*height:3840px;*/
+	overflow: hidden;
 }
 #detailList .product{
 	width:232px;
 	height:300px;
 	float: left;
 	margin-right: 6px;
+	margin-top: 10px;
 }
 #detailList .productImg{
+	height:230px;
 	width:230px;
 	float: left;
 	border:1px solid #ddd;
@@ -401,13 +404,55 @@ li{
 	font-size: 0.7vw;
 }
 
+#detailPage{
+	overflow: hidden;
+}
 
+#detailUl{
+	float: left;
+	border:1px solid #e5e5e5;
+	border-right:0;
+}
 
-
-
-
-
-
-
-
-
+#detailUl li{
+	width:35px;
+	height:38px;
+	border-right:1px solid #e5e5e5;
+	color: #000;
+	line-height: 38px;
+	text-align:center;
+}
+#detailUl li:hover{
+	cursor: pointer;
+}
+#detailDl{
+	float:left;
+	height:40px;
+	line-height: 40px;
+}
+#detailDl dt{
+	float: left;
+	color: #000;
+	margin:0 6px;
+}
+#detailDl dt input{
+	width:32px;
+	height: 16px;
+	text-align: center;
+	border:1px solid #ccc;
+}
+#detailDl dt input:focus{
+	outline:none;
+}
+#detailDl dd{
+	float: left;
+}
+#detailDl dd input{
+	width:44px;
+	height: 22px;
+	line-height: 20px;
+	font-size: 0.7vw;
+	text-align: center;
+	margin-top: 9px;
+	border:1px solid #ccc;
+}
