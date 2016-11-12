@@ -21,38 +21,288 @@ li{
 	width: 1190px;
 	margin: 0 auto;
 }
-#detailMain{
+.detailMain{
 	overflow: hidden;
 }
-#detailMain-p1{
+.detailMain-p1{
 	height:28px;
 	line-height: 28px;
 }
-#detailMain-p1 a{
+.detailMain-p1 a{
 	color: orange;
 }
-#detailMain-p1 a:hover{
+.detailMain-p1 a:hover{
 	color: red;
 }
-#detailMian-left{
+.detailMian-left{
 	float: left;
-	width:1000px;
+	width:481px;
+	position: relative;
+	z-index:3;
+}
+.detailMian-left-img{
+	float: left;
+	width:481px;
+}
+.detailMian-left-ul{
+	float: left;
+	height:66px;
+	margin-top:16px;
 
 }
+.detailMian-left-ul li{
+	width:64px;
+	height:64px;
+	border:1px solid #ddd;
+	margin-right:3px;
+	text-align: center;
+}.detailMian-left-ul li:hover{
+	border:1px solid red;
+	 cursor: pointer;
+}
+.detailMian-left-ul li span{
+	height: 64px;
+	display:inline-block;
+	vertical-align: middle;
+}
+.detailMian-left-ul li img{
+	width:60px;
+	height:60px;
+	vertical-align: middle;
+}
+.detailMian-left-glass{
+	width:480px;
+	height:480px;
+	position: absolute;
+	top:0;
+	left:500px;
+	display: none;
+	overflow: hidden;
+}
+.glass{
+	width:481px;
+	height:481px;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index:5;
+}.glass:hover{
+	 cursor:crosshair;
+}
+.little-glass{
+	width:150px;
+	height:140px;
+	position: absolute;
+	left:0;
+	top:0;
+	z-index:4;
+	background: black;
+	opacity:0.4;
+	display: none;
+}
+.detailMian-left-img1{
+	position: absolute;
+}
 
+.detailMian-mid{
+	float: left;
+	width:480px;
+	margin-left:20px;
+}
 
+.detailMain-p2{
+	width:100%;
+	height:66px;
+	line-height: 30px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.detailMain-p2 a{
+	font-weight:bolder;
+	color: #000;
+	font-size:16px;
+}
+.detailMain-p2 a:hover{
+	color: red;
+}
+.detailMain-a1{
+	text-decoration: underline;
+	width:100%;
+	display: block;
+	height:44px;
 
+}
+.detailMain-a1:hover{
+	color: red;
+}
+.detailMain-p3{
+	width:100%;
+	height:64px;
+}
+.detailMain-p3 b{
+	font-size: 23px;
+	color: red;
+}
+.detailMain-p3 del{
+	color: #aaa;
+	margin-left:13px;
+}
+.detailMain-p3 span{
+	color: #aaa;
+	margin-left:18px;
+}
+.detailMain-p4{
+	width:100%;
+	height:40px;
+	line-height: 40px;
+	color: #000;
+}
+.detailMain-a2{
+	margin-left:10px;
+}
+.detailMain-a2:hover{
+	color: red;
+}
+.detailMain-a3{
+	float: right;
+	color: #666;
+	background: url("../images/detail-wechat.png") no-repeat left center;
+	width:70px;
+	text-align: right;
+}
+.buy{
+	width:100%;
+	height:234px;
+	background: #f8f8f8;
+}
+.buyColor{
+	width:460px;
+	height:57px;
+	margin-left: 10px;
+}
+.buyColor span{
+	width:34px;
+	height:57px;
+	float: left;
+	color: #333;
+}
+.buyColor img{
+	width:40px;
+	height:40px;
+	float: left;
+	border:1px solid red;
+	margin-right: 10px;
+}
+.buySize{
+	width:300px;
+	height:63px;
+	margin-left: 10px;
 
+}
+.buySize span{
+	width:34px;
+	height:63px;
+	float: left;
+	color: #333;
+}
 
+.buySize ul{
+	float: left;
+	width:230px;
+}
+.buySize ul li{
+	height:18px;
+	width:35px;
+	line-height: 18px;
+	text-align: center;
+	color: #000;
+	border:1px solid #ddd;
+	background: white;
+	margin-right: 14px;
+	margin-bottom:10px;
+}
+.buySize ul li:hover{
+	cursor: pointer;
+}
+.buyNum{
+	width:300px;
+	height:63px;
+	margin-left: 10px;
 
+}
+.buyNum span{
+	width:34px;
+	height:63px;
+	float: left;
+	color: #333;
+}
 
-
-
-
-
-
-
-
+.mostBuy{
+	width:210px;
+	height:20px;
+	line-height: 20px;
+}
+.mostBuy input{
+	width:25px;
+	height:17px;
+	border:1px solid #ddd;
+	text-align: center;
+	line-height: 17px;
+	float: left;
+	margin: 0 4px;
+}
+.mostBuy span{
+	width:10px;
+	height:10px;
+	line-height: 8px;
+	border:1px solid #ddd;
+	float: left;
+	margin-top: 4px;
+	text-align: center;
+}
+.mostBuy span:hover{
+	cursor: pointer;
+}
+.mostBuy p{
+	float: left;
+	color: #000;
+	margin-left:10px;
+}
+.mostBuy p b{
+	color: #e60012;
+}
+.buyNow{
+	float: left;
+	width:131px;
+	height:35px;
+	background: white;
+	color: #e60012;
+	border:1px solid #e60012;
+	line-height: 35px;
+	text-align: center;
+	margin-left:10px;
+}
+.addCart{
+	float: left;
+	width:131px;
+	height:35px;
+	background: #e60012;
+	color: white;
+	border:1px solid #d90d0d;
+	line-height: 35px;
+	text-align: center;
+	margin-left:10px;
+}
+.detailMian-mid-p2{
+	width:100%;
+	height:32px;
+	line-height: 32px;
+	text-indent: 10px;
+	color: #999;
+}
+.detailMian-mid-p2 a{
+	color: #000;
+}
 
 
 
