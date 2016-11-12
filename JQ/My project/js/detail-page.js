@@ -34,3 +34,46 @@ $(".detailMian-left-ul li").mouseenter(function () {
 	$(".detailMian-left-img1").attr('src','images/detail/big'+Index+'.jpg')
 
 });
+$(".buySize ul li").click(function () {
+	$(this).css("background","red").siblings().css("background","#fff")
+});
+
+var Num=1;
+$(".mostBuy").children().first().mousedown(function () {
+	Num=parseInt($(this).next().val());
+	Num--;
+	if(Num<=0){
+		$(this).next().val(0);
+		Num=0;
+	}else{
+		$(this).next().val(Num);
+	}
+
+});
+$(".fk").mousedown(function () {
+	Num=parseInt($(this).prev().val());
+	Num++;
+	$(this).prev().val(Num);
+});
+$(".buyNow").hover(function () {
+	$(this).css('background','red').css('color','white')
+},function () {
+	$(this).css('background','white').css('color','#e60012')
+});
+$(".KKK ul li").eq(0).css({
+	'background':'#cc0011',
+	'border':'1px solid #cc0011',
+	'color':'white'
+});
+$(".KKK ul li").click(function () {
+	$(this).css({
+		'background':'#cc0011',
+		'border':'1px solid #cc0011',
+		'color':'white'
+	}).siblings().css({
+		'background':'#fff',
+		'border':'1px solid #ccc',
+		'color':'#000'
+	})
+});
+

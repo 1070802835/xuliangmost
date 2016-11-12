@@ -23,6 +23,7 @@ li{
 }
 .detailMain{
 	overflow: hidden;
+	margin-top:12px;
 }
 .detailMain-p1{
 	height:28px;
@@ -303,6 +304,191 @@ li{
 .detailMian-mid-p2 a{
 	color: #000;
 }
+#artemp{
+	float: left;
+}
+.detailMian-right{
+	width:140px;
+	float: right;
+}
+.right-top{
+	width:100%;
+	height:34px;
+	line-height: 34px;
+	color: #777;
+	position: relative;
+}
+.right-top p{
+	width:50px;
+	margin: 0 auto;
+}
+.look1{
+	position: absolute;
+	left:0;
+	top:0;
+	height:34px;
+}
+.look2{
+	position: absolute;
+	right:0;
+	top:0;
+	height:34px;
+}
+.right-new{
+	width:140px;
+	float: left;
+	margin-bottom: 10px;
+}
+.right-new img{
+	width:140px;
+	height:140px;
+	float: left;
+}
+.right-new p{
+	width:140px;
+	height:22px;
+	line-height: 22px;
+	float: left;
+	color: #000;
+}
+.right-new p span{
+	float: right;
+}
+.right-button{
+	width:140px;
+	height:36px;
+	background: #fff;
+	float: left;
+}
+.right-button1{
+	width:70px;
+	height:36px;
+	float: left;
+	background: url("../images/detail-button1.png") no-repeat center;
+}
+.right-button2{
+	width:70px;
+	height:36px;
+	float: right;
+	background: url("../images/detail-button2.png") no-repeat center;
+}
+.right-button:hover{
+	cursor: pointer;
+}
+.detailMain2{
+	height:282px;
+	width:1188px;
+	border:1px solid #ddd;
+	margin:0 auto;
+	overflow: hidden;
+	position: relative;
+	padding-left:5px;
+}
+.detailMain2 .detailMain2-left{
+	height:282px;
+	width: 11px;
+	position: absolute;
+	left: 0;
+	top:0;
+	background: url("../images/foot-sign-change.png") no-repeat 0 center;
+}
+.detailMain2 .detailMain2-right{
+	height:282px;
+	width: 11px;
+	position: absolute;
+	right:0;
+	top:0;
+	background: url("../images/foot-sign-change.png") no-repeat -11px center;
+}
+.detailMain2 span:hover{
+	cursor: pointer;
+}
+.detailMain2 p{
+	width:100%;
+	height:20px;
+
+	color: #666;
+	line-height: 20px;
+}
+.endBuy{
+	float: left;
+	width:190px;
+	height:220px;
+	margin-left:34px;
+
+}
+.endBuy dt{
+	width:190px;
+	float: left;
+}
+.endBuy dt img{
+	width:160px;
+	height:160px;
+	float: left;
+}
+.endBuy dd{
+	width:100%;
+	float: left;
+}
+
+.endBuy dd a{
+	width:100%;
+	float: left;
+	line-height: 20px;
+	word-wrap: break-word;
+	word-break: break-all;
+	color: #444;
+}
+.endBuy dd a:hover{
+	color: red;
+}
+.endBuy dd p{
+	width:100%;
+	float: left;
+	line-height: 20px;
+	word-wrap: break-word;
+	word-break: break-all;
+	color: red;
+	font-weight:bolder ;
+}
+.endBuy dd p del{
+	word-wrap: break-word;
+	word-break: break-all;
+	color: #666;
+	font-weight:100;
+}
+.LLL{
+	height:32px;
+	margin-top:20px;
+
+}
+.KKK{
+	width: 976px;
+	height:32px;
+	border-bottom: 1px solid #cc0011;
+}
+.KKK ul{
+	float: left;
+}
+.KKK ul li{
+	width:100px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	border:1px solid #ccc;
+}
+.KKK ul li:hover{
+	cursor: pointer;
+}
+.KKK ul li span{
+	color: red;
+}
+
+
+
+
+
+
 
 
 
