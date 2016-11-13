@@ -921,24 +921,18 @@
 
 
 <script id="List" type="text/html">
-
-
-
 		{{each list as value i}}
 		<div class="product">
-			<a href="javascript:void(0)">
+			<a href="" target="_blank" hreflang="{{value.hreflang}}">
 				<img class="productImg" src={{value.sr}} alt="Most">
 			</a>
-			<a href="javascript:void(0)" class="productNmae">{{value.productNmae}}
+			<a href="" target="_blank" class="productNmae">{{value.productNmae}}
 			</a>
 			<p class="productPrice">
 				¥{{value.productPrice}}<del class="usedPrice">¥{{value.usedPrice}}</del>
 			</p>
 		</div>
 		{{/each}}
-
-
-
 </script>
 
 

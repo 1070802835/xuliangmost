@@ -38,12 +38,31 @@ var url="json/detail-List.json";
 var setting={
 	dataType:'json',
 	success:function (data) {
-		console.log(data);
+		// console.log(data);
 		var html=template("List",data[0]);
 		$("#detailList").html(html);
+		$(".product a").click(function () {
+			var num=parseInt($(this).attr('hreflang'));
+			$(this).attr("href","detail-page.html?"+num)
+		});
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+		//事件绑定要放到这里
+
+
+
+
+
+
+
+
+
+
+
+
 	},
 	error:function () {
-		alert(1)
+		alert("失败")
 	}
 };
 $.ajax(url,setting);
@@ -65,15 +84,13 @@ $("#detailUl li").click(function () {
 
 		},
 		error:function () {
-			alert(1)
+			alert("失败")
 		}
 	};
 	$.ajax(url,setting);
 });
 $("#lastBut").click(function () {
 	var num=parseInt($("#lastTx").val())-1;
-
-
 	var url="json/detail-List.json";
 	var setting={
 		dataType:'json',
@@ -88,7 +105,7 @@ $("#lastBut").click(function () {
 
 		},
 		error:function () {
-			alert(1)
+			alert("失败")
 		}
 	};
 	$.ajax(url,setting);

@@ -34,8 +34,50 @@ $(".detailMian-left-ul li").mouseenter(function () {
 	$(".detailMian-left-img1").attr('src','images/detail/big'+Index+'.jpg')
 
 });
+// $(".detail-share-ul li").eq(0).hover()
+
+for(var i=0;i<12;i++){
+	$(".shareDiv span").eq(i).css({
+		backgroundPosition:i*-16+'px '+'0px'
+	})
+}
+
+$(".detail-share-ul-li1").hover(function () {
+	$(".shareDiv").css({
+		display:'block'
+	})
+},function () {
+	$(".shareDiv").css({
+		display:'none'
+	})
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(".buyColor img").click(function () {
+	$(".buyColor img").css("border","1px solid white");
+	$(this).css({
+		border:'1px solid red'
+	});
+	$(".mostBuy .b1").html($(this).attr('alt'))
+
+});
+
+var flag=false;
 $(".buySize ul li").click(function () {
-	$(this).css("background","red").siblings().css("background","#fff")
+	flag=!flag;
+	$(this).css("border","1px solid red").siblings().css("border","1px solid #ddd");
+	$(".mostBuy .b2").html($(this).html())
 });
 
 var Num=1;
@@ -76,4 +118,198 @@ $(".KKK ul li").click(function () {
 		'color':'#000'
 	})
 });
+
+
+$(".right-button1").click(function () {
+	var ran=Math.floor(Math.random()*60);
+	var ran1=Math.floor(Math.random()*60);
+	var ran2=Math.floor(Math.random()*60);
+	var url="json/detail-List.json";
+	var arr=[];
+	var setting={
+		dataType:'json',
+		success:function (data) {
+			var dat=data[1].list[ran];
+			var dat1=data[1].list[ran1];
+			var dat2=data[1].list[ran2];
+			var detaillist={list:[
+				{sr:dat.sr,productPrice:dat.productPrice},
+				{sr:dat1.sr,productPrice:dat1.productPrice},
+				{sr:dat2.sr,productPrice:dat2.productPrice}
+			]};
+			console.log(detaillist);
+
+
+			var html=template("detailMain-right",detaillist);
+			console.log(detaillist);
+			$(".detailMian-right-main").html(html)
+
+		}
+	};
+	$.ajax(url,setting);
+});
+
+
+$(".right-button2").click(function () {
+	var ran=Math.floor(Math.random()*60);
+	var ran1=Math.floor(Math.random()*60);
+	var ran2=Math.floor(Math.random()*60);
+	var url="json/detail-List.json";
+	var arr=[];
+	var setting={
+		dataType:'json',
+		success:function (data) {
+			var dat=data[1].list[ran];
+			var dat1=data[1].list[ran1];
+			var dat2=data[1].list[ran2];
+			var detaillist={list:[
+				{sr:dat.sr,productPrice:dat.productPrice},
+				{sr:dat1.sr,productPrice:dat1.productPrice},
+				{sr:dat2.sr,productPrice:dat2.productPrice}
+			]};
+			console.log(detaillist);
+
+
+			var html=template("detailMain-right",detaillist);
+			console.log(detaillist);
+			$(".detailMian-right-main").html(html)
+
+		}
+	};
+	$.ajax(url,setting);
+});
+
+
+$(".detailMain2-left").click(function () {
+	endBuy();
+});
+$(".detailMain2-right").click(function () {
+	endBuy();
+});
+endBuy();
+function endBuy() {
+	var ran=Math.floor(Math.random()*60);
+	var ran1=Math.floor(Math.random()*60);
+	var ran2=Math.floor(Math.random()*50);
+	var ran3=Math.floor(Math.random()*60);
+	var ran4=Math.floor(Math.random()*60);
+	var url="json/detail-List.json";
+	var setting={
+		dataType:'json',
+		success:function (data) {
+			var dat=data[0].list[ran];
+			var dat1=data[1].list[ran1];
+			var dat2=data[2].list[ran2];
+			var dat3=data[0].list[ran3];
+			var dat4=data[1].list[ran4];
+			var detaillist={list:[
+				{
+					sr:dat.sr,
+					productNmae:dat.productNmae,
+					productPrice:dat.productPrice,
+					usedPrice:dat.usedPrice
+
+				},
+				{
+					sr:dat1.sr,
+					productNmae:dat1.productNmae,
+					productPrice:dat1.productPrice,
+					usedPrice:dat1.usedPrice
+
+				},
+				{
+					sr:dat2.sr,
+					productNmae:dat2.productNmae,
+					productPrice:dat2.productPrice,
+					usedPrice:dat2.usedPrice
+
+				},
+				{
+					sr:dat3.sr,
+					productNmae:dat3.productNmae,
+					productPrice:dat3.productPrice,
+					usedPrice:dat3.usedPrice
+
+				},
+				{
+					sr:dat4.sr,
+					productNmae:dat4.productNmae,
+					productPrice:dat4.productPrice,
+					usedPrice:dat4.usedPrice
+
+				}
+
+			]};
+			var html=template("endingBuy",detaillist);
+			// console.log(detaillist);
+			$(".endingBuy").html(html)
+
+		}
+	};
+	$.ajax(url,setting);
+}
+
+//通过location.href获取来的id，  取到商品信息   然后push到一个空数组里面
+//因为详情页只有一个商品的详情，所以   不需要属性，  直接each到属性值就可以了
+// 就是说each到一个数组arr，然后把value[i]填到相应的位置就可以了
+//eg:	var obj = {list:arr};
+// 		var html = template("#", obj);
+
+
+
+xl();
+function xl(){
+	var str=location.href;
+	var Href=str.split("?")[1];
+	//此时Href就是取回的ID   是数字类型的
+	// alert(Href);
+	var url="json/detail-List.json";
+	var arr=[];
+	var Id=0;
+	var setting={
+		dataType:"json",
+		success:function (data) {
+			var arr=data[0].list;
+			console.log(arr);
+			$.each(arr,function () {
+				if($(this)[0].hreflang){
+					Id=parseInt($(this)[0].hreflang);
+					if(Id==Href){
+						alert("我找到了!");
+						alert($(this)[0].productNmae);
+						<!--productNmae   0-->
+						<!--sr            1-->
+						<!--productPrice  2-->
+						<!--usedPrice     3-->
+
+
+					}
+				}
+			});
+			// 在这里添加hreflang   4
+
+
+		},
+		error:function () {
+			alert("失败")
+		}
+	};
+	$.ajax(url,setting)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
