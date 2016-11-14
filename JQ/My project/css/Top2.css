@@ -148,10 +148,6 @@ li{
 	font-size: 0.8vw;
 }
 
-/*#ul-mid li #a1{*/
-	/*border-right:1px solid black;*/
-/*}*/
-
 
 #ul-right{
 	float: left;
@@ -163,7 +159,8 @@ li{
 
 #ul-right li{
 	border:1px solid #f3f3f5;
-	border-bottom:0
+	border-bottom:0;
+	height:30px;
 }
 #ul-right .p1{
 	background: url("../images/sign-bg2.png") no-repeat right center;
@@ -183,7 +180,7 @@ li{
 
 #yg{
 	width: 80px;
-	height:32px;
+	height:28px;
 	/*background: white;*/
 	/*display: none;*/
 	overflow: hidden;

@@ -1,123 +1,4 @@
-$(".glass").mousemove(function (e) {
-	var x1=e.offsetX-75;
-	var y1=e.offsetY-70;
-	x1 = Math.max(0,Math.min(x1,$(".glass").width()-$(".little-glass").width()));
-	y1 = Math.max(0,Math.min(y1,$(".glass").height()-$(".little-glass").height()));
-	$(".little-glass").css({
-		'display':'block',
-		'left':x1+'px',
-		'top':y1+'px'
-	});
 
-	$(".detailMian-left-glass").css({
-		'display':'block'
-	});
-	var percentx=x1/($(".glass").width()-$(".little-glass").width());
-	var percenty=y1/($(".glass").height()-$(".little-glass").height());
-
-	var x2=($(".detailMian-left-img1").width()-$(".detailMian-left-glass").width())*percentx;
-	var y2=($(".detailMian-left-img1").height()-$(".detailMian-left-glass").height())*percenty;
-	$(".detailMian-left-img1").css({
-		'left':-x2+'px',
-		'top':-y2+'px'
-	});
-}).mouseout(function () {
-	$(".little-glass").css('display','none');
-	$(".detailMian-left-glass").css({
-		'display':'none'
-	});
-});
-$(".detailMian-left-ul li").mouseenter(function () {
-	$(this).css('borderColor','red').siblings().css('borderColor','#ddd');
-	var Index=$(this).index();
-	$(".detailMian-left-img").attr('src','images/detail/'+Index+'.jpg')
-	$(".detailMian-left-img1").attr('src','images/detail/big'+Index+'.jpg')
-
-});
-// $(".detail-share-ul li").eq(0).hover()
-
-for(var i=0;i<12;i++){
-	$(".shareDiv span").eq(i).css({
-		backgroundPosition:i*-16+'px '+'0px'
-	})
-}
-
-$(".detail-share-ul-li1").hover(function () {
-	$(".shareDiv").css({
-		display:'block'
-	})
-},function () {
-	$(".shareDiv").css({
-		display:'none'
-	})
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-$(".buyColor img").click(function () {
-	$(".buyColor img").css("border","1px solid white");
-	$(this).css({
-		border:'1px solid red'
-	});
-	$(".mostBuy .b1").html($(this).attr('alt'))
-
-});
-
-var flag=false;
-$(".buySize ul li").click(function () {
-	flag=!flag;
-	$(this).css("border","1px solid red").siblings().css("border","1px solid #ddd");
-	$(".mostBuy .b2").html($(this).html())
-});
-
-var Num=1;
-$(".mostBuy").children().first().mousedown(function () {
-	Num=parseInt($(this).next().val());
-	Num--;
-	if(Num<=0){
-		$(this).next().val(0);
-		Num=0;
-	}else{
-		$(this).next().val(Num);
-	}
-
-});
-$(".fk").mousedown(function () {
-	Num=parseInt($(this).prev().val());
-	Num++;
-	$(this).prev().val(Num);
-});
-$(".buyNow").hover(function () {
-	$(this).css('background','red').css('color','white')
-},function () {
-	$(this).css('background','white').css('color','#e60012')
-});
-$(".KKK ul li").eq(0).css({
-	'background':'#cc0011',
-	'border':'1px solid #cc0011',
-	'color':'white'
-});
-$(".KKK ul li").click(function () {
-	$(this).css({
-		'background':'#cc0011',
-		'border':'1px solid #cc0011',
-		'color':'white'
-	}).siblings().css({
-		'background':'#fff',
-		'border':'1px solid #ccc',
-		'color':'#000'
-	})
-});
 
 
 $(".right-button1").click(function () {
@@ -269,31 +150,76 @@ function xl(){
 		dataType:"json",
 		success:function (data) {
 			var arr=data[0].list;
-			$.each(arr,function () {
+			$.each(arr,function (index) {
 				if(this.hreflang){
 					Id=parseInt(this.hreflang);
 					if(Id==Href){
-						alert("我找到了!");
-						alert(this.productNmae);
-						<!--productNmae   0-->
-						<!--sr            1-->
-						<!--productPrice  2-->
-						<!--usedPrice     3-->
+						var html3=template("little",data[0].list[index]);
+						console.log(data[0].list[index]);
+						$("#artemp2").html(html3);
+						Most();
 
 
 
+						// $(".addCart").click(function () {
+						// 	if($(".b2").html().length<1){
+						// 		alert("请选择尺码")
+						// 	}else{
+						//
+						// 		var oBject=JSON.parse($.cookie("user"));
+						// 		var arrCookie=[];
+						// 		$.each(oBject,function (key) {
+						// 			if(key!="index"){
+						// 				arrCookie.push(key);
+						// 			}
+						// 		});
+						// 		for(var i=0;i<arrCookie.length-1;i++){
+						// 			for(var k=0;k<arrCookie.length-1;k++){
+						// 				if(oBject[arrCookie[i]]<oBject[arrCookie[i+1]]){
+						// 					var temp=arrCookie[i];
+						// 					arrCookie[i]=arrCookie[i+1];
+						// 					arrCookie[i+1]=temp;
+						// 				}
+						// 			}
+						// 		}
+						//
+						// 		var apitype={
+						// 			uName:"username",
+						// 			uPassword:"userpassword"
+						// 		};
+						// 		var count=$(".mostBuy input").val();//商品数量
+						// 		var tar2={
+						// 			userNmae:arrCookie[0],
+						// 			count:count,
+						// 			hreflang:Href
+						//
+						// 		};
+						// 		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+						// 		var setting={
+						// 			type:"get",
+						// 			dataType:"jsonp",
+						// 			data:{
+						// 				id:arrCookie[0],
+						// 				datajson:JSON.stringify(tar2),
+						// 				type:apitype.uName
+						// 			},
+						// 			success:function () {
+						// 				alert("加入购物车成功!")
+						// 			},
+						// 			error:function () {
+						// 				alert("加入购物车失败!")
+						// 			},
+						// 			complete:function () {
+						//
+						// 			}
+						// 		};
+						// 		$.ajax(url,setting);
+						// 	}
+						// });
 
-
-						$(".addCart").click(function () {
-							if($(".b2").html().length<1){
-								alert("请选择尺码")
-							}
-						});
 					}
 				}
 			});
-			// 在这里添加hreflang   4
-
 
 		},
 		error:function () {
@@ -359,6 +285,139 @@ $(".KKK ul li").eq(1).click(function () {
 });
 
 
+
+
+
+
+
+
+
+//下面就是template出来的东西要绑定的事件
+
+
+
+function Most() {
+	$(".glass").mousemove(function (e) {
+		var x1=e.offsetX-75;
+		var y1=e.offsetY-70;
+		x1 = Math.max(0,Math.min(x1,$(".glass").width()-$(".little-glass").width()));
+		y1 = Math.max(0,Math.min(y1,$(".glass").height()-$(".little-glass").height()));
+		$(".little-glass").css({
+			'display':'block',
+			'left':x1+'px',
+			'top':y1+'px'
+		});
+
+		$(".detailMian-left-glass").css({
+			'display':'block'
+		});
+		var percentx=x1/($(".glass").width()-$(".little-glass").width());
+		var percenty=y1/($(".glass").height()-$(".little-glass").height());
+
+		var x2=($(".detailMian-left-img1").width()-$(".detailMian-left-glass").width())*percentx;
+		var y2=($(".detailMian-left-img1").height()-$(".detailMian-left-glass").height())*percenty;
+		$(".detailMian-left-img1").css({
+			'left':-x2+'px',
+			'top':-y2+'px'
+		});
+	}).mouseout(function () {
+		$(".little-glass").css('display','none');
+		$(".detailMian-left-glass").css({
+			'display':'none'
+		});
+	});
+	$(".detailMian-left-ul li").mouseenter(function () {
+		$(this).css('borderColor','red').siblings().css('borderColor','#ddd');
+		var Index=$(this).index();
+		$(".detailMian-left-img").attr('src','images/detail/'+Index+'.jpg')
+		$(".detailMian-left-img1").attr('src','images/detail/big'+Index+'.jpg')
+
+	});
+// $(".detail-share-ul li").eq(0).hover()
+
+	for(var i=0;i<12;i++){
+		$(".shareDiv span").eq(i).css({
+			backgroundPosition:i*-16+'px '+'0px'
+		})
+	}
+
+	$(".detail-share-ul-li1").hover(function () {
+		$(".shareDiv").css({
+			display:'block'
+		})
+	},function () {
+		$(".shareDiv").css({
+			display:'none'
+		})
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+	$(".buyColor img").click(function () {
+		$(".buyColor img").css("border","1px solid white");
+		$(this).css({
+			border:'1px solid red'
+		});
+		$(".mostBuy .b1").html($(this).attr('alt'))
+
+	});
+
+	var flag=false;
+	$(".buySize ul li").click(function () {
+		flag=!flag;
+		$(this).css("border","1px solid red").siblings().css("border","1px solid #ddd");
+		$(".mostBuy .b2").html($(this).html())
+	});
+
+	var Num=1;
+	$(".mostBuy").children().first().mousedown(function () {
+		Num=parseInt($(this).next().val());
+		Num--;
+		if(Num<=0){
+			$(this).next().val(0);
+			Num=0;
+		}else{
+			$(this).next().val(Num);
+		}
+
+	});
+	$(".fk").mousedown(function () {
+		Num=parseInt($(this).prev().val());
+		Num++;
+		$(this).prev().val(Num);
+	});
+	$(".buyNow").hover(function () {
+		$(this).css('background','red').css('color','white')
+	},function () {
+		$(this).css('background','white').css('color','#e60012')
+	});
+	$(".KKK ul li").eq(0).css({
+		'background':'#cc0011',
+		'border':'1px solid #cc0011',
+		'color':'white'
+	});
+	$(".KKK ul li").click(function () {
+		$(this).css({
+			'background':'#cc0011',
+			'border':'1px solid #cc0011',
+			'color':'white'
+		}).siblings().css({
+			'background':'#fff',
+			'border':'1px solid #ccc',
+			'color':'#000'
+		})
+	});
+}
 
 
 

@@ -23,7 +23,7 @@ $("#ul-right li").eq(2).hover(function () {
 	$(this).css({
 		background:"#f3f3f5",
 		border:"1px solid #f3f3f5",
-		borderBottom:0
+
 	})
 });
 
@@ -39,7 +39,7 @@ $("#ul-right li").eq(3).hover(function () {
 	$(this).css({
 		background:"#f3f3f5",
 		border:"1px solid #f3f3f5",
-		borderBottom:0
+
 	})
 });
 
@@ -58,7 +58,7 @@ $("#yg").hover(function () {
 		border:"1px solid #f3f3f5",
 		borderBottom:0
 	}).animate({
-		height:"30px"
+		height:"28px"
 	},200)
 });
 
@@ -173,3 +173,6 @@ function checkCookie() {
 	}
 }
 
+$("#top2-mid-butt").click(function () {
+	location.href="list-page.html";
+});
