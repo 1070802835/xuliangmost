@@ -288,7 +288,40 @@
 	</div>
 </div>
 
-<div style="height: 2000px"></div>
+
+<div id="detail-bottom1">
+
+
+</div>
+
+<div id="detail-bottom2" class="w">
+	<div class="evaluate1">
+		<img src="images/detail/myd.png" alt="">
+		<dl>
+			<dt>我购买过此商品</dt>
+			<dd>
+				我要写点评
+			</dd>
+		</dl>
+	</div>
+	<div class="evaluate2">
+		<span><input id="in1" type="radio" name="all" checked><label for="in1">全部评价</label></span>
+
+		<span><input id="in2" type="radio" name="all"><label for="in2">有晒单</label></span>
+
+	</div>
+
+
+	<div class="evaluate3">
+
+	</div>
+
+
+
+</div>
+
+
+
 
 
 
@@ -542,6 +575,58 @@
     {{/each}}
 </script>
 
+
+<script id="detailBottom" type="text/html">
+	{{each list as value i}}
+	<a href="javascript:void(0)">
+		<img src="images/detail/detail-bottom{{value.sr}}.jpg" alt="">
+	</a>
+	{{/each}}
+</script>
+
+<script id="evaluation" type="text/html">
+	{{each list as value i}}
+	<div class="evaluateMain">
+		<dl>
+			<dt><a href="javascript:void(0)"><img src="images/detail/touxiang.png" alt="">Most</a></dt>
+			<dd>
+				<div class="productEvaluate">
+					<p class="productEvaluate-p1">
+						商品评分 : <span></span>
+					</p>
+					<p class="productEvaluate-p2">
+						购买时间 : <span>{{value.time}}</span>
+					</p>
+					<p class="productEvaluate-p3">
+						颜色 : <span>{{value.buyColor}}</span>
+					</p>
+					<p class="productEvaluate-p4">
+						尺码 : <span>{{value.buySize}}</span>
+					</p>
+				</div>
+				<div class="productEvaluate">
+					<p class="productEvaluate-p5">
+						尺码大小评价 : <span>{{value.buyLength}}</span>
+					</p>
+				</div>
+				<div class="productEvaluate productEvaluate-last">
+					<p class="productEvaluate-p6">
+						点评内容 : <span>{{value.buyMain}}</span>
+					</p>
+				</div>
+				<div class="productEvaluate">
+					<a class="productEvaluate-a" href="javascript:void(0)"><span class="productEvaluate-a-span">赞</span><span>(0)</span></a>
+				</div>
+			</dd>
+
+		</dl>
+
+
+	</div>
+
+
+	{{/each}}
+</script>
 
 
 

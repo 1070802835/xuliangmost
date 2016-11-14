@@ -270,7 +270,6 @@ function xl(){
 		dataType:"json",
 		success:function (data) {
 			var arr=data[0].list;
-			console.log(arr);
 			$.each(arr,function () {
 				if($(this)[0].hreflang){
 					Id=parseInt($(this)[0].hreflang);
@@ -298,12 +297,59 @@ function xl(){
 }
 
 
+detailBottom();
+function detailBottom() {
+	var arr1=[
+		{"sr":"01"},
+		{"sr":"02"},
+		{"sr":"03"},
+		{"sr":"04"},
+		{"sr":"05"},
+		{"sr":"06"},
+		{"sr":"07"},
+		{"sr":"08"},
+		{"sr":"09"},
+		{"sr":"10"},
+		{"sr":"11"},
+		{"sr":"12"},
+		{"sr":"13"},
+		{"sr":"14"},
+		{"sr":"15"},
+		{"sr":"16"}
+	];
+
+	var obj1={list:arr1};
+	var html1=template("detailBottom",obj1);
+	$("#detail-bottom1").html(html1);
+}
 
 
+evaluation();
+function evaluation() {
+	var url="json/evaluation.json";
+	var set={
+		dataType:"json",
+		success:function (data){
+			var html2=template("evaluation",data);
+			$(".evaluate3").html(html2);
+			$(".productEvaluate-a").click(function () {
+				$(this).children().first().text("已赞").next().text("(1)");
+			})
+			
+			
+		}
+	};
+	$.ajax(url,set)
+}
+$(".KKK ul li").eq(0).click(function () {
+	$("#detail-bottom1").css("display","block");
+	$("#detail-bottom2").css("display","none");
+});
 
-
-
-
+$(".KKK ul li").eq(1).click(function () {
+	$("#detail-bottom2").css("display","block");
+	$("#detail-bottom1").css("display","none");
+});
 
 
 

@@ -28,12 +28,13 @@ $("#ul-right li").eq(2).hover(function () {
 	$("#gg").css("display","none");
 	$(this).css({
 		background:"#f3f3f5",
-		border:"0"
+		border:"1px solid #f3f3f5",
+		borderBottom:0
 	})
 });
 
 $("#ul-right li").eq(3).hover(function () {
-	$("#gd").slideDown("fast");
+	$("#gd").slideDown("fast").css({background:"white"});
 	$(this).css({
 		background:"white",
 		border:"1px solid #dfdedf",
@@ -43,7 +44,8 @@ $("#ul-right li").eq(3).hover(function () {
 	$("#gd").css("display","none");
 	$(this).css({
 		background:"#f3f3f5",
-		border:"0"
+		border:"1px solid #f3f3f5",
+		borderBottom:0
 	})
 });
 
@@ -51,11 +53,14 @@ $("#ul-left li").eq(1).hover(function () {
 	$("#Code").slideDown("fast");
 	$(this).css({
 		background:"white",
+		border:"1px solid #dfdedf",
 		borderBottom:0
 	})
 },function () {
 	$("#Code").css("display","none");
 	$(this).css({
-		background:"#f3f3f5"
+		background:"#f3f3f5",
+		border:"1px solid #f3f3f5",
+		borderBottom:0
 	})
 });

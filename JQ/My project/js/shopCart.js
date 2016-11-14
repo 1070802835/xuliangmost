@@ -100,52 +100,12 @@ $("#top2-right-shop").hover(function () {
 	$("#top2-right-shop2").css("display","none");
 });
 
-
-
-
-$(".all").hover(function (e) {
-	e.preventDefault();
-	$("#details").stop().slideDown("fast");
-},function () {
-	$("#details").stop().slideUp("fast");
-});
-
-
-
-$("#details dl").hover(function () {
-	var Index=$(this).index();
-	$(".Detail").stop().eq(Index).css('display','block').animate({
-		left:"197px"
-	},400);
-
-},function () {
-	$(".Detail").stop().css({
-		display:'none',
-		left:"174px"
-	});
-});
-$(".Deatils p").hover(function () {
-	$(this).stop().animate({
-		marginLeft:"10px"
-	},300)
-},function () {
-	$(this).stop().css("marginLeft",0)
-});
-
-//以上都是优购自身的效果
-
-
-
-
 $("#signOut").click(function () {
 	// $.removeCookie("flag");
 	$.cookie("flag","1",{expires:-1,path:"/"});
 	window.location.reload();
 
 });
-
-
-
 
 function checkCookie() {
 	if($.cookie("user")){

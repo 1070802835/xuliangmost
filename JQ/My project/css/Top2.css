@@ -160,6 +160,11 @@ li{
 	top:0;
 
 }
+
+#ul-right li{
+	border:1px solid #f3f3f5;
+	border-bottom:0
+}
 #ul-right .p1{
 	background: url("../images/sign-bg2.png") no-repeat right center;
 }
@@ -184,6 +189,8 @@ li{
 	overflow: hidden;
 	position: relative;
 	z-index:2;
+	border:1px solid #f3f3f5;
+	border-bottom:0
 }
 #ul-right li{
 	position: relative;
