@@ -58,7 +58,7 @@ $("#yg").hover(function () {
 		border:"1px solid #f3f3f5",
 		borderBottom:0
 	}).animate({
-		height:"30px"
+		height:"28px"
 	},200)
 });
 

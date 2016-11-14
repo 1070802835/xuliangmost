@@ -264,24 +264,31 @@ function xl(){
 	//此时Href就是取回的ID   是数字类型的
 	// alert(Href);
 	var url="json/detail-List.json";
-	var arr=[];
 	var Id=0;
 	var setting={
 		dataType:"json",
 		success:function (data) {
 			var arr=data[0].list;
 			$.each(arr,function () {
-				if($(this)[0].hreflang){
-					Id=parseInt($(this)[0].hreflang);
+				if(this.hreflang){
+					Id=parseInt(this.hreflang);
 					if(Id==Href){
 						alert("我找到了!");
-						alert($(this)[0].productNmae);
+						alert(this.productNmae);
 						<!--productNmae   0-->
 						<!--sr            1-->
 						<!--productPrice  2-->
 						<!--usedPrice     3-->
 
 
+
+
+
+						$(".addCart").click(function () {
+							if($(".b2").html().length<1){
+								alert("请选择尺码")
+							}
+						});
 					}
 				}
 			});
