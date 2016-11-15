@@ -2,22 +2,56 @@
 {
   "list": [
     {
-      "sr": "images/detail/0.jpg",
+      "sr": "images/detail/611.jpg",
       "productNmae": "viishow潮牌2016秋装新品卫衣男士套头纯棉连帽卫衣外套带帽上衣WDZ9663",
       "productPrice": "198",
       "usedPrice": "299",
+      "glass":"images/detail/big611.jpg",
       "hreflang":"61",
-      "littleImg":["images/detail/0.jpg","images/detail/1.jpg","images/detail/2.jpg","images/detail/3.jpg"],
-      "colorImg":["images/detail/0.jpg","images/detail/1.jpg","images/detail/2.jpg"],
-      "size":["XXXL","XXL","XL","L","M","S"]
+      "littleImg":["images/detail/611.jpg","images/detail/612.jpg","images/detail/613.jpg","images/detail/614.jpg"],
+      "colorImg":["images/detail/611.jpg","images/detail/612.jpg","images/detail/613.jpg","images/detail/614.jpg"],
+      "color":["黑色","白色","蓝色"],
+      "size":["XXXL","XXL","XL","L","M","S"],
+      "bottomBg":["a-bottom01.jpg","a-bottom02.jpg","a-bottom03.jpg","a-bottom04.jpg","a-bottom05.jpg","a-bottom06.jpg","a-bottom07.jpg","a-bottom08.jpg","a-bottom09.jpg","a-bottom10.jpg","a-bottom11.jpg","a-bottom12.jpg","a-bottom13.jpg","a-bottom14.jpg","a-bottom15.jpg","a-bottom16.jpg"]
     },
+    {
+      "sr": "images/detail/621.jpg",
+      "productNmae": "佐丹奴Giordano2016冬季男 简约素色纯棉连帽袋鼠兜长袖卫衣01076901002",
+      "productPrice": "199",
+      "usedPrice": "320",
+      "glass":"images/detail/big621.jpg",
+      "hreflang":"62",
+      "littleImg":["images/detail/621.jpg","images/detail/622.jpg","images/detail/623.jpg","images/detail/624.jpg"],
+      "colorImg":["images/detail/b-little1.jpg","images/detail/b-little2.jpg","images/detail/b-little3.jpg","images/detail/b-little4.jpg"],
+      "color":["黑色","白色","蓝色","粉色"],
+      "size":["XXXL","XXL","XL","L","M","S"],
+      "bottomBg":["b-bottom1.jpg","b-bottom2.jpg","b-bottom3.jpg","b-bottom4.jpg"]
+    },
+
+    {
+      "sr": "images/detail/631.jpg",
+      "productNmae": "马克华菲潮牌RESHAKE华菲型格商场同款字母拼接加绒直筒套头上衣潮男士卫衣",
+      "productPrice": "229",
+      "usedPrice": "629",
+      "glass":"images/detail/big631.jpg",
+      "hreflang":"63",
+      "littleImg":["images/detail/631.jpg","images/detail/632.jpg","images/detail/633.jpg","images/detail/634.jpg"],
+      "colorImg":["images/detail/c-little.jpg"],
+      "color":["黑色"],
+      "size":["XXXL","XXL","XL","L","M","S"],
+      "bottomBg":["c-bottom01.jpg","c-bottom02.jpg","c-bottom03.jpg","c-bottom04.jpg","c-bottom05.jpg","c-bottom06.jpg","c-bottom07.jpg","c-bottom08.jpg","c-bottom09.jpg","c-bottom10.jpg","c-bottom11.jpg","c-bottom12.jpg","c-bottom13.jpg"]
+    },
+
+
+
+
     {
       "sr": "images/shop01.jpg",
       "productNmae": "NIKE耐克2016年新款男子AS M NSW CRW FT CLUB套头衫804343-010",
       "productPrice": "198",
       "usedPrice": "299",
       "hreflang":"1",
-      "color":["黑色","白色","蓝色"],
+      "color":["红色","粉色","蓝色"],
       "size":["XXXL","XXL","XL","L","M","S"]
     },
     {
@@ -26,7 +60,7 @@
       "productPrice": "239",
       "usedPrice": "329",
       "hreflang":"2",
-      "color":["黑色","白色","蓝色"],
+      "color":["黑色","白色","青色"],
       "size":["XXXL","M","S"]
     },
     {
@@ -35,7 +69,7 @@
       "productPrice": "349",
       "usedPrice": "499",
       "hreflang":"3",
-      "color":["黑色","白色","蓝色"],
+      "color":["黑白","白色","蓝色"],
       "size":["XXXL","L","M","S"]
     },
     {

@@ -211,15 +211,15 @@
 		</div>
         <div class="detailMian-right-main">
             <div class="right-new">
-                <a href="javascript:void(0)"><img src="images/detail/0.jpg" alt=""></a>
+                <a href="javascript:void(0)"><img src="images/detail/611.jpg" alt=""></a>
                 <p>VIIshouw<span>¥999</span></p>
             </div>
             <div class="right-new">
-                <a href="javascript:void(0)"><img src="images/detail/1.jpg" alt=""></a>
+                <a href="javascript:void(0)"><img src="images/detail/612.jpg" alt=""></a>
                 <p>VIIshouw<span>¥999</span></p>
             </div>
             <div class="right-new">
-                <a href="javascript:void(0)"><img src="images/detail/2.jpg" alt=""></a>
+                <a href="javascript:void(0)"><img src="images/detail/613.jpg" alt=""></a>
                 <p>VIIshouw<span>¥999</span></p>
             </div>
         </div>
@@ -451,7 +451,7 @@
 
 
     <div class="detailMian-left-glass">
-        <img class="detailMian-left-img1" src={{sr}} alt="">
+        <img class="detailMian-left-img1" src={{glass}} alt="">
 
     </div>
     <div class="glass">
@@ -482,8 +482,9 @@
 
         <div class="buyColor">
             <span>颜色</span>
+
 			{{each colorImg as value i}}
-            <img src={{value}} alt="黑色">
+          	  <img src={{value}} alt={{color[i]}}>
 			{{/each}}
         </div>
 
@@ -579,9 +580,9 @@
 
 
 <script id="detailBottom" type="text/html">
-	{{each list as value i}}
+	{{each bottomBg as value i}}
 	<a href="javascript:void(0)">
-		<img src="images/detail/detail-bottom{{value.sr}}.jpg" alt="">
+		<img src="images/detail/{{value}}" alt="">
 	</a>
 	{{/each}}
 </script>

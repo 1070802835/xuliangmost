@@ -139,9 +139,10 @@ function endBuy() {
 
 
 xl();
+var Href;
 function xl(){
 	var str=location.href;
-	var Href=str.split("?")[1];
+	Href=str.split("?")[1];
 	//此时Href就是取回的ID   是数字类型的
 	// alert(Href);
 	var url="json/detail-List.json";
@@ -155,67 +156,69 @@ function xl(){
 					Id=parseInt(this.hreflang);
 					if(Id==Href){
 						var html3=template("little",data[0].list[index]);
-						console.log(data[0].list[index]);
 						$("#artemp2").html(html3);
+
+						var html1=template("detailBottom",data[0].list[index]);
+						$("#detail-bottom1").html(html1);
+
+
 						Most();
 
 
 
-						// $(".addCart").click(function () {
-						// 	if($(".b2").html().length<1){
-						// 		alert("请选择尺码")
-						// 	}else{
-						//
-						// 		var oBject=JSON.parse($.cookie("user"));
-						// 		var arrCookie=[];
-						// 		$.each(oBject,function (key) {
-						// 			if(key!="index"){
-						// 				arrCookie.push(key);
-						// 			}
-						// 		});
-						// 		for(var i=0;i<arrCookie.length-1;i++){
-						// 			for(var k=0;k<arrCookie.length-1;k++){
-						// 				if(oBject[arrCookie[i]]<oBject[arrCookie[i+1]]){
-						// 					var temp=arrCookie[i];
-						// 					arrCookie[i]=arrCookie[i+1];
-						// 					arrCookie[i+1]=temp;
-						// 				}
-						// 			}
-						// 		}
-						//
-						// 		var apitype={
-						// 			uName:"username",
-						// 			uPassword:"userpassword"
-						// 		};
-						// 		var count=$(".mostBuy input").val();//商品数量
-						// 		var tar2={
-						// 			userNmae:arrCookie[0],
-						// 			count:count,
-						// 			hreflang:Href
-						//
-						// 		};
-						// 		var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
-						// 		var setting={
-						// 			type:"get",
-						// 			dataType:"jsonp",
-						// 			data:{
-						// 				id:arrCookie[0],
-						// 				datajson:JSON.stringify(tar2),
-						// 				type:apitype.uName
-						// 			},
-						// 			success:function () {
-						// 				alert("加入购物车成功!")
-						// 			},
-						// 			error:function () {
-						// 				alert("加入购物车失败!")
-						// 			},
-						// 			complete:function () {
-						//
-						// 			}
-						// 		};
-						// 		$.ajax(url,setting);
-						// 	}
-						// });
+						$(".addCart").click(function () {
+							if($(".b2").html().length<1){
+								alert("请选择尺码")
+							}else{
+
+								var oBject=JSON.parse($.cookie("user"));
+								var arrCookie=[];
+								$.each(oBject,function (key) {
+									if(key!="index"){
+										arrCookie.push(key);
+									}
+								});
+								for(var i=0;i<arrCookie.length-1;i++){
+									for(var k=0;k<arrCookie.length-1;k++){
+										if(oBject[arrCookie[i]]<oBject[arrCookie[i+1]]){
+											var temp=arrCookie[i];
+											arrCookie[i]=arrCookie[i+1];
+											arrCookie[i+1]=temp;
+										}
+									}
+								}
+
+								var apitype={
+									Cart:"Cart"
+								};
+								var count=$(".mostBuy input").val();//商品数量
+								var tar2={
+									userNmae:arrCookie[0],
+									count:count,
+									hreflang:Href
+								};
+								var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+								var setting={
+									type:"get",
+									dataType:"jsonp",
+									data:{
+										id:arrCookie[0],
+										datajson:JSON.stringify(tar2),
+										type:apitype.Cart
+									},
+									success:function () {
+										alert("加入购物车成功!")
+									},
+									error:function () {
+										alert("加入购物车失败!")
+									},
+									complete:function () {
+
+									}
+								};
+								$.ajax(url,setting);
+							}
+						});
 
 					}
 				}
@@ -252,8 +255,7 @@ function detailBottom() {
 	];
 
 	var obj1={list:arr1};
-	var html1=template("detailBottom",obj1);
-	$("#detail-bottom1").html(html1);
+
 }
 
 
@@ -328,12 +330,12 @@ function Most() {
 	});
 	$(".detailMian-left-ul li").mouseenter(function () {
 		$(this).css('borderColor','red').siblings().css('borderColor','#ddd');
-		var Index=$(this).index();
-		$(".detailMian-left-img").attr('src','images/detail/'+Index+'.jpg')
-		$(".detailMian-left-img1").attr('src','images/detail/big'+Index+'.jpg')
+		var Index=$(this).index()+1;
+		$(".detailMian-left-img").attr('src','images/detail/'+Href+Index+'.jpg')
+		$(".detailMian-left-img1").attr('src','images/detail/big'+Href+Index+'.jpg')
 
 	});
-// $(".detail-share-ul li").eq(0).hover()
+
 
 	for(var i=0;i<12;i++){
 		$(".shareDiv span").eq(i).css({
@@ -372,9 +374,9 @@ function Most() {
 
 	});
 
-	var flag=false;
+	var flag3=false;
 	$(".buySize ul li").click(function () {
-		flag=!flag;
+		flag3=true;
 		$(this).css("border","1px solid red").siblings().css("border","1px solid #ddd");
 		$(".mostBuy .b2").html($(this).html())
 	});
@@ -383,9 +385,9 @@ function Most() {
 	$(".mostBuy").children().first().mousedown(function () {
 		Num=parseInt($(this).next().val());
 		Num--;
-		if(Num<=0){
+		if(Num<=1){
 			$(this).next().val(0);
-			Num=0;
+			Num=1;
 		}else{
 			$(this).next().val(Num);
 		}
@@ -417,6 +419,9 @@ function Most() {
 			'color':'#000'
 		})
 	});
+
+
+
 }
 
 
