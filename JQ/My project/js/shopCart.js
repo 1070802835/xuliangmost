@@ -1,6 +1,4 @@
-/**
- * Created by Administrator on 2016/11/2.
- */
+
 
 if($.cookie("flag")){
 	checkCookie();
@@ -8,8 +6,7 @@ if($.cookie("flag")){
 	$("#ul-mid").css('display','block');
 	$("#ul-l-m").css('display','none');
 }
-
-
+var myId;
 $("#ul-right li").eq(2).hover(function () {
 
 	$("#gg").slideDown("fast");
@@ -126,10 +123,57 @@ function checkCookie() {
 			}
 		}
 		$("#uName").text(arr[0]);
+		myId=arr[0];
+		loadList(arr[0]);
 		$("#ul-mid").css('display','none');
 	}else{
 		$("#ul-mid").css('display','block');
 		$("#ul-l-m").css('display','none');
 	}
 }
+
+
+function loadList(id) {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonp",
+		data:{
+			Id:id,
+			type:"Product"
+		},
+		success:function (data) {
+			if(!data){
+				$("#productList").html("<div style='width: 100%;height: 300px;color: red;text-align: center;line-height: 300px;font-size: 20px;'>你的购物车空啦!快滚去买东西!!</div>");
+			}else{
+				var list1=JSON.parse(data.Data);
+				var obj={list:list1};
+				var html1=template("list",obj);
+				$("#productList").html(html1);
+				changeProduct();
+				
+			}
+
+
+
+		}
+	};
+	$.ajax(url,setting)
+}
+
+function changeProduct() {
+	$(".productList-in1").click(function () {
+		var sr=$(this).parent().children().first().children("img").attr("src");
+		alert(sr);
+	})
+
+
+
+
+}
+
+
+
+
+
+
 

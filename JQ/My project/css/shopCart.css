@@ -2,7 +2,7 @@
 	margin:0;
 	padding:0;
 }
-body{
+html,body{
 	background:#fff;
 }
 a{
@@ -290,8 +290,11 @@ li{
 	width:70px;
 }
 
-
-#CartMain .productList{
+#productList{
+	width:100%;
+	overflow: hidden;
+}
+#productList .productList{
 	width:100%;
 	height:102px;
 	border-bottom:1px dashed #eee;

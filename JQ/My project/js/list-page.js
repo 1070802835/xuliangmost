@@ -77,7 +77,6 @@ $("#detailUl li").click(function () {
 			console.log(data);
 			var html=template("List",data[Index]);
 			$("#detailList").html(html);
-
 			$(".product a").click(function () {
 				var num=parseInt($(this).attr('hreflang'));
 				$(this).attr("href","detail-page.html?"+num)

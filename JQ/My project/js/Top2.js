@@ -99,7 +99,9 @@ $("#top2-right-shop").hover(function () {
 	$(this).css("borderBottom","1px solid #d1d3d4");
 	$("#top2-right-shop2").css("display","none");
 });
-
+$("#top2-right-shop").click(function () {
+	location.href="shopCart.html"
+});
 
 
 
