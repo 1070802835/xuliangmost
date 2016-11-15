@@ -4,6 +4,7 @@
 
 if($.cookie("flag")){
 	checkCookie();
+	getCount();
 }else{
 	$("#ul-mid").css('display','block');
 	$("#ul-l-m").css('display','none');
@@ -92,16 +93,66 @@ $("#ul-left li").eq(2).hover(function () {
 
 
 
-$("#top2-right-shop").hover(function () {
-	$(this).css("borderBottom",0);
-	$("#top2-right-shop2").slideDown("fast");
-},function () {
-	$(this).css("borderBottom","1px solid #d1d3d4");
-	$("#top2-right-shop2").css("display","none");
-});
+// $("#top2-right-shop").hover(function () {
+// 	$(this).css("borderBottom",0);
+// 	$("#top2-right-shop2").slideDown("fast");
+// },function () {
+// 	$(this).css("borderBottom","1px solid #d1d3d4");
+// 	$("#top2-right-shop2").css("display","none");
+// });
 $("#top2-right-shop").click(function () {
 	location.href="shopCart.html"
 });
+
+function getMycookie() {
+	var oBject=JSON.parse($.cookie("user"));
+	var arrCookie=[];
+	$.each(oBject,function (key) {
+		if(key!="index"){
+			arrCookie.push(key);
+		}
+	});
+	for(var i=0;i<arrCookie.length-1;i++){
+		for(var k=0;k<arrCookie.length-1;k++){
+			if(oBject[arrCookie[i]]<oBject[arrCookie[i+1]]){
+				var temp=arrCookie[i];
+				arrCookie[i]=arrCookie[i+1];
+				arrCookie[i+1]=temp;
+			}
+		}
+	}
+	return arrCookie[0]
+};
+
+function getCount() {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonP",
+		data:{
+			Id:getMycookie(),
+			type:"Product"
+		},
+
+		success:function (data) {
+			if(!data){
+				$(".top2-right-shop-sp1").html("0");
+			}else{
+
+				var str=JSON.parse(data.Data);
+				var numCount=0;
+				$.each(str,function () {
+					numCount+=parseInt(this.count);
+				});
+
+				$(".top2-right-shop-sp1").html(numCount);
+			}
+		},
+		complete:function (data) {
+		}
+	};
+	$.ajax(url,setting)
+}
+
 
 
 

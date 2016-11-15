@@ -454,25 +454,6 @@ function getProduct(item) {
 					updateProduct(str);
 					alert(2)
 				}
-				// for(var i=0;i<str.length;i++){
-				// 	if(str[i].Name==item.Name){
-				// 		if(str[i].color==item.color&&str[i].size==item.size){
-				// 			str[i].count=parseInt(item.count)+parseInt(str[i].count);
-				// 			updateProduct(str);
-				//
-				// 		}else{
-				// 			str.push(item);
-				// 			updateProduct(str);
-				//
-				// 		}
-				// 	}else{
-				// 		str.push(item);
-				// 		updateProduct(str);
-				// 		return false
-				// 	}
-				// }
-
-
 			}
 		},
 		complete:function (data) {
@@ -482,9 +463,9 @@ function getProduct(item) {
 }
 
 function updateProduct(item){
-	var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+	var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_post";
 	var setting={
-		dataType:"jsonP",
+		type:"post",
 		data:{
 			Id:getMycookie(),
 			datajson:JSON.stringify(item),
@@ -495,9 +476,9 @@ function updateProduct(item){
 			console.log(a)
 		},
 		error:function () {
-			alert("加入购物车失败!")
+			// alert("加入购物车失败!")
 		},
-		complete:function (data) {
+		complete:function () {
 			alert("加入购物车成功!")
 		}
 	};
