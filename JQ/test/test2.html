@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+<script>
+	var url="https://xl962143502.github.io/Product/GetProductById_get";
+	var settin={
+		dataType:"jsonp",
+		data:{
+			id:"admin"
+		},
+		success:function (data) {
+			alert(1)
+		},
+		error:function () {
+			alert("哎，又失败了")
+		}
+	}
+	$.ajax(url,settin);
+</script>
+</body>
+</html>

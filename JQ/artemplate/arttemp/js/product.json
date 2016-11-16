@@ -1,0 +1,57 @@
+{
+	"0001":{
+		"id": "0001",
+		"type":"针织衫",
+		"imgres": {"small":["images/MT01_50x64.jpg","images/MT02_50x64.jpg","images/MT03_50x64.jpg","images/MT04_50x64.jpg","images/MT05_50x64.jpg"],"medium":"images/MT01_350x449.jpg","large":"images/MT01_800x1026.jpg"},
+		"style":["images/MT_TYPE01_60x76.jpg","images/MT_TYPE01_60x76.jpg"],
+		"title": "针织衫一 针织衫一 针织衫一",
+		"price": "200.00",
+		"size":["small","medium","large"],
+		"tag":"hot"
+	}, 
+	"0002":{
+		"id": "0002",
+		"type":"针织衫",
+		"imgres": {"small":["images/MT01_50x64.jpg","images/MT02_50x64.jpg","images/MT03_50x64.jpg","images/MT04_50x64.jpg","images/MT05_50x64.jpg"],"medium":"images/MT02_350x449.jpg","large":"images/MT02_800x1026.jpg"},
+		"style":["images/MT_TYPE01_60x76.jpg","images/MT_TYPE01_60x76.jpg"],
+		"title": "针织衫二 针织衫二 针织衫二",
+		"price": "200",
+		"size":["small","medium","large"]
+	},
+	"0003":{
+		"id": "0003",
+		"type":"针织衫",
+		"imgres": {"small":["images/MT01_50x64.jpg","images/MT02_50x64.jpg","images/MT03_50x64.jpg","images/MT04_50x64.jpg","images/MT05_50x64.jpg"],"medium":"images/MT03_350x449.jpg","large":"images/MT03_800x1026.jpg"},
+		"style":["images/MT_TYPE01_60x76.jpg","images/MT_TYPE01_60x76.jpg"],
+		"title": "针织衫三 针织衫三 针织衫三",
+		"price": "200",
+		"size":["small","medium","large"]
+	},
+	"0004":{
+		"id": "0004",
+		"type":"针织衫",
+		"imgres": {"small":["images/MT01_50x64.jpg","images/MT02_50x64.jpg","images/MT03_50x64.jpg","images/MT04_50x64.jpg","images/MT05_50x64.jpg"],"medium":"images/MT04_350x449.jpg","large":"images/MT04_800x1026.jpg"},
+		"style":["images/MT_TYPE01_60x76.jpg","images/MT_TYPE01_60x76.jpg"],
+		"title": "针织衫四 针织衫四 针织衫四",
+		"price": "200",
+		"size":["small","medium","large"]
+	},
+	"0005":{
+		"id": "0005",
+		"type":"针织衫",
+		"imgres": {"small":["images/MT01_50x64.jpg","images/MT02_50x64.jpg","images/MT03_50x64.jpg","images/MT04_50x64.jpg","images/MT05_50x64.jpg"],"medium":"images/MT05_350x449.jpg","large":"images/MT05_800x1026.jpg"},
+		"style":["images/MT_TYPE01_60x76.jpg","images/MT_TYPE01_60x76.jpg"],
+		"title": "针织衫五 针织衫五 针织衫五",
+		"price": "200",
+		"size":["small","medium","large"]
+	},
+	"0006":{
+		"id": "0006",
+		"type":"针织衫",
+		"imgres": {"small":["images/MT01_50x64.jpg","images/MT02_50x64.jpg","images/MT03_50x64.jpg","images/MT04_50x64.jpg","images/MT05_50x64.jpg"],"medium":"images/MT01_350x449.jpg","large":"images/MT01_800x1026.jpg"},
+		"style":["images/MT_TYPE01_60x76.jpg","images/MT_TYPE01_60x76.jpg"],
+		"title": "针织衫六 针织衫六 针织衫六",
+		"price": "200",
+		"size":["small","medium","large"]
+	}	
+}

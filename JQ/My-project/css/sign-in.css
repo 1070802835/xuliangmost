@@ -122,6 +122,20 @@ margin: 24px auto;
 	text-decoration: underline;
 	color: #666;
 }
+#Sign2 .pnm .savePassword{
+	float: left;
+	margin:36px 0 6px 0;
+	text-decoration: underline;
+	color: #666;
+}
+#Sign2 .pnm .savePassword input{
+	float: left;
+	width: 12px;
+	height: 12px;
+}
+#Sign2 .pnm .savePassword label{
+	float: left;
+}
 #Sign2 .pnm a:hover{
 	color: red;
 }
@@ -160,7 +174,7 @@ margin: 24px auto;
 	display: block;
 	width: 314px;
 	height:40px;
-	margin: 0 auto;
+	margin: 10px auto;
 	line-height: 40px;
 	text-align: center;
 	color: #fff;

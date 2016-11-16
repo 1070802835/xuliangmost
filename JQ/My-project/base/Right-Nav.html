@@ -22,17 +22,13 @@
 			</div>
 
 			<div id="cartMain-Mid">
-				<dl>
-					<dt><img src="images/detail/611.jpg" alt=""></dt>
-					<dd>
-						<p class="first">name</p>
-						<p class="first">颜色：{{value.color}} 尺码：{{value.ruler}}</p>
-					</dd>
-					<dd>
-						<p>{{value.price}} x {{value.num}}</p>
-						<p>删除</p>
-					</dd>
-				</dl>
+				<!--<dl>-->
+					<!--<dt><img src="images/detail/611.jpg" alt=""></dt>-->
+					<!--<dd>-->
+						<!--<p>马克华菲潮牌RESHAKE华菲型格商场同款字母拼接加绒直筒套头上衣潮男士卫衣<span>(黑色)</span></p>-->
+						<!--<p>¥999<span>×1</span></p>-->
+					<!--</dd>-->
+				<!--</dl>-->
 
 
 			</div>
@@ -62,6 +58,24 @@
 			<a class="biubiubiu biubiubiu2" href="javascript:void(0)"></a>
 		</div>
 	</div>
+
+
+<script id="gouwuche" type="text/html">
+	{{each list as value i}}
+		<dl>
+			<dt><img src={{value.sr}} alt=""></dt>
+			<dd>
+				<p>{{value.Name}}<span>({{value.color}}{{value.size}})</span></p>
+				<p>¥{{value.price}}<span>×{{value.count}}</span></p>
+			</dd>
+		</dl>
+	{{/each}}
+
+
+</script>
+
+
+
 	<script src="js/Right-Nav.js"></script>
 <!--</body>-->
 <!--</html>-->

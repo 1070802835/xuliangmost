@@ -73,13 +73,12 @@ $(".Sure").click(function () {
 						obj[uNmae] = num;
 						// alert(obj[uNmae]);
 						var str=JSON.stringify(obj);
-						var conf=confirm("14天内免登陆");
-						if(conf){
+						if($("#kksb").is(":checked")){
 							$.cookie("user",str,{expires:14,path:"/"});
-							window.location.href="../index.html"
+							window.location.href="../index.html";
 						}else{
 							$.cookie("user",str);
-							window.location.href="../index.html"
+							window.location.href="../index.html";
 						}
 
 

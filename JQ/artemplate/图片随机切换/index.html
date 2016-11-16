@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		*{margin: 0;
+		  padding: 0;}
+		#box{width: 1120px;
+			 height:600px;
+			 /*background: #666;*/
+			 margin: 20px auto;}
+		#box ul li{list-style: none;
+				   width: 350px;
+				   height: 600px;
+				   /*background: blue;*/
+				   float: left;
+				   margin-right: 10px;}
+		#box ul li.last{width: 400px;
+						margin: 0;
+		}
+		#box ul li div{width: 100%; position: relative;overflow: hidden;}
+		#box ul li div img{position: absolute;left: 0;top: 0;}
+		.top1{height: 250px;margin-bottom: 10px;}
+		.bottom1{height: 340px;}
+		.top2{height: 180px;,margin-bottom: 10px;}
+		.center2{height: 220px;margin-bottom: 10px;margin-top: 10px;}
+		.bottom2{height: 180px;}
+		.top3{height: 340px;margin-bottom: 10px;}
+		.bottom3{height: 250px;}
+	</style>
+	<script src="js/jquery-3.1.1.js"></script>
+	<body>
+		<div id="box">
+			<ul>
+				<li>
+					<div class="top1">
+						<img src="img/1.jpg" width="100%" height="250px"/>
+						<img src="img/2.jpg" width="100%" height="250px"/>
+					</div>
+					<div class="bottom1">
+						<img src="img/3.jpg"  width="100%" height="340px" />
+						<img src="img/4.jpg"  width="100%" height="340px" />
+					</div>
+				</li>
+				<li>
+					<div class="top2">
+						<img src="img/5.jpg" width="100%" height="180px"  />
+						<img src="img/6.jpg" width="100%" height="180px"  />
+					</div>
+					<div class="center2">
+						<img src="img/7.jpg" width="100%" height="220px" />
+						<img src="img/8.jpg" width="100%" height="220px" />
+					</div>
+					<div class="bottom2">
+						<img src="img/9.jpg" width="100%" height="180px" />
+						<img src="img/10.jpg" width="100%" height="180px" />
+					</div>
+				</li>
+				<li class="last">
+					<div class="top3">
+						<img src="img/11.jpg" width="100%" height="340px" />
+						<img src="img/12.jpg" width="100%" height="340px" />
+					</div>
+					<div class="bottom3">
+						<img src="img/13.jpg" width="100%" height="250px" />
+						<img src="img/14.jpg" width="100%" height="250px" />
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script>
+			var w = 0;  //保存宽度
+			var h = 0;  
+			var direction=[];//定义一个随机的方向
+			//鼠标移入的效果
+			$("#box ul li div").hover(function(){
+				//获取鼠标移入时候的宽高
+				w = $(this).width();
+				h = $(this).height();
+				//随机的方向
+				direction=[
+					{"top":-h+"px","opacity":0},//上
+					{"top":h+"px","opacity":0},//下
+					{"left":-w+"px","opacity":0},//左
+					{"left":w+"px","opacity":0}//右
+				];
+			},function(){
+				//鼠标移出
+				var a = Math.floor(Math.random()*4); //0-3
+				$(this).find("img").eq(1).animate(direction[a],1000,function(){
+					//回调函数
+					$(this).css({"left":0,"top":0,"opacity":1});
+					$(this).prependTo($(this).parent()); //把它添加到这个元素的后面
+				});
+			});
+		</script>
+	</body>
+</html>
