@@ -77,7 +77,7 @@ $(".Sure").click(function () {
 							$.cookie("user",str,{expires:14,path:"/"});
 							window.location.href="../index.html";
 						}else{
-							$.cookie("user",str);
+							$.cookie("user",str,{expires:1,path:"/"});
 							window.location.href="../index.html";
 						}
 
