@@ -151,7 +151,7 @@ function loadList(id) {
 				$("#productList").html(html1);
 
 
-
+				//减号键
 				$(".productList-in1").click(function () {
 					var Index=$(this).parent().parent().index();
 					$(this).next().val(parseInt($(this).next().val())-1);
@@ -161,17 +161,37 @@ function loadList(id) {
 						deleteoneProduct(Index);
 					}
 				});
-
+				//加号键
 				$(".productList-in3").click(function () {
 					var Index=$(this).parent().parent().index();
 					addoneProduct(Index)
 				});
 
 
-
+				//删除这个商品
 				$(".deleteLine").click(function () {
 					var Index=$(this).parent().parent().index();
 						deleteLine(Index);
+				});
+				//选中每件商品   价格跟着变化
+				$(".productList-int").click(function () {
+					if($(this).is(":checked")){
+						var Num=$(this).parent().children(".productList-div2-subtotal").html()
+						$(".total span").html(parseInt($(".total span").html())+parseInt(Num))
+					}
+					if(!$(this).is(":checked")){
+						var Num1=$(this).parent().children(".productList-div2-subtotal").html()
+						$(".total span").html(parseInt($(".total span").html())-parseInt(Num1))
+					}
+
+				});
+				
+				//数量修改
+				$(".productList-in2").blur(function () {
+					var Index=$(this).parent().parent().index();
+					var count=parseInt($(this).val());
+					changeCount(Index,count)
+
 				});
 
 				//删除按钮
@@ -242,6 +262,24 @@ function deleteLine(index) {
 	$.ajax(url,setting)
 }
 
+function changeCount(index,count) {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonp",
+		data:{
+			Id:myId,
+			type:"Product"
+		},
+		success:function (data) {
+			var arrProduct1=JSON.parse(data.Data);
+			arrProduct1[index].count=count;
+			upDate(arrProduct1);
+		}
+
+	};
+	$.ajax(url,setting)
+}
+
 
 
 function upDate(item) {
@@ -292,6 +330,41 @@ $(".deleteCart").click(function () {
 });
 
 
+
+
+//全选
+
+$("#check2").click(function () {
+	if($(this).is(":checked")){
+		$(".productList-int").prop("checked",true)
+		allChecked();
+	}
+	if(!$(this).is(":checked")){
+		$(".productList-int").prop("checked",false)
+		$(".total span").html("0")
+	}
+
+});
+
+$("#check1").click(function () {
+	if($(this).is(":checked")){
+		$(".productList-int").prop("checked",true);
+		allChecked();
+	}
+	if(!$(this).is(":checked")){
+		$(".productList-int").prop("checked",false);
+		$(".total span").html("0")
+	}
+});
+
+
+function allChecked() {
+	var plusAllnum=0;
+	$(".productList-div2-subtotal").each(function () {
+		plusAllnum+=parseInt($(this).text())
+		$(".total span").html(plusAllnum)
+	})
+}
 
 
 

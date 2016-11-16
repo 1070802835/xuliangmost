@@ -7,20 +7,45 @@
 </head>
 <body>
 <script>
-	var url="https://xl962143502.github.io/Product/GetProductById_get";
-	var settin={
-		dataType:"jsonp",
-		data:{
-			id:"admin"
-		},
-		success:function (data) {
-			alert(1)
-		},
-		error:function () {
-			alert("哎，又失败了")
-		}
-	}
-	$.ajax(url,settin);
+		$("#allcheck").click(function(){
+			$(this).parents("#top").siblings().find("input[type=checkbox]").each(function(){
+				$(this).prop("checked",!$(this).prop("checked"));
+			})
+		})
+		$("#shoppinglist").find("input").click(function(){
+			if(!$(this).prop("checked")){
+				$("#allcheck").prop("checked",false);
+			}
+			var checkLen = $("#shoppinglist").find("input:checked").length;
+			var len = $("#shoppinglist").find("input").length;
+			if(len == checkLen ){
+				$("#allcheck").prop("checked",true);
+			}
+		})
+	//全选
+//	$("#allcheck").prop("checked",true);
+//	$("#shoppinglist :checkbox").prop("checked",true);
+//	$("#allcheck").click(function(){
+//		if(this.checked){
+//			$("#shoppinglist :checkbox").prop("checked",true);
+//		}else{
+//			$("#shoppinglist :checkbox").prop("checked",false);
+//		}
+//	})
+//	$("#shoppinglist input").click(function(){
+//		chackcount();
+//	})
+//	})
+//	function chackcount(){
+//		var chechcount=$("#shoppinglist :checkbox").length;
+//		var chechsum=0;
+//		$("#shoppinglist :checkbox").each(function(){
+//			if($(this).prop("checked")==true){
+//				chechsum++;
+//			}
+//		})
+//		chechcount==chechsum?$("#allcheck").prop("checked",true):$("#allcheck").prop("checked",false);
+//	}
 </script>
 </body>
 </html>
