@@ -132,7 +132,7 @@ function checkCookie() {
 	}
 }
 
-
+//加载购物车
 function loadList(id) {
 	var url="http://10.17.158.241:8081/Product/GetProductById_get";
 	var setting={
@@ -149,29 +149,147 @@ function loadList(id) {
 				var obj={list:list1};
 				var html1=template("list",obj);
 				$("#productList").html(html1);
-				changeProduct();
-				
+
+
+
+				$(".productList-in1").click(function () {
+					var Index=$(this).parent().parent().index();
+					$(this).next().val(parseInt($(this).next().val())-1);
+					if($(this).next().val()<=0){
+						deleteLine(Index);
+					}else{
+						deleteoneProduct(Index);
+					}
+				});
+
+				$(".productList-in3").click(function () {
+					var Index=$(this).parent().parent().index();
+					addoneProduct(Index)
+				});
+
+
+
+				$(".deleteLine").click(function () {
+					var Index=$(this).parent().parent().index();
+						deleteLine(Index);
+				});
+
+				//删除按钮
 			}
-
-
-
 		}
 	};
 	$.ajax(url,setting)
 }
 
-function changeProduct() {
-	$(".productList-in1").click(function () {
-		var sr=$(this).parent().children().first().children("img").attr("src");
-		alert(sr);
-	})
+function deleteoneProduct(index) {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonp",
+		data:{
+			Id:myId,
+			type:"Product"
+		},
+		success:function (data) {
+			var arrProduct=JSON.parse(data.Data);
+			arrProduct[index].count=parseInt(arrProduct[index].count)-1;
+			upDate(arrProduct);
+		}
 
-
-
-
+	};
+	$.ajax(url,setting)
 }
 
 
+function addoneProduct(index) {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonp",
+		data:{
+			Id:myId,
+			type:"Product"
+		},
+		success:function (data) {
+			var arrProduct=JSON.parse(data.Data);
+			arrProduct[index].count=parseInt(arrProduct[index].count)+1;
+			upDate(arrProduct);
+		}
+
+	};
+	$.ajax(url,setting)
+}
+
+
+
+function deleteLine(index) {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonp",
+		data:{
+			Id:myId,
+			type:"Product"
+		},
+		success:function (data) {
+
+			var arrProduct=JSON.parse(data.Data);
+			// console.log(data.Data);
+			arrProduct.splice(index,1);
+			upDate(arrProduct);
+
+
+		}
+
+	};
+	$.ajax(url,setting)
+}
+
+
+
+function upDate(item) {
+	var url="http://10.17.158.241:8081/Product/CreateUpdateProduct_get";
+	var setting={
+		type:"get",
+		dataType:"jsonp",
+		data:{
+			Id:myId,
+			datajson:JSON.stringify(item),
+			type:"Product"
+		},
+		success:function (data) {
+
+		},
+		error:function () {
+			// alert("加入购物车失败!")
+		},
+		complete:function () {
+			loadList(myId);
+		}
+	};
+	$.ajax(url,setting)
+}
+
+
+
+
+
+//清空购物车
+$(".deleteCart").click(function () {
+	var url="http://10.17.158.241:8081/Product/DeleteProductById_get";
+	var setting={
+		dataType:"jsonp",
+		data:{
+			id:myId,
+			type:"Product"
+		},
+		success:function () {
+			alert("清空了");
+			loadList(myId);
+		},
+		error:function () {
+			alert("清空失败")
+		}
+	};
+		$.ajax(url,setting)
+});
 
 
 

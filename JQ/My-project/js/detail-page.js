@@ -445,14 +445,12 @@ function getProduct(item) {
 							this.count=parseInt(item.count)+parseInt(this.count);
 							istrue=true;
 							updateProduct(str);
-							alert(1)
 						}
 					}
 				});
 				if(!istrue){
 					str.push(item);
 					updateProduct(str);
-					alert(2)
 				}
 			}
 		},
@@ -473,17 +471,46 @@ function updateProduct(item){
 		},
 		success:function (data) {
 			var a=data.Data;
-			console.log(a)
 		},
 		error:function () {
 			// alert("加入购物车失败!")
 		},
 		complete:function () {
-			alert("加入购物车成功!")
+			alert("加入购物车成功!");
+			getCount();
 		}
 	};
 	$.ajax(url,setting)
 }
 
+
+function getCount() {
+	var url="http://10.17.158.241:8081/Product/GetProductById_get";
+	var setting={
+		dataType:"jsonP",
+		data:{
+			Id:getMycookie(),
+			type:"Product"
+		},
+
+		success:function (data) {
+			if(!data){
+				$(".top2-right-shop-sp1").html("0");
+			}else{
+
+				var str=JSON.parse(data.Data);
+				var numCount=0;
+				$.each(str,function () {
+					numCount+=parseInt(this.count);
+				});
+
+				$(".top2-right-shop-sp1").html(numCount);
+			}
+		},
+		complete:function (data) {
+		}
+	};
+	$.ajax(url,setting)
+}
 
 
