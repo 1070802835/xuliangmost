@@ -157,14 +157,32 @@ function loadList(id) {
 					$(this).next().val(parseInt($(this).next().val())-1);
 					if($(this).next().val()<=0){
 						deleteLine(Index);
+						$(this).parent().parent().remove();
 					}else{
-						deleteoneProduct(Index);
+						if($(this).parent().parent().children().first().is(":checked")){
+							$(".total span").html(parseInt($(".total span").html())-parseInt($(this).parent().parent().children(".productList-div2-price").html()));
+							deleteoneProduct(Index);
+
+							$(this).parent().parent().children().first().prop("checked");
+						}else{
+							deleteoneProduct(Index);
+						}
+						$(this).parent().parent().children(".productList-div2-subtotal").html(parseInt($(this).next().val())*parseInt($(this).parent().parent().children(".productList-div2-price").html()))
 					}
+
 				});
 				//加号键
 				$(".productList-in3").click(function () {
 					var Index=$(this).parent().parent().index();
-					addoneProduct(Index)
+					$(this).prev().val(parseInt($(this).prev().val())+1);
+					if($(this).parent().parent().children().first().is(":checked")){
+						$(".total span").html(parseInt($(".total span").html())+parseInt($(this).parent().parent().children(".productList-div2-price").html()));
+						addoneProduct(Index);
+						$(this).parent().parent().children().first().prop("checked");
+					}else{
+						addoneProduct(Index)
+					}
+					$(this).parent().parent().children(".productList-div2-subtotal").html(parseInt($(this).parent().parent().children(".productList-div2-subtotal").html())+parseInt($(this).parent().parent().children(".productList-div2-price").html()))
 				});
 
 
@@ -172,6 +190,7 @@ function loadList(id) {
 				$(".deleteLine").click(function () {
 					var Index=$(this).parent().parent().index();
 						deleteLine(Index);
+
 				});
 				//选中每件商品   价格跟着变化
 				$(".productList-int").click(function () {
@@ -185,12 +204,13 @@ function loadList(id) {
 					}
 
 				});
-				
+
 				//数量修改
 				$(".productList-in2").blur(function () {
 					var Index=$(this).parent().parent().index();
 					var count=parseInt($(this).val());
-					changeCount(Index,count)
+					changeCount(Index,count);
+					$(this).parent().parent().children(".productList-div2-subtotal").html(parseInt($(this).val())*parseInt($(this).parent().parent().children(".productList-div2-price").html()))
 
 				});
 
@@ -299,7 +319,7 @@ function upDate(item) {
 			// alert("加入购物车失败!")
 		},
 		complete:function () {
-			loadList(myId);
+			// loadList(myId);
 		}
 	};
 	$.ajax(url,setting)
