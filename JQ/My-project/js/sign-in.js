@@ -75,10 +75,22 @@ $(".Sure").click(function () {
 						var str=JSON.stringify(obj);
 						if($("#kksb").is(":checked")){
 							$.cookie("user",str,{expires:14,path:"/"});
-							window.location.href="../index.html";
+							var loc=location.href.split("?");
+							if(loc[2]){
+								window.location.href="../"+loc[1]+"?"+loc[2];
+							}else{
+								window.location.href="../"+loc[1];
+							}
 						}else{
 							$.cookie("user",str,{expires:1,path:"/"});
-							window.location.href="../index.html";
+							var loc=location.href.split("?");
+							if(loc[2]){
+								window.location.href="../"+loc[1]+"?"+loc[2];
+							}else{
+								window.location.href="../"+loc[1];
+							}
+
+
 						}
 
 

@@ -1,4 +1,9 @@
 
+$("#a1").click(function () {
+	var loc=location.href.split("/")[4];
+	$(this).attr("href","html/sign-in.html?"+loc)
+});
+
 
 if($.cookie("flag")){
 	checkCookie();
@@ -158,6 +163,7 @@ function loadList(id) {
 					if($(this).next().val()<=0){
 						deleteLine(Index);
 						$(this).parent().parent().remove();
+						$(".total span").html(parseInt($(".total span").html())-parseInt($(this).parent().parent().children(".productList-div2-price").html()));
 					}else{
 						if($(this).parent().parent().children().first().is(":checked")){
 							$(".total span").html(parseInt($(".total span").html())-parseInt($(this).parent().parent().children(".productList-div2-price").html()));
@@ -190,7 +196,7 @@ function loadList(id) {
 				$(".deleteLine").click(function () {
 					var Index=$(this).parent().parent().index();
 						deleteLine(Index);
-
+						$(this).parent().parent().remove();
 				});
 				//选中每件商品   价格跟着变化
 				$(".productList-int").click(function () {
@@ -199,22 +205,27 @@ function loadList(id) {
 						$(".total span").html(parseInt($(".total span").html())+parseInt(Num))
 					}
 					if(!$(this).is(":checked")){
-						var Num1=$(this).parent().children(".productList-div2-subtotal").html()
+						var Num1=$(this).parent().children(".productList-div2-subtotal").html();
 						$(".total span").html(parseInt($(".total span").html())-parseInt(Num1))
 					}
 
 				});
 
-				//数量修改
+				//数量修改  失去焦点的时候
 				$(".productList-in2").blur(function () {
 					var Index=$(this).parent().parent().index();
 					var count=parseInt($(this).val());
 					changeCount(Index,count);
-					$(this).parent().parent().children(".productList-div2-subtotal").html(parseInt($(this).val())*parseInt($(this).parent().parent().children(".productList-div2-price").html()))
+					var charge1=parseInt($(this).parent().next().html());
+					$(this).parent().next().html(parseInt($(this).parent().prev().html()*count));
+					var charge2=parseInt($(this).parent().next().html());
+					if($(this).parent().parent().children(".productList-int").is(":checked")){
+						$(".total span").html(parseInt($(".total span").html())-(charge1-charge2));
+					}
 
 				});
 
-				//删除按钮
+
 			}
 		}
 	};
@@ -274,8 +285,6 @@ function deleteLine(index) {
 			// console.log(data.Data);
 			arrProduct.splice(index,1);
 			upDate(arrProduct);
-
-
 		}
 
 	};

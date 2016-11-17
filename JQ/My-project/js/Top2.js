@@ -229,3 +229,8 @@ function checkCookie() {
 $("#top2-mid-butt").click(function () {
 	location.href="list-page.html";
 });
+
+$("#a1").click(function () {
+	var loc=location.href.split("/")[4];
+	$(this).attr("href","html/sign-in.html?"+loc)
+});
