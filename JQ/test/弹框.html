@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.1.1.js"></script>
+		<style type="text/css">
+			body,html{
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				background: #000;
+			}
+			#div1{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: white;
+			}
+			#div2{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background: #000;
+				display: none;
+				opacity: 0;
+				z-index: 1;
+			}
+			#div3{
+				width: 300px;
+				height: 100px;
+				background: #fff;
+				position: absolute;
+				top: 100px;
+				left: 50%;
+				z-index: 2;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+		
+		<div id="div2">
+			
+			
+		</div>
+		
+		<div id="div3">
+				<input type="button" name="b2" id="b2" value="关闭" />
+		</div>
+			
+		
+		<script>
+			$("#div1").click(function(){
+				if(!$("#div1").is(":animated")){
+					$("#div2").css("display","block")
+					$("#div1").animate({
+						height:"90%",
+						top:"5%",
+						width:'90%',
+						left:'5%'
+					},800);
+					
+					$("#div2").animate({
+							opacity:0.4
+						},800,function(){
+							$("#div3").css("display","block")
+						})
+				}
+			})
+			
+			$("#b2").click(function(e){
+				e.stopPropagation()
+				$("#div3").css("display","none");
+				
+				$("#div1").animate({
+					height:"100%",
+					top:"0%",
+					width:'100%',
+					left:'0%'
+				},800);
+				
+				$("#div2").animate({
+						opacity:0
+					},800,function(){
+						$("#div2").css("display","none")
+					})
+				
+				
+				
+			})
+			
+		</script>
+	</body>
+</html>

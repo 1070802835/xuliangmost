@@ -8,16 +8,21 @@
 <body>
 <script>
 
-	function a(name,color) {
-		this.name=name;
-		this.color=color
+	var son={
+		mySon:function(){
+			
+			return function(name,color){
+				this.name=name;
+				this.color=color
+			}
+		}
 	}
-
-	var b=new a("1","2");
-
-	a.prototype.uName="3";
-
-	alert(b.uName)
+	
+//	son.mySon().prototype.uName="1";
+	var a=son.mySon();
+//	console.log(a.uName);
+	
+	
 </script>
 </body>
 </html>
