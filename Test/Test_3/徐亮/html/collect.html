@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-1.11.3.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/template.js"></script>
+		<link rel="stylesheet" type="text/css" href="../css/collect.css"/>
+	</head>
+	<body>
+		<div id="top-wrap">
+			
+			<div id="top" class="w">
+				<img src="../img/logo.jpg"/>
+				<ul id="ul1">
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="javascript:void(0)">分类</a></li>
+					<li><a href="javascript:void(0)">歌单</a></li>
+					<li><a href="html/collect.html">我的收藏</a></li>
+					<li><a href="javascript:void(0)">下载客户端</a></li>
+				</ul>
+			
+			</div>
+		</div>
+		
+		
+		<div id="main_wrap">
+    <div id="main">
+        <ul id="collection">
+            <script id="data_list" type="text/html">
+            {{each list as value i}}
+            <li>
+                <dl>
+                    <dt><img src="../{{value.pic}}" width="100"/></dt>
+                    <dd>
+                        <p>{{value.title}}</p>
+                        <p>时间：{{value.update}}</p>
+                        <p>播放：{{value.play}}</p>
+                        <p>主播：{{value.author}}</p>
+                    </dd>
+                </dl>
+                <h3 class="rm_col" this_id={{value.id}}>取消收藏</h3>
+            </li>
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+</div>
+
+<script src="../js/collect.js"></script>
+	</body>
+</html>

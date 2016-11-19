@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>百度乐播-首页</title>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/template.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		
+	</head>
+	<body>
+		<div id="top-wrap">
+			
+			<div id="top" class="w">
+				<img src="img/logo.jpg"/>
+				<ul id="ul1">
+					<li><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">分类</a></li>
+					<li><a href="javascript:void(0)">歌单</a></li>
+					<li><a href="html/collect.html">我的收藏</a></li>
+					<li><a href="javascript:void(0)">下载客户端</a></li>
+				</ul>
+			
+			</div>
+		</div>
+		<div id="Main" class="w">
+			<div id="mainLeft">
+				<div id="leftTop">
+					<div id="time">
+						<img src="img/time1.png"/>
+						<p></p>
+					</div>
+					<div id="lb">
+						<ul id="ul2">
+							<li><img src="img/banner/banner1.jpg"/></li>
+							<li><img src="img/banner/banner2.jpg"/></li>
+							<li><img src="img/banner/banner3.jpg"/></li>
+							<li><img src="img/banner/banner4.jpg"/></li>
+							<li><img src="img/banner/banner1.jpg"/></li>
+						</ul>
+						<span id="sp1"></span>
+						<span id="sp2"></span>
+					</div>
+				</div>
+				<div id="leftBo">
+					<p id="p1">节目推荐/<a href="javascript:void(0)">换一批</a></p>
+					<div id="cao">
+						<!--<div class="cao1">
+							<a href="javascript:void(0)" class="sp3">收藏</a>
+							<img src="img/show/10001.jpg"/>
+							<p class="p1">贴吧泄密局</p>
+							<p class="p2"><span class="sp1">脱口秀</span><span class="sp2">百度乐博</span></p>
+						</div>-->
+						
+					</div>
+					
+				</div>
+			</div>
+			<div id="mainRight">
+				<img src="img/main-right.png"/>
+				
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script id="tieba" type="text/html">
+			{{each list as value i}}
+			<div class="cao1">
+							<a href="javascript:void(0)" lang="{{value.id}}" class="sp3">收藏</a>
+							<img src="{{value.pic}}" >
+							<p class="p1">{{value.title}}</p>
+							<p class="p2"><span class="sp1">{{value.sort}}</span><span class="sp2">{{value.author}}</span></p>
+						</div>
+			
+			{{/each}}
+		</script>
+		
+		
+		<script src="js/index.js"></script>
+	</body>
+</html>
