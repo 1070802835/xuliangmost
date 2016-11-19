@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+<script>
+	var son={
+		mySon:function () {
+
+			return function(name,color) {
+				this.name=name;
+				this.color=color;
+			}
+		}
+	};
+
+	son.mySon().prototype.sonName="大海";
+
+	var b=son.mySon();
+	var a=new b("kk","11");
+	console.log(b)
+
+
+//	var b=son.mySon();
+//
+//
+//	var a=new b("kk","11");
+//
+//	b.prototype.sonName="111";
+//
+//
+//	console.log(a.sonName);
+//	console.log(son.mySon());
+//	console.log(b);
+
+
+	
+//	function Son (name,color) {
+//		this.name=name;
+//		this.color=color;
+//	}
+//
+//	Son.prototype.sonName="大海";
+//	var a=new Son("KK","黄色");
+//	console.log(a.sonName)
+
+</script>
+</body>
+</html>
