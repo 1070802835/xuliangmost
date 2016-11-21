@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/class-text.css">
+</head>
+<body>
+	<header>
+		<h1>Oh My God</h1>
+	</header>
+
+	<section>
+		<form action="">
+			<fieldset>
+				<legend>Your details</legend>
+				<ul class="ul1">
+					<li>
+						<label for="text1">Name</label>
+						<input type="text" autofocus id="text1" class="check1" required placeholder="First and last name"/>
+					</li>
+					<li>
+						<label for="text2">Email</label>
+						<input type="email" id="text2" required placeholder="example@domain.com"/>
+					</li>
+					<li><label for="text3">Phone</label>
+						<input type="number" id="text3" required placeholder="Eg. +447500000000"/>
+					</li>
+				</ul>
+			</fieldset>
+
+
+
+
+			<fieldset>
+				<legend>Delivery address</legend>
+				<ul class="ul1">
+					<li>
+						<label for="text4">Adress</label>
+						<textarea name="text4" id="text4" rows="5" required></textarea>
+					</li>
+					<li>
+						<label for="text5">Post code</label>
+						<input type="text" id="text5" required />
+					</li>
+					<li><label for="text6">Country</label>
+						<input type="text" id="text6" required />
+					</li>
+				</ul>
+			</fieldset>
+
+
+
+
+
+			<fieldset>
+				<legend>Card details</legend>
+				<ul class="ul1 ul2">
+					<li>
+						<fieldset id="fieldset1">
+							<legend class="legned">Card type</legend>
+							<ul class="ul3">
+								<li><input type="radio" name="Card" id="check1"><label class="check1" for="check1">VISA</label></li>
+								<li><input type="radio" name="Card" id="check2"><label class="check1" for="check2">VISA</label></li>
+								<li><input type="radio" name="Card" id="check3"><label class="check1" for="check3">VISA</label></li>
+							</ul>
+						</fieldset>
+
+					</li>
+					<li>
+						<label for="text8">Card number</label>
+						<input type="number" id="text8" required />
+					</li>
+					<li><label for="text9">Security code</label>
+						<input type="number" id="text9" required />
+					</li>
+
+					<li><label for="text10">Name on card</label>
+						<input type="text" id="text10" required placeholder="Exact name as on the card"/>
+					</li>
+				</ul>
+			</fieldset>
+
+
+
+
+			<fieldset oninput="text11.value=parseInt(text13.value);text12.value=parseInt(text13.value)+parseInt(text11.value)">
+				<legend>My-self</legend>
+				<ul class="ul1">
+					<li>
+						<label for="text13">One</label>
+						<input type="range" value="0" min="0" max="100" id="text13" required />
+					</li>
+					<li>
+						<label for="text11">Two</label>
+						<input type="text" id="text11" placeholder="这是拖动上面产生的值" readonly />
+					</li>
+					<li><label for="text12">Three</label>
+						<input type="text" id="text12" placeholder="这是上面两个input的value相加的值" readonly/>
+					</li>
+				</ul>
+			</fieldset>
+
+
+			<fieldset>
+				<ul class="ul1">
+					<li><label for="date1">Date</label><input type="date" id="date1" >
+					</li>
+					<li>
+						<label for="date2">Month</label><input type="month" id="date2" >
+					</li>
+					<li>
+						<label for="date3">Date Time</label><input type="datetime-local" id="date3" >
+					</li>
+					<li>
+						<label for="datalist">Method</label>
+						<input type="url" id="datalist" list="url_list" name="url_list" />
+						<datalist id="url_list">
+							<option value="Http://www.baidu.com"></option>
+							<option value="Http://www.qianbailu.com"></option>
+							<option value="Http://www.pornhub.com"></option>
+						</datalist>
+
+					</li>
+				</ul>
+
+
+
+			</fieldset>
+
+
+
+			<fieldset>
+				<button type="submit">Buy it!</button>
+			</fieldset>
+
+		</form>
+	</section>
+</body>
+</html>
