@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>引导</title>
+	<script src="../js/jquery-3.1.1.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body,html{
+			height:100%;
+		}
+		section:nth-of-type(1){
+			height:803px;
+			width:100%;
+			background: -webkit-gradient(linear,0 0,100% 100%,from(orange),to(orangered));
+			position: relative;
+		}
+		section:nth-of-type(2){
+			height:803px;
+			width:100%;
+			background: -webkit-gradient(linear,0 0,100% 100%,from(hotpink),to(deeppink));
+			position: relative;
+		}
+
+
+		.img1{
+			position: absolute;
+			left:400px;
+			top:300px;
+			transition: all 1s linear;
+			transform: rotate(20deg);
+			transform-origin:50% 0;
+
+		}
+		.goOne{
+			transform:rotate(0deg) translate(10px,0);
+		}
+
+		.img2{
+			width:200px;
+			position: absolute;
+			right:400px;
+			top:300px;
+			transform: rotate(-10deg);
+
+		}
+		.goTwo{
+			animation:Two 1s infinite;
+		}
+		@keyframes Two {
+			0%{right:400px;top:300px}
+			10%{right:400px;top:295px}
+			20%{right:400px;top:290px}
+			30%{right:400px;top:285px}
+			40%{right:400px;top:280px}
+			50%{right:400px;top:275px}
+			60%{right:400px;top:280px}
+			70%{right:400px;top:285px}
+			80%{right:400px;top:290px}
+			90%{right:400px;top:295px}
+			100%{right:400px;top:300px}
+
+		}
+		.div1{
+			width:500px;
+			height:80px;
+			background:-webkit-gradient(linear,0 0 ,100% 100%,from(darkcyan),to(darkblue));
+			text-align: center;
+			line-height: 80px;
+			position: absolute;
+			left:400px;
+			/*top:440px;*/
+			top:700px;
+			border-radius:20px;
+			transform: skew(-40deg);
+			transition: all 1s linear;
+		}
+		.div1Go{
+			top:500px;
+			opacity: 0.7;
+		}
+		.div2{
+			width:100%;
+			height:50px;
+			font-size: 14px;
+			color: #FFF;
+			text-align: center;
+			line-height: 50px;
+			position: absolute;
+			top:700px;
+			text-decoration: none;
+
+		}
+		.div2Go{
+			animation:four 2s infinite;
+		}
+		@keyframes four {
+			0%{top:700px}
+			10%{top:695px}
+			20%{top:690px}
+			30%{top:685px}
+			40%{top:680px}
+			50%{top:675px}
+			60%{top:680px}
+			70%{top:685px}
+			80%{top:690px}
+			90%{top:695px}
+			100%{top:700px}
+
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+		<img src="img/huose.png" class="img1" alt="">
+		<img src="img/spaceman.svg" class="img2" alt="">
+		<div class="div1">
+			Most
+		</div>
+		<a href="javascript:void(0)" class="div2">点我点我</a>
+	</section>
+
+	<section>
+		<img src="img/huose.png" class="img1" alt="">
+		<img src="img/spaceman.svg" class="img2" alt="">
+		<div class="div1">
+			Most
+		</div>
+
+		<a href="javascript:void(0)" class="div2">点我点我</a>
+	</section>
+
+
+
+	<script>
+		window.onload=function () {
+			$("section").eq(0).children(".img1").addClass("goOne").next().addClass("goTwo").next().addClass("div1Go").next().addClass("div2Go");
+
+			$(".div2").click(function () {
+
+				var $index=$(this).parent().index();
+				$("section").eq($index).children(".img1").removeClass("goOne").next().removeClass("goTwo").next().removeClass("div1Go").next().removeClass("div2Go");
+				$("section").eq($index+1).children(".img1").addClass("goOne").next().addClass("goTwo").next().addClass("div1Go").next().addClass("div2Go");
+
+				var $Top=($index+1)*parseInt($(this).parent().css("height"));
+				$("html body").animate({
+					scrollTop:$Top
+				},1000)
+			});
+
+
+
+		}
+
+
+	</script>
+</body>
+</html>
