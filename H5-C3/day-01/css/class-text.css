@@ -25,8 +25,8 @@ fieldset{
 	width:360px;
 
 }
-fieldset:not(#fieldset1){
-	counter-increment: fieldset;
+form:not(#fieldset1){
+	counter-reset: fieldset;
 }
 legend{
 	font-weight:bolder;
@@ -36,6 +36,7 @@ legend{
 }
 legend:not(.legned):before{
 	content: "Step" counter(fieldset) ":";
+	counter-increment: fieldset;
 }
 
 

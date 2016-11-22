@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		header{
+			width:100px;
+			height:100px;
+			background: #555;
+			margin:0 auto;
+			margin-top:100px;
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+			position: relative;
+		}
+		header:before{
+			content: ' ';
+			display: block;
+			height:2px;
+			width:60px;
+			position: absolute;
+			top:50px;
+			left:20px;
+			background: #111;
+			z-index: 0;
+		}
+		input{
+			border:0 ;
+			visibility: hidden;
+		}
+		label:hover{
+			cursor: pointer;
+		}
+		fieldset{
+			border:0;
+			width:100px;
+			height:30px;
+			display: block;
+			margin:35px auto;
+			float: left;
+			position: relative;
+		}
+		fieldset:before{
+			content: 'click it';
+			display: block;
+			width:100px;
+			text-align: center;
+			height:17px;
+			color: #bbb;
+			font-size: 12px;
+			position: absolute;
+			top:-15px;
+		}
+		fieldset:after{
+			content: 'slide';
+			display: block;
+			text-align: center;
+			width:100px;
+			color: #bbb;
+			height:17px;
+			font-size: 12px;
+			position: absolute;
+			bottom:-24px;
+		}
+		label{
+			width:22px;
+			height:22px;
+			display: block;
+			background: #fcfff4;
+			position: absolute;
+			z-index: 3;
+			top:4px;
+			left:20px;
+			-webkit-border-radius:22px;
+			-moz-border-radius:22px;
+			border-radius:22px;
+			-webkit-transition: left 0.5s linear;
+			-moz-transition: left 0.5s linear;
+			-ms-transition: left 0.5s linear;
+			-o-transition: left 0.5s linear;
+			transition: left 0.5s linear;
+		}
+		label:before{
+			content: ' ';
+			display: block;
+			width:10px;
+			height:10px;
+			background: #333;
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+			position: absolute;
+			top:6px;
+			left:6px;
+			z-index: 2;
+		}
+		input:checked+label{
+			left:66px;
+			-webkit-transition: left 0.5s linear;
+			-moz-transition: left 0.5s linear;
+			-ms-transition: left 0.5s linear;
+			-o-transition: left 0.5s linear;
+			transition: left 0.5s linear;
+		}
+		input:checked+label:before{
+			background: green;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<fieldset>
+			<input type="checkbox" id="rad1"><label for="rad1"></label>
+		</fieldset>
+	</header>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../js/jquery-3.1.1.js"></script>
+	<style>
+		#anmated{
+			width:90px;
+			height:60px;
+			margin:0 auto;
+
+		}
+		.imgBox{
+			width:90px;
+			height:60px;
+			background: url("img/1.png") no-repeat;
+			-webkit-animation:play 1s infinite;
+			-o-animation:play 1s infinite;
+			animation:play 1s infinite;
+			animation-timing-function:step-end;
+		}
+		.xfast{
+			-webkit-animation-duration: 0.1s;
+			-moz-animation-duration: 0.1s;
+			-o-animation-duration: 0.1s;
+			animation-duration: 0.1s;
+		}
+		.fast{
+			-webkit-animation-duration: 0.3s;
+			-moz-animation-duration: 0.3s;
+			-o-animation-duration: 0.3s;
+			animation-duration: 0.3s;
+		}
+		.normal{
+			-webkit-animation-duration: 0.4s;
+			-moz-animation-duration: 0.4s;
+			-o-animation-duration: 0.4s;
+			animation-duration: 0.4s;
+		}
+		.slow{
+			-webkit-animation-duration: 0.6s;
+			-moz-animation-duration: 0.6s;
+			-o-animation-duration: 0.6s;
+			animation-duration: 0.6s;
+		}
+		.stop{
+			-webkit-animation-play-state: paused;
+			-moz-animation-play-state: paused;
+			-o-animation-play-state: paused;
+			animation-play-state: paused;
+		}
+
+		@keyframes play {
+			0%{background-position:0 0;}
+			20%{background-position:-90px 0;}
+			50%{background-position:-180px 0;}
+			60%{background-position:-270px 0;}
+			80%{background-position:-360px 0;}
+			100%{background-position:-450px 0;}
+		}
+
+
+		button{
+			width:50px;
+			height:30px;
+			font-size: 16px;
+			float: left;
+			text-align:center;
+			line-height: 30px;
+			margin-right:100px;
+			margin-top:100px;
+		}
+		button:nth-of-type(1){
+			margin-left:100px;
+		}
+		/*button:after{*/
+			/*content: ' ';*/
+			/*display: block;*/
+			/*width:100px;*/
+			/*height:30px;*/
+			/*float: left;*/
+		/*}*/
+	</style>
+</head>
+<body>
+	<div id="anmated">
+		<div class="imgBox stop">
+		<!-- 本来imgBox是ID   权重过高  导致下面进行不了   换成class   js里面相应的  attr要加上这个class名字-->
+		</div>
+	</div>
+
+	<button class="speed-xfast">超快</button>
+	<button class="speed-fast">快速</button>
+	<button class="speed-normal">正常</button>
+	<button class="speed-slow">慢速</button>
+	<button class="speed-stop">暂停</button>
+	<script>
+		$("button").click(function () {
+			$(".imgBox").removeClass().attr("class","imgBox "+$(this).attr("class").split("-")[1]);
+		})
+
+	</script>
+</body>
+</html>
