@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.img1 {
+			display: block;
+			margin: 100px auto;
+			width: 300px;
+			height: 300px;
+			border-radius: 300px;
+		}
+
+		section{
+			width:300px;
+			height:300px;
+		}
+		section:hover .img1{
+			transform:rotateX(3600deg) ;
+			transition: all 5s ease;
+			/*rotateX  就是 X轴  3D旋转*/
+			/*rotateY  就是 Y轴  3D旋转*/
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<img src="images/1.png" class="img1" alt="">
+	</section>
+
+</body>
+</html>
