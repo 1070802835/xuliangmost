@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<input type="button" value="提交" id="b1">
+	<input type="button" value="获取" id="b2">
+	<input type="button" value="清空" id="b3">
+	<input type="button" value="删除" id="b4">
+	<script>
+		$("#b1").click(function () {
+			var tar={
+				name:"most",
+				age:"11"
+			};
+			localStorage.setItem("most",JSON.stringify(tar));
+			//localStorage存储无时间限制
+			sessionStorage.setItem("most",JSON.stringify(tar));
+			//sessionStorage存储有时间限制   关闭网页就自动删除
+		});
+		$("#b2").click(function () {
+			var a=JSON.parse(localStorage.getItem("most"));
+			console.log(a);
+
+			var b=JSON.parse(sessionStorage.getItem("most"));
+			console.log(b)
+		});
+
+		$("#b3").click(function () {
+			localStorage.clear();
+
+			sessionStorage.clear()
+		});
+
+		$("#b4").click(function () {
+			localStorage.removeItem("most");
+
+			sessionStorage.removeItem("most")
+		})
+	</script>
+</body>
+</html>

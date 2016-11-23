@@ -15,18 +15,18 @@ var shopping={
 	
 	addCookie:function(name,value,days){
 		var date=new Date();
-		date.setDate(date.getDate()+days)
+		date.setDate(date.getDate()+days);
 		document.cookie=name+"="+encodeURIComponent(value)+";expires="+date;
 		
 	},
 	
 	deleteCookie:function(name){
 		var date=new Date();
-		date.setDate(date.getDate()-1)
+		date.setDate(date.getDate()-1);
 		document.cookie=name+"="+""+";expires="+date;
 		
 	}
-}
+};
 	
 
 

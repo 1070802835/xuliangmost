@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+	<script src="../js/jquery-3.1.1.js"></script>
+	<style>
+		#try2{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="try1" width="300" height="300"></canvas>
+	<canvas id="try2" width="400" height="400"></canvas>
+	<script>
+		var context=document.getElementById("try1").getContext("2d");
+			context.beginPath();
+			context.fillStyle="orange";
+			context.moveTo(150,0);
+			context.lineTo(118,130);
+			context.lineTo(0,150);
+			context.lineTo(100,205);
+			context.lineTo(75,300);
+
+			context.lineTo(150,244);
+			context.lineTo(225,300);
+			context.lineTo(203,204);
+			context.lineTo(300,150);
+			context.lineTo(182,130);
+			context.closePath();
+			context.fill();
+			context.beginPath();
+			context.strokeStyle="black";
+			context.arc(150,150,150,0,2*Math.PI);
+			context.stroke();
+//		var
+	</script>
+</body>
+</html>

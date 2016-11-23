@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="../js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<button id="b1"></button>
+
+<script>
+	var tar={
+		go:function () {
+			alert(1)
+		},
+		gogo:function () {
+			this.go();
+		}
+	};
+	$("#b1").click(function () {
+		tar.gogo()
+	})
+
+</script>
+</body>
+</html>

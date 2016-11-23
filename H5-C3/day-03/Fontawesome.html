@@ -51,15 +51,29 @@
 
 
 	<script>
-		$("a").hover(function () {
+		var flag=true;
+		$("a").
+//		hover(function () {
+//			if(flag){
+//				var $index=$(this).index();
+//				for(var i=$index;i>=0;i--){
+//					$("a").eq(i).attr("class","icon-star")
+//				}
+//			}
+//
+//		},function () {
+//			if(flag){
+//				$("a").attr("class","icon-star-empty")
+//			}
+//		}).
+		click(function () {
+			$("a").attr("class","icon-star-empty");
 			var $index=$(this).index();
 			for(var i=$index;i>=0;i--){
 				$("a").eq(i).attr("class","icon-star")
 			}
-		},function () {
-				$("a").attr("class","icon-star-empty")
-
 		})
+
 	</script>
 
 </body>
