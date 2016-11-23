@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<script src="../js/jquery-3.1.1.js"></script>
+	<style>
+		.icon1{
+			font-size: 14px;
+			color: orangered;
+		}
+
+		.icon-spinner{
+			color: orangered;
+
+		}
+		.icon-star-empty{
+			font-size: 30px;
+		}
+		.icon-star{
+			color: yellow;
+			font-size: 30px;
+		}
+		a{
+			float: left;
+		}
+		.div1{
+			margin-top: 100px;
+		}
+	</style>
+</head>
+<body>
+
+			<div class="icon-spinner icon1 icon-spin">
+				<!--http://www.bootcss.com/p/font-awesome/#-->
+				<!--只要引用一个css就可以了 但是路径要统一  font-css文件夹-->
+				<!--这个网站上 找到  想用的图标的名字  直接使用class名-->
+				<!--想用旋转什么的效果的话  直接加上class名-->
+				<!--自己也可以加上class名  然后定义字体图标的一些样式-->
+			</div>
+	<!--<div><span class="icon-spinner icon-spin"></span>加载中</div>-->
+			<div class="div1">
+				<a class="icon-star-empty a1"></a>
+				<a class="icon-star-empty a1"></a>
+				<a class="icon-star-empty a1"></a>
+				<a class="icon-star-empty a1"></a>
+			</div>
+
+
+
+
+	<script>
+		$("a").hover(function () {
+			var $index=$(this).index();
+			for(var i=$index;i>=0;i--){
+				$("a").eq(i).attr("class","icon-star")
+			}
+		},function () {
+				$("a").attr("class","icon-star-empty")
+
+		})
+	</script>
+
+</body>
+</html>
