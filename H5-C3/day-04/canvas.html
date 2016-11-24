@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas</title>
+	<script src="js/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+	<canvas width="500" height="500" style="border: 1px solid #000;" id="can1"></canvas>
+	<script>
+		var c=document.getElementById("can1");
+		var pen=c.getContext("2d");
+		pen.beginPath();
+		pen.fillStyle="#DBBFAA";
+		pen.arc(250,334,200,1.25*Math.PI,1.75*Math.PI);
+		//90°=0.5*Math.PI
+		//第一个是起始角
+		//第二个是结束角
+		pen.fill();
+		pen.beginPath();
+		pen.fillStyle="#DBBFAA";
+		pen.arc(250,50,200,0.25*Math.PI,0.75*Math.PI);
+		pen.fill();
+
+		pen.beginPath();
+		pen.fillStyle="#c60300";
+		pen.arc(252,192,54,0,2*Math.PI,false);
+		pen.fill();
+		pen.beginPath();
+		pen.fillStyle="black";
+		pen.arc(252,192,15,0,2*Math.PI,false);
+		pen.fill();
+
+	</script>
+</body>
+</html>
