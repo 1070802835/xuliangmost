@@ -17,6 +17,7 @@
 		body, html {
 			height: 100%;
 			overflow: hidden;
+			font-size: 12px;
 		}
 		.app{
 			width:100%;
@@ -45,32 +46,32 @@
 		.page:nth-child(4){
 			width:100%;
 			height: 100%;
-			background:#42FF78 ;
+			background:-webkit-linear-gradient(top,orange,orangered) ;
 		}
 		.page:nth-child(5){
 			width:100%;
 			height: 100%;
 			background:#FFBE18 ;
 		}
-		.nav{
+		.nav,.dot-tips{
 			position: fixed;
 			right:20px;
 			top:50%;
-			width:30px;
+			width:auto;
 			height:auto;
 			transform: translateY(-50%);
 		}
 		.dot{
 			display: block;
-			width: 30px;
-			height: 30px;
+			width: 20px;
+			height: 20px;
 			background: black;
 			opacity: 0.4;
 			border-radius: 30px;
 			margin-top: 8px;
 		}
 		.dot:hover{
-			opacity: 1;
+			opacity: 0.7;
 		}
 		.dotOn{
 			opacity: 1;
@@ -110,15 +111,53 @@
 			background: black;
 			opacity: 1;
 		}
-		/*.show5 .nav .dot:nth-child(5){*/
-			/*background: black;*/
-			/*opacity: 1;*/
-		/*}*/
+		.dot-tips{
+			right:36px;
+		}
+		.dot-tips .dot-wrap{
+			width:200px;
+			height:20px;
+			line-height: 20px;
+			margin-top: 9px;
+			position: relative;
+			transition: all 0.5s ease;
+		}
+		.dot-tips .dot-tip:after{
+			content: '';
+			display: block;
+			position: absolute;
+			right:-6px;
+			top:50%;
+			transform: translateY(-50%);
+			width:0;
+			height:0;
+			border-top: 4px solid transparent;
+			border-bottom:4px solid transparent;
+			border-left:6px solid #AD77FF;
+		}
+		.dot-tips .dot-wrap .dot-tip{
+			position:absolute;
+			right:40px;
+			top:0;
+			border-radius:10%;
+			color: #777;
+			text-align: right;
+			height:100%;
+			opacity: 0;
+			padding:0 6px;
+			background: -webkit-linear-gradient(right,#09FF84,#00D8FF);
+			transition: all 0.4s ease;
+		}
+
+		.dot-tips .dot-wrap.Hover>.dot-tip{
+			opacity: 1;
+			transform: translateX(25px);
+		}
 
 	</style>
 </head>
 <body>
-<div class="app">
+<div class="app show0">
 
 	<div class="wrap">
 		<section class="page"></section>
@@ -134,24 +173,46 @@
 		<a href="javascript:void(0)" class="dot"></a>
 		<a href="javascript:void(0)" class="dot"></a>
 	</nav>
-
+	<nav class="dot-tips">
+		<div class="dot-wrap">
+			<div class="dot-tip">瞅啥瞅</div>
+		</div>
+		<div class="dot-wrap">
+			<div class="dot-tip">愁你咋地</div>
+		</div>
+		<div class="dot-wrap">
+			<div class="dot-tip">那你再瞅一个试试？</div>
+		</div>
+		<div class="dot-wrap">
+			<div class="dot-tip">试试就试试</div>
+		</div>
+		<div class="dot-wrap">
+			<div class="dot-tip">你还敢瞅?!</div>
+		</div>
+	</nav>
 </div>
 <script>
 	var God={
 		init:function () {
 			this.$dot=$("a.dot");
 			this.$app=$("div.app");
+			this.$dot_wrap=$(".dot-tips .dot-wrap");
 			this.move();
 		},
 		cssClass:{
-			app:"app show"
+			app:"app show",
+			app1:"Hover"
 		},
 		move:function () {
-			var me=this;
-			me.$dot.click(function () {
-				me.$app.attr("class",me.cssClass.app+$(this).index());
+			var most=this;
+			most.$dot.click(function() {
+				most.$app.attr("class",most.cssClass.app+$(this).index());
+			});
+			most.$dot.hover(function() {
+				most.$dot_wrap.eq($(this).index()).addClass(most.cssClass.app1);
+			},function () {
+				most.$dot_wrap.removeClass(most.cssClass.app1);
 			})
-
 		}
 	};
 	God.init();

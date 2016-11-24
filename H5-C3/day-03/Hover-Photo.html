@@ -11,7 +11,7 @@
 			border-radius:300px;
 			position: relative;
 		}
-		section:before{
+		section:after{
 			content: '';
 			position: absolute;
 			left:0;
@@ -40,7 +40,7 @@
 			background:-webkit-linear-gradient(top,#808080,#003333);
 			position: absolute;
 			top:0;
-			left:-400px;
+			left:0;
 			color: #eeeeee;
 			opacity: 0;
 			transition: all 0.4s ease;
@@ -69,6 +69,9 @@
 			margin-top: 30px;
 
 		}
+		.div0{
+			position: relative;
+		}
 		section:hover{
 			cursor: pointer;
 		}
@@ -77,20 +80,25 @@
 			opacity: 0.7;
 		}
 
-		section:hover .div1{
-			left:0;
+		section:hover ~.div1{
+			transform: translate(-50%);
+			left:50%;
 			opacity: 0.7;
 		}
 	</style>
 </head>
 <body>
+<div class="div0">
 	<section>
 		<img class="img1" src="images/1.png" alt="">
 
-		<div class="div1">
 
-		</div>
-<!--We are told to  -->
+		<!--We are told to  -->
 	</section>
+	<div class="div1">
+
+	</div>
+</div>
+
 </body>
 </html>
