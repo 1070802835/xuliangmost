@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		#can1{
+			border:1px solid #000;
+			display: block;
+			box-shadow: 0 0 4px #13FFFC;
+			margin:50px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="can1" height="600" width="600"></canvas>
+	<script>
+		var can=document.getElementById("can1");
+		var pen=can.getContext("2d");
+		pen.arc(300,300,200,0,2*Math.PI);
+		var color1=pen.createRadialGradient(300,300,140,300,300,200);
+		color1.addColorStop(0,"#f0e720");
+		color1.addColorStop(1,"#ffca3c");
+		pen.fillStyle=color1;
+		pen.fill();
+
+		pen.beginPath();
+		pen.fillStyle="#000";
+		pen.arc(300,300,140,0,Math.PI);
+		pen.fill();
+
+		pen.beginPath();
+		pen.fillStyle="#f0e720";
+		pen.arc(300,285,140,0,Math.PI);
+		pen.fill();
+
+
+		pen.beginPath();
+		pen.fillStyle="#000";
+		pen.moveTo(240,170);
+		pen.quadraticCurveTo(180,103,140,150);
+		pen.quadraticCurveTo(180,133,240,170);
+		pen.fill();
+
+		pen.beginPath();
+		pen.moveTo(355,170);
+		pen.fillStyle="#000";
+		pen.quadraticCurveTo(420,103,460,150);
+		pen.quadraticCurveTo(420,133,355,170);
+		pen.fill();
+
+		pen.beginPath();
+		pen.strokeStyle="#ffca3c";
+		pen.lineWidth="5";
+		pen.arc(183,553,350,-.43*Math.PI,-.59*Math.PI,true);
+		pen.stroke();
+		pen.beginPath();
+		pen.strokeStyle="#ffca3c";
+		pen.arc(183,583,350,-.43*Math.PI,-.59*Math.PI,true);
+		pen.stroke();
+
+		pen.beginPath();
+		pen.moveTo(86,216);
+		pen.strokeStyle="#ffca3c";
+		pen.lineWidth="5";
+		pen.quadraticCurveTo(72,230,86,247);
+		pen.stroke();
+
+		pen.beginPath();
+		pen.moveTo(258,211);
+		pen.strokeStyle="#ffca3c";
+		pen.lineWidth="5";
+		pen.quadraticCurveTo(274,228,258,242);
+		pen.stroke();
+
+
+
+		pen.beginPath();
+		pen.strokeStyle="#ffca3c";
+		pen.lineWidth="5";
+		pen.arc(440,553,350,-.43*Math.PI,-.59*Math.PI,true);
+		pen.stroke();
+		pen.beginPath();
+		pen.strokeStyle="#ffca3c";
+		pen.arc(440,583,350,-.43*Math.PI,-.59*Math.PI,true);
+		pen.stroke();
+
+		pen.beginPath();
+		pen.moveTo(343,216);
+		pen.strokeStyle="#ffca3c";
+		pen.lineWidth="5";
+		pen.quadraticCurveTo(330,230,343,247);
+		pen.stroke();
+
+		pen.beginPath();
+		pen.moveTo(515,211);
+		pen.strokeStyle="#ffca3c";
+		pen.lineWidth="5";
+		pen.quadraticCurveTo(526,228,515,242);
+		pen.stroke();
+
+		pen.beginPath();
+		pen.fillStyle="#000";
+		pen.arc(107,226,13,0,2*Math.PI);
+		pen.fill();
+
+		pen.beginPath();
+		pen.fillStyle="#000";
+		pen.arc(107+268,225,13,0,2*Math.PI);
+		pen.fill();
+
+
+	</script>
+</body>
+</html>
