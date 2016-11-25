@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vegetable-List</title>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<style>
+		#can1{
+			border:1px solid #FF5B84;
+			box-shadow: 0 0 4px #FF5B84;
+			display: block;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="can1" width="600" height="600">此处显示，canvas不支持</canvas>
+	<script>
+		var canvasDom=document.getElementById("can1");
+		var context=canvasDom.getContext("2d");
+//		context.font="14px 宋体";
+		context.beginPath();
+		context.strokeStyle="#4DFFF8";
+		context.closePath();
+		context.moveTo(50,60);//Y轴顶点
+
+		context.lineTo(50,450);//坐标系o点
+
+		context.lineTo(500,450);//X轴顶点
+		context.stroke();
+		//画出了坐标系
+		//画出Y轴刻度
+		for(var i=0;i<8;i++){
+		context.moveTo(50,450-50*i);
+		context.lineTo(60,450-50*i);
+		context.stroke();
+		}
+		for(var k=0;k<8;k++){
+			context.strokeText(50*(k),20,450-50*k);
+			context.stroke();
+		}
+		var numArr=["100","210","321","400"];
+		var fruitArr=["iphone1",'iphone2','iphone3','iphone4'];
+		var numColor=['red','yellow','blue','#00FFDA','21D5FF'];
+		for(var j=0;j<numArr.length;j++){
+			context.fillStyle=numColor[j];
+			context.fillRect(90*(j+1),450-parseInt(numArr[j]),50,parseInt(numArr[j]));
+			context.fillText(fruitArr[j],90*(j+1),465);
+		}
+		for(var l=0;l<4;l++){
+			context.beginPath();
+			context.strokeStyle="#000";
+			context.moveTo(90*(l+1)+25,450-parseInt(numArr[l]));
+			context.lineTo(90*(l+2)+25,450-parseInt(numArr[l+1]));
+			context.stroke();
+		}
+		for(var a=0;a<numArr.length;a++){
+			context.beginPath();
+			context.fillStyle=numColor[a-1];
+			context.arc(90*(a+1)+25,450-parseInt(numArr[a]),10,0,2*Math.PI);
+			context.fill();
+		}
+		//Y轴箭头
+		context.beginPath();
+		context.strokeStyle="#4DFFF8";
+		context.moveTo(50,60);
+		context.lineTo(45,70);
+		context.moveTo(50,60);
+		context.lineTo(55,70);
+		context.stroke();
+		//X轴箭头
+		context.beginPath();
+		context.strokeStyle="#4DFFF8";
+		context.moveTo(500,450);
+		context.lineTo(490,445);
+		context.moveTo(500,450);
+		context.lineTo(490,455);
+		context.stroke();
+		//坐标XY
+		context.beginPath();
+		context.strokeStyle="#FF2EF6";
+		context.strokeText("Y",30,75);
+		context.stroke();
+		context.beginPath();
+		context.strokeStyle="#FF2EF6";
+		context.strokeText("X",490,470);
+		context.stroke();
+	</script>
+</body>
+</html>

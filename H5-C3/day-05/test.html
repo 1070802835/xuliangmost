@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		section{
+			width: 200px;
+			height:200px;
+			background:red;
+			animation: one 4s linear forwards;
+		}
+		@keyframes one {
+			0%{transform:translateX(0) rotate(0deg)}
+			25%{transform:translateX(400px) rotate(3600deg)}
+			50%{transform:translate(400px,400px) rotate(-3600deg)}
+			75%{transform:translate(0,400px) rotate(3600deg)}
+			100%{transform:translate(0,0) rotate(-3600deg)}
+		}
+	</style>
+</head>
+<body>
+	<section>
+
+	</section>
+</body>
+</html>
