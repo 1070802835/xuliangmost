@@ -27,14 +27,14 @@
 					var y=e.clientY;
 					oDiv.style.left=x-disx+"px";
 					oDiv.style.top=y-disy+"px";
-				}
+				};
 				document.onmouseup=function(e){
 					document.onmousemove=null;
 					var left=oDiv.offsetLeft;
 					var top=oDiv.offsetTop;
 					document.cookie="divposition="+left+"&"+top+";expires="+date;
 				}
-			}
+			};
 			function divPosition(){
 				var odivposition=shopping.getCookie("divposition");
 				var oDivposition=odivposition.split("&");

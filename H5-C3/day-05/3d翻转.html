@@ -19,7 +19,7 @@
 			height:150px;
 			position: relative;
 			transform-style: preserve-3d;
-			transition: all 1s linear;
+			transition: all 1s ease;
 		}
 		.wrap>section>div{
 			width:150px;
@@ -94,6 +94,7 @@
 			text-align: center;
 			line-height: 150px;
 			font-size: 20px;
+
 		}
 		.a{
 			transform: rotateY(180deg);
@@ -141,26 +142,38 @@
 
 </div>
 <script>
-	$(".nav>a").click(function () {
-//		alert(1);
-		$(".wrap").attr("class","wrap wrap"+parseInt($(this).index()+1))
+
+
+	var a=0,b=0,c=0,d=0;
+
+	$(document).mousedown(function (e) {
+		e=e||window.event;
+		var x1=e.clientX;
+		var y1=e.clientY;
+
+		$(document).on("mousemove",function (e) {
+			var x2=e.clientX;
+			var y2=e.clientY;
+			a=-(y2-y1)/4;
+			b=(x2-x1)/10;
+			$("title").text(c);
+			$(".wrap>section").css("transform","rotateX("+(a+c)+"deg) "+"rotateY("+(b+d)+"deg)");
+		});
+		$(document).mouseup(function () {
+			$(document).unbind('mousemove');
+			c+=a;
+			d+=b;
+		})
 	});
-
-//	$(document).mousedown(function (e) {
-//		e=e||window.event;
-//		var x1=e.clientX;
-//		var y1=e.clientY;
-//		$(document).mousemove(function (e) {
-//			e=e||window.event;
-//			var x2=e.clientX;
-//			var y2=e.clientY;
-//			$(".wrap>section").css("transform","rotateY("+x2-x1+"deg)"+"rotateX("+y2-y1+"deg)");
-//		});
-//		$(document).mouseup(function () {
-//			$(document).mousemove=null;
-//		})
-//	})
-
+//	$(".nav>a").click(function () {
+//		$(".wrap").attr("class","wrap wrap"+parseInt($(this).index()+1));
+//	});
+//	$(document).on("click",function () {
+//		alert(1)
+//	});
+//	$(document).on("click",function () {
+//		alert(2)
+//	});
 </script>
 </body>
 </html>
