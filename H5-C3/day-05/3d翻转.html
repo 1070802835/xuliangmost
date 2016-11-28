@@ -165,6 +165,10 @@
 			d+=b;
 		})
 	});
+		$(document).contextmenu(function (e) {
+			e=e||window.event;
+			e.preventDefault();
+		});
 //	$(".nav>a").click(function () {
 //		$(".wrap").attr("class","wrap wrap"+parseInt($(this).index()+1));
 //	});
