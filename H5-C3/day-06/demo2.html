@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+	<style>
+		#au1,#au2{
+			width: 500px;
+			height:200px;
+		}
+		#can1{
+			border:1px solid #000;
+			box-shadow: 0 0 4px #00FFEF;
+			display: block;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<audio src="薛之谦%20-%20你还要我怎样.mp3" controls="controls" id="au1"></audio>
+	<video src="薛之谦%20-%20你还要我怎样.mp3" controls="controls" id="au2"></video>
+	<canvas id="can1" width="600" height="600"></canvas>
+	<script>
+		var can1=document.getElementById("can1");
+		var pen=can1.getContext("2d");
+		pen.beginPath();
+		pen.moveTo(100,100);
+		pen.fillStyle="#A200FF";
+		pen.fillRect(100,100,100,101);
+		pen.fill();
+
+		pen.beginPath();
+		pen.fillStyle="#00FFD4";
+		pen.arc(200,200,100,0,2*Math.PI);
+		pen.fill();
+		$(document).click(function () {
+			pen.clearRect(0,0,600,600);
+			//这个范围内的内容全都清空掉,所以一般默认跟画布一般大小
+		})
+	</script>
+</body>
+</html>

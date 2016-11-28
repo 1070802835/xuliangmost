@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="//cdn.bootcss.com/jquery/2.2.2/jquery.js"></script>
+	<style>
+		#can1{
+			border:1px solid #000;
+			box-shadow: 0 0 6px #03FCFF;
+			display: block;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="can1" width="500" height="500"></canvas>
+	<script>
+		var can1=document.getElementById("can1");
+		var pen=can1.getContext("2d");
+		function go(x1,y1) {
+			pen.beginPath();
+			pen.clearRect(0,0,500,500);
+			var ctx=pen.createRadialGradient(x1,y1,50,x1,y1,100);
+			ctx.addColorStop(0,"#F420FF");
+			ctx.addColorStop(1,"#FF9800");
+			pen.fillStyle=ctx;
+			pen.arc(x1,y1,100,0,2*Math.PI);
+			pen.fill();
+		}
+		var $index=100;
+		var time=setInterval(function () {
+
+			$index+=2;
+			go($index,$index);
+		},50);
+		$(document).click(function () {
+
+			clearInterval(time);
+		})
+	</script>
+</body>
+</html>
