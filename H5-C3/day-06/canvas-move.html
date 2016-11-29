@@ -23,6 +23,8 @@
 			pen.clearRect(0,0,500,500);
 			var ctx=pen.createRadialGradient(x1,y1,50,x1,y1,100);
 			ctx.addColorStop(0,"#F420FF");
+			ctx.addColorStop(.5,"#00FFFA");
+
 			ctx.addColorStop(1,"#FF9800");
 			pen.fillStyle=ctx;
 			pen.arc(x1,y1,100,0,2*Math.PI);
@@ -33,9 +35,8 @@
 
 			$index+=2;
 			go($index,$index);
-		},50);
+		},10);
 		$(document).click(function () {
-
 			clearInterval(time);
 		})
 	</script>
