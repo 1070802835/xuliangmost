@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title id="title1">Title</title>
+	<link rel="stylesheet" href="css/demo1.css">
+</head>
+<body>
+	<div class="a b">Today I'm your Dad</div>
+	<div class="wrap">
+		<div class="item">
+			<div class="link">
+				<p class="p1">我是第一个</p>
+				<div class="linkSon"></div>
+			</div>
+			<div class="link">
+				<p class="p1">我是第二个</p>
+				<div class="linkSon"></div>
+			</div>
+			<div class="link">
+				<p class="p1">我是第三个</p>
+				<div class="linkSon"></div>
+			</div>
+			<div class="link">
+				<p class="p1">我是第四个</p>
+				<div class="linkSon"></div>
+			</div>
+			<div class="link">
+				<p class="p1">我是第五个</p>
+				<div class="linkSon"></div>
+			</div>
+			<div class="link">
+				<p class="p1">我是第六个</p>
+				<div class="linkSon"></div>
+			</div>
+			<div class="link">
+				<p class="p1">我是第七个</p>
+				<div class="linkSon"></div>
+			</div>
+
+		</div>
+	</div>
+	<div class="love-wrap">
+		<div class="love">
+
+		</div>
+		<div class="big-love">
+
+		</div>
+	</div>
+
+	<script>
+		var oTitle=document.getElementById("title1");
+		oTitle.innerHTML=document.body.offsetWidth;
+		window.onresize=function () {
+			oTitle.innerHTML=document.body.offsetWidth;
+		}
+	</script>
+</body>
+</html>
