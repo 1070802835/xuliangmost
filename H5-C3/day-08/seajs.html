@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
-	<script src="js/sea.js"></script>
+	<title>SeaJs</title>
+	<script src="js/sea2.0.js"></script>
+	<script src="js/sea-text.js"></script>
 </head>
 <body>
-<a href="javascript:void(0)">123</a>
+<a class="a1" href="javascript:void(0)">123</a>
+<div class="tpp"></div>
 <script>
 	seajs.config({
 		path:{
@@ -14,13 +16,13 @@
 			"cdn":"//cdn.bootcss.com"
 		},
 		alias:{
-//			"jquery":"jquery-2.1.1.min.js"
 			"jquery":"jquery-2.1.1.min.js"
+//			"jquery":"template.js"
 		}
 	});
 	seajs.use(["a","./js/c","jquery"],function (a,c,b) {
-		a.fn();
-		c.bfn();
+		a.init();
+//		c.bfn();
 	});
 	//use里面的数组  就是要加载的js文件  与后面a,c,b 都是一一对应的
 	//a.fn()就是调用a.js文件里面的fn()函数   具体写法去参照a里面的 esport.fn=function(){alert(1)}
