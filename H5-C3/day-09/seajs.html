@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SeaJs</title>
+	<script src="js/sea2.0.js"></script>
+	<script src="js/sea-text.js"></script>
+</head>
+<body>
+<a class="a1" href="javascript:void(0)">123</a>
+<div class="tpp"></div>
+<script>
+	seajs.config({
+		"paths":{
+			"cdn":"//cdn.bootcss.com",
+			"base":"http://localhost:63342/H5-C3/day-09/",
+			"components":"http://localhost:63342/H5-C3/day-09/components",
+			"page":"http://localhost:63342/H5-C3/day-09/page"
+		},
+		"alias":{
+			"jquery":"jquery-2.1.1.min.js",
+			"button":"components/Button/Button"
+		}
+	});
+	seajs.use(["page/a","jquery"]);
+	//use里面的数组  就是要加载的js文件  与后面a,c,b 都是一一对应的
+	//a.fn()就是调用a.js文件里面的fn()函数   具体写法去参照a里面的 esport.fn=function(){alert(1)}
+</script>
+</body>
+</html>

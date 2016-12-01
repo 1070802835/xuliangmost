@@ -1,0 +1,16 @@
+.btn{
+	display: inline-block;
+	width:100px;
+	height:40px;
+	background: #ACBDFF;
+	border:0;
+	border-radius: 20px;
+	background: -webkit-gradient(linear,0 0,80% 80%,from(#39FFC3),to(#E587FF));
+	transition:all 0.01s linear;
+}
+.btn:focus{
+	outline: none;
+}
+.btn:active{
+	transform: translateY(3px);
+}

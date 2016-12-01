@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<script>
+	//阶段一
+	var a=true;
+	var sess=function () {
+		a=false;
+	};
+	var sess1=function () {
+		sess();
+	};
+	//阶段二
+	var page={
+		a:true,
+		sess:function () {
+			this.a=false;
+			console.log(a)
+		},
+		sess1:function () {
+			this.sess();
+		}
+	};//
+
+	//阶段三
+	var page=(function () {
+		var a=true;
+		var sess=function () {
+			a=false;
+			console.log(a)
+		};
+		var sess1=function () {
+			sess();
+		};
+		return {
+			output2:sess(),
+			output1:sess1()
+		}
+	})();
+	page.output1();
+
+
+	//第一阶段缺点不多说  自己体会
+	//第二阶段  可以通过page.a来改变a  所以还是有弊端
+	//第三阶段   相对第二阶段来说   安全性更高   不能修改page里面的内容
+</script>
+</body>
+</html>
