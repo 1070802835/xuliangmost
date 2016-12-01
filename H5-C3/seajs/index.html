@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/sea2.0.js"></script>
+	<script src="js/sea-text.js"></script>
+	<script src="js/sea-css.js"></script>
+	<link rel="stylesheet" href="page/index.css">
+</head>
+<body>
+	<button class="btn button">Button</button>
+	<div class="hah">
+		<h1>Hello World</h1>
+		<button class="close">x</button>
+	</div>
+	<script>
+		seajs.config({
+			"paths":{
+				"components":"http://localhost:63342/H5-C3/seajs/components",
+				"page":"http://localhost:63342/H5-C3/seajs/page",
+				"js":"http://localhost:63342/H5-C3/seajs/js"
+			},
+			"alias":{
+				"jquery":"js/jquery-2.1.1.min.js",
+				"button":"components/button/index",
+				"model":"http://localhost:63342/H5-C3/seajs/model/model"
+			}
+		});
+		seajs.use("page/test.js",function (a) {
+			a.init().show();
+		});
+	</script>
+</body>
+</html>

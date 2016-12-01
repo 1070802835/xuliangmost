@@ -1,0 +1,21 @@
+.model_wrap{
+    width:100%;
+    height: 100%;
+    background: #58BDFF;
+    position: fixed;
+    left: 0;
+    top:0;
+    display: none;
+    opacity: .3
+}
+.model_wrap.show{
+    display: block;
+}
+.model_wrap.hide{
+    display: none;
+}
+.model_content{
+    position: fixed;
+    left: 50%;
+    top:50%;
+}

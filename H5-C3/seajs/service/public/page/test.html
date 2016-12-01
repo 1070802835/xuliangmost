@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script src="../lib/sea.js"></script>
+    <script src="../lib/seajs-css.js"></script>
+    <script src="../lib/seajs-text.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="button">button</div>
+<div class="hah">
+    <h1>Hello World</h1>
+    <button class="close">x</button>
+</div>
+<script>
+    seajs.config({
+        "paths":{
+            "components":"http://localhost:3000/components",
+            "lib":"http://localhost:3000/lib",
+            "page":"http://localhost:3000/page"
+        },
+        "alias":{
+            "jquery":"lib/jquery-3.1.1.js",
+            //components/button    如果设置成这样的话，在js里面require时，会因为paths和alias的解析出现问题
+            "button":"components/button/index",
+            "button_error":"components/button",
+            "model":"http://localhost:3000/model/index"
+        }
+    });
+</script>
+<script>
+    seajs.use("page/js/test");
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+*{
+    margin:0;
+    padding:0;
+}
+.hah{
+    width:400px;
+    height: 200px;
+    background: pink;
+    margin:0 auto;
+    opacity: 0
+}
