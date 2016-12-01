@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>game</title>
+	<link rel="shortcut icon" href="../../title.ico">
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<style>
 		* {
@@ -62,7 +63,16 @@
 				canvasGame.gameLine(lineLength);
 				if(lineLength>=canvasGame.pos.arrBg[1]+50){
 					alert("你已经必死了!");
-					window.location.reload();
+					clearInterval(time);
+					pen1.clearRect(0,0,500,500);
+					canvasGame.pos.arrLine=[];
+					canvasGame.pos.arrBg=[];
+					canvasGame.pos.arrBox=[];
+					canvasGame.gameBg();
+					canvasGame.gameBox();
+					flag = false;
+				}else{
+					flag = true;
 				}
 			}, 20);
 		}
@@ -87,7 +97,13 @@
 				else if (debug - 90 == canvasGame.pos.arrLine[0]) {
 					if (canvasGame.pos.arrLine[0] + 55 < canvasGame.pos.arrBg[1] || canvasGame.pos.arrLine[0] > canvasGame.pos.arrBg[1]) {
 						alert("Game Over! 得分 : " + total);
-						window.location.reload();
+						pen1.clearRect(0,0,500,500);
+						canvasGame.pos.arrLine=[];
+						canvasGame.pos.arrBg=[];
+						canvasGame.pos.arrBox=[];
+						canvasGame.gameBg();
+						canvasGame.gameBox();
+						flag = true;
 					}
 					else {
 
@@ -135,6 +151,7 @@
 					this.pos.arrBg.push(i * ran);
 					pen1.fill();
 					pen1.restore();
+					
 				}
 			}
 			if (bgArr) {
@@ -147,9 +164,7 @@
 					pen1.fill();
 //					pen1.restore();
 				}
-
 			}
-
 		},
 		gameBox: function (arrLine) {
 			if (!arrLine) {
