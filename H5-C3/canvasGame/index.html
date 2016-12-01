@@ -15,11 +15,24 @@
 			height: 100%;
 		}
 
-		canvas {
+		.div1 {
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
+		}
+
+		.total {
+			width: 100px;
+			height: 30px;
+			border: 1px solid #000;
+			box-shadow: 0 0 4px #80FFFA;
+			position: absolute;
+			left: -104px;
+			top: 0;
+			text-align: left;
+			line-height: 30px;
+			color: #D0B1FF;
 		}
 
 		canvas:nth-child(1) {
@@ -28,15 +41,20 @@
 	</style>
 </head>
 <body>
-<canvas id="can1" width="500" height="500"></canvas>
+<div class="div1">
+	<canvas id="can1" width="500" height="500"></canvas>
+	<div class="total">
+		得分 :
+	</div>
+</div>
 <canvas id="can2" width="500" height="500"></canvas>
 <script>
 	var can1 = document.getElementById("can1");
 	var pen1 = can1.getContext("2d");
-//	var can2 = document.getElementById("can2");
-//	var pen2 = can2.getContext("2d");
 	var time;
-	$(document).mousedown(function () {
+	var total = 0;
+	var flag = true;
+	$(".div1").mousedown(function () {
 		if (canvasGame.pos.arrLine == false) {
 			var lineLength = 0;
 			time = setInterval(function () {
@@ -44,13 +62,11 @@
 				canvasGame.gameLine(lineLength);
 			}, 20);
 		}
-	});
-	var flag=true;
-	$(document).mouseup(function () {
+	}).mouseup(function () {
 		var debug = 0;
 		clearInterval(time);
 		var x1 = canvasGame.pos.arrBg[1];
-		canvasGame.pos.arrBg[2] = (canvasGame.pos.arrBg[1] + Math.max(150,Math.floor(Math.random()*400)));
+		canvasGame.pos.arrBg[2] = (canvasGame.pos.arrBg[1] + Math.max(150, Math.floor(Math.random() * 400)));
 		console.log(canvasGame.pos.arrBg[2]);
 		if (flag) {
 			flag = false;
@@ -66,24 +82,26 @@
 					//小滑块移动
 				}
 				else if (debug - 90 == canvasGame.pos.arrLine[0]) {
-					if (canvasGame.pos.arrLine[0] + 60 < canvasGame.pos.arrBg[1] || canvasGame.pos.arrLine[0] > canvasGame.pos.arrBg[1]) {
-						alert("Game Over!");
+					if (canvasGame.pos.arrLine[0] + 55 < canvasGame.pos.arrBg[1] || canvasGame.pos.arrLine[0] > canvasGame.pos.arrBg[1]) {
+						alert("Game Over! 得分 : " + total);
 						window.location.reload();
 					}
 					else {
 
 						canvasGame.pos.arrBox[0] = canvasGame.pos.arrLine[0] + 50;
+						total++;
+						$(".total").text("得分 : " + total)
 					}
 				}
 				else if (debug - 90 - canvasGame.pos.arrLine[0] <= x1) {
 					//循环改变距离 判断条件也会变
-					var b = (debug - 90 - canvasGame.pos.arrLine[0]) ;
+					var b = (debug - 90 - canvasGame.pos.arrLine[0]);
 					for (var k = 0; k < canvasGame.pos.arrBg.length; k++) {
 						canvasGame.pos.arrBg[k]--;
 					}
 					canvasGame.moveLine(b, canvasGame.pos.arrLine[0]);
 					canvasGame.gameBg(canvasGame.pos.arrBg);
-					canvasGame.moveBox(canvasGame.pos.arrBox[0], b);
+					canvasGame.moveBox(canvasGame.pos.arrBox[0], b - 4);
 				}
 				else {
 					clearInterval(time1);
