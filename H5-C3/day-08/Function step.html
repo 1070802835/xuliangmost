@@ -38,10 +38,13 @@
 		};
 		return {
 			output2:sess(),
-			output1:sess1()
+			output1:sess1(),
+			output3:(function opt3 (argument) {
+				alert(1)
+			})()
 		}
 	})();
-	page.output1();
+	page.output3;
 
 
 	//第一阶段缺点不多说  自己体会
