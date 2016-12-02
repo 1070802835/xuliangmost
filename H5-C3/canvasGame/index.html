@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>game</title>
-	<link rel="shortcut icon" href="../../title.ico">
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<style>
 		* {
@@ -61,19 +60,12 @@
 			time = setInterval(function () {
 				lineLength += 6;
 				canvasGame.gameLine(lineLength);
-				if(lineLength>=canvasGame.pos.arrBg[1]+50){
-					alert("你已经必死了!");
+				if (lineLength >= canvasGame.pos.arrBg[1] + 50) {
+					alert("你已经挂了");
 					clearInterval(time);
-					pen1.clearRect(0,0,500,500);
-					canvasGame.pos.arrLine=[];
-					canvasGame.pos.arrBg=[];
-					canvasGame.pos.arrBox=[];
-					canvasGame.gameBg();
-					canvasGame.gameBox();
+					canvasGame.gameRestart(total);
 					flag = false;
-					total=0;
-					$(".total").text("得分 : " + total)
-				}else{
+				} else {
 					flag = true;
 				}
 			}, 20);
@@ -93,27 +85,18 @@
 				}
 				else if (debug - 90 < canvasGame.pos.arrLine[0]) {
 					canvasGame.gameBox(debug - 90);
-					
+
 
 					//小滑块移动
 				}
 				else if (debug - 90 == canvasGame.pos.arrLine[0]) {
 					if (canvasGame.pos.arrLine[0] + 56 < canvasGame.pos.arrBg[1] || canvasGame.pos.arrLine[0] > canvasGame.pos.arrBg[1]) {
 						clearInterval(time1);
-						pen1.clearRect(0,0,500,500);
-						canvasGame.pos.arrLine=[];
-						canvasGame.pos.arrBg=[];
-						canvasGame.pos.arrBox=[];
-						canvasGame.gameBg();
-						canvasGame.gameBox();
-						flag = true;
-						alert("Game Over! 得分 : " + total);
-						total=0;
-						$(".total").text("得分 : " + total)
-						
-						
+						canvasGame.gameRestart(total);
+
+
 //						window.location.reload();
-						
+
 					}
 					else {
 						canvasGame.pos.arrBox[0] = canvasGame.pos.arrLine[0] + 50;
@@ -160,7 +143,7 @@
 					this.pos.arrBg.push(i * ran);
 					pen1.fill();
 					pen1.restore();
-					
+
 				}
 			}
 			if (bgArr) {
@@ -226,6 +209,18 @@
 			pen1.rotate(-a);
 //			pen1.translate(-78, -350);
 			pen1.restore();
+		},
+		gameRestart: function (total) {
+			pen1.clearRect(0, 0, 500, 500);
+			canvasGame.pos.arrLine = [];
+			canvasGame.pos.arrBg = [];
+			canvasGame.pos.arrBox = [];
+			canvasGame.gameBg();
+			canvasGame.gameBox();
+			flag = true;
+			alert("Game Over! 得分 : " + total);
+			total = 0;
+			$(".total").text("得分 : " + total);
 		}
 	};
 	canvasGame.gameBg();

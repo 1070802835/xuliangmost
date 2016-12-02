@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tab-Change</title>
+	<script src="./../lib/sea2.0.js"></script>
+	<script src="./../lib/sea-text.js"></script>
+	<script src="./../lib/sea-css.js"></script>
+</head>
+<body>
+<div class="div_wrap">
+
+</div>
+<script>
+	seajs.config({
+		"paths":{
+			"components":"http://localhost:63342/H5-C3/public/components",
+			"page":"http://localhost:63342/H5-C3/public/page",
+			"lib":"http://localhost:63342/H5-C3/public/lib"
+		},
+		"alias":{
+			"jquery":"lib/jquery-2.1.1.min",
+//			"model":"http://localhost:63342/H5-C3/public/model/model",
+			"tabs":"components/tabs/index",
+			"handleBars":"lib/handlebars.min"
+		}
+	});
+	seajs.use("./js/tab.js",function (a) {
+
+	});
+</script>
+</body>
+</html>
