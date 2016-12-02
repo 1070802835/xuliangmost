@@ -9,7 +9,21 @@ define(function (require,exports,module) {
 		var elem=param.elem;
 		var html=template(obj);
 
-		$("."+elem).html(html);
+		$(elem).html(html);
+		// $(".btn2").click(function () {
+		// 	var titleValue=$(".input_title").val().split(",");
+		// 	var contentValue=$(".input_content").val().split("/");
+		// 	console.log(titleValue);
+		// 	console.log(contentValue);
+		// 	if(titleValue.length==contentValue.length){
+		// 		var obj1={
+		// 			title:titleValue,
+		// 			content:contentValue
+		// 		};
+		// 		var html=template(obj1);
+		// 		$(elem).html(html);
+		// 	}
+		// });
 		$(".tab_title").click(function (e) {
 			e.preventDefault();
 			$(".tab_content").hide().eq($(this).index()).show();

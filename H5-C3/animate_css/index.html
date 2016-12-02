@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="../js/jquery-2.1.1.min.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body,html{
+			width:100%;
+			height:100%;
+			overflow: hidden;
+		}
+		.btn1{
+			width: 100px;
+			height:30px;
+		}
+		.can1{
+			position: absolute;
+			top:50%;
+			left:50%;
+			margin-left:-25%;
+			margin-top:-25%;
+
+		}
+	</style>
+</head>
+<body>
+	<button class="animated bounceInUp btn1">
+		点我点我
+	</button>
+	<canvas id="can1" class="animated can1" width="500" height="500"></canvas>
+	<script>
+		var can1=document.getElementById("can1");
+		var pen1=can1.getContext("2d");
+		pen1.strokeStyle="#FFABBA";
+		pen1.font="100px Arial";
+		pen1.strokeText("iCloud",100,250);
+		pen1.stroke();
+		var arr=["bounce", "flash", "pulse", "rubberBand", "shake", "swing", "tada", "wobble", "jello", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flip", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "slideInUp", "slideInDown", "slideInLeft", "slideInRight", "slideOutUp", "slideOutDown", "slideOutLeft", "slideOutRight", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "zoomOut", "zoomOutDown", "zoomOutLeft", "zoomOutRight", "zoomOutUp", "hinge", "rollIn", "rollOut"];
+		var $index=0;
+		var time=setInterval(function () {
+			$index++;
+			if($index==75){
+				$index=0
+			}
+			$(".can1").attr("class","animated can1 "+arr[$index])
+		},2000)
+	</script>
+</body>
+</html>
