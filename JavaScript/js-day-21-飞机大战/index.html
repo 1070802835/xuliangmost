@@ -193,14 +193,14 @@
 										arr.splice(k, 1);
 										k--;
 										arrEnemy[i].HP -= 1;
-//										if(arrEnemy[i].HP <= 0) {
-//											oBg1.removeChild(arrEnemy[i]);
-//											arrEnemy.splice(i, 1);
-//											i--;
-//											
-//											sum += 100;
-//											oDiv2.innerHTML = "得分：" + sum;
-//										}
+										if(arrEnemy[i].HP <= 0) {
+											oBg1.removeChild(arrEnemy[i]);
+											arrEnemy.splice(i, 1);
+											i--;
+											
+											sum += 100;
+											oDiv2.innerHTML = "得分：" + sum;
+										}
 										if(arrEnemy[i].HP <= 0) {
 											
 											
@@ -274,10 +274,10 @@
 					bulleteMove();
 					removebullete();
 				
-					if(bgspeed % 10 == 0) {
+					if(bgspeed % 50 == 0) {
 						creatEnemyLittle();
 					}
-					if(bgspeed % 30 == 0) {
+					if(bgspeed % 80 == 0) {
 						creatEnemyBig();
 					}
 					
